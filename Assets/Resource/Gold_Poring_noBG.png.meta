@@ -1,0 +1,1923 @@
+fileFormatVersion: 2
+guid: 0f24bde9292a75546aa37815d9cce755
+timeCreated: 1459102127
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Gold_Poring_noBG_0
+    21300002: Gold_Poring_noBG_1
+    21300004: Gold_Poring_noBG_2
+    21300006: Gold_Poring_noBG_3
+    21300008: Gold_Poring_noBG_4
+    21300010: Gold_Poring_noBG_5
+    21300012: Gold_Poring_noBG_6
+    21300014: Gold_Poring_noBG_7
+    21300016: Gold_Poring_noBG_8
+    21300018: Gold_Poring_noBG_9
+    21300020: Gold_Poring_noBG_10
+    21300022: Gold_Poring_noBG_11
+    21300024: Gold_Poring_noBG_12
+    21300026: Gold_Poring_noBG_13
+    21300028: Gold_Poring_noBG_14
+    21300030: Gold_Poring_noBG_15
+    21300032: Gold_Poring_noBG_16
+    21300034: Gold_Poring_noBG_17
+    21300036: Gold_Poring_noBG_18
+    21300038: Gold_Poring_noBG_19
+    21300040: Gold_Poring_noBG_20
+    21300042: Gold_Poring_noBG_21
+    21300044: Gold_Poring_noBG_22
+    21300046: Gold_Poring_noBG_23
+    21300048: Gold_Poring_noBG_24
+    21300050: Gold_Poring_noBG_25
+    21300052: Gold_Poring_noBG_26
+    21300054: Gold_Poring_noBG_27
+    21300056: Gold_Poring_noBG_28
+    21300058: Gold_Poring_noBG_29
+    21300060: Gold_Poring_noBG_30
+    21300062: Gold_Poring_noBG_31
+    21300064: Gold_Poring_noBG_32
+    21300066: Gold_Poring_noBG_33
+    21300068: Gold_Poring_noBG_34
+    21300070: Gold_Poring_noBG_35
+    21300072: Gold_Poring_noBG_36
+    21300074: Gold_Poring_noBG_37
+    21300076: Gold_Poring_noBG_38
+    21300078: Gold_Poring_noBG_39
+    21300080: Gold_Poring_noBG_40
+    21300082: Gold_Poring_noBG_41
+    21300084: Gold_Poring_noBG_42
+    21300086: Gold_Poring_noBG_43
+    21300088: Gold_Poring_noBG_44
+    21300090: Gold_Poring_noBG_45
+    21300092: Gold_Poring_noBG_46
+    21300094: Gold_Poring_noBG_47
+    21300096: Gold_Poring_noBG_48
+    21300098: Gold_Poring_noBG_49
+    21300100: Gold_Poring_noBG_50
+    21300102: Gold_Poring_noBG_51
+    21300104: Gold_Poring_noBG_52
+    21300106: Gold_Poring_noBG_53
+    21300108: Gold_Poring_noBG_54
+    21300110: Gold_Poring_noBG_55
+    21300112: Gold_Poring_noBG_56
+    21300114: Gold_Poring_noBG_57
+    21300116: Gold_Poring_noBG_58
+    21300118: Gold_Poring_noBG_59
+    21300120: Gold_Poring_noBG_60
+    21300122: Gold_Poring_noBG_61
+    21300124: Gold_Poring_noBG_62
+    21300126: Gold_Poring_noBG_63
+    21300128: Gold_Poring_noBG_64
+    21300130: Gold_Poring_noBG_65
+    21300132: Gold_Poring_noBG_66
+    21300134: Gold_Poring_noBG_67
+    21300136: Gold_Poring_noBG_68
+    21300138: Gold_Poring_noBG_69
+    21300140: Gold_Poring_noBG_70
+    21300142: Gold_Poring_noBG_71
+    21300144: Gold_Poring_noBG_72
+    21300146: Gold_Poring_noBG_73
+    21300148: Gold_Poring_noBG_74
+    21300150: Gold_Poring_noBG_75
+    21300152: Gold_Poring_noBG_76
+    21300154: Gold_Poring_noBG_77
+    21300156: Gold_Poring_noBG_78
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 390, z: 590, w: 0}
+  spritePixelsToUnits: 30
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Gold_Poring_noBG_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 392.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.5, y: 14.375}
+        - {x: -20.5, y: 5.375}
+        - {x: -20.5, y: -18.625}
+        - {x: -18.5, y: -20.625}
+        - {x: 19.5, y: -20.625}
+        - {x: 20.5, y: -17.625}
+        - {x: 20.5, y: 4.375}
+        - {x: 17.5, y: 14.375}
+      - - {x: 13.5, y: 19.375}
+        - {x: 10.5, y: 16.375}
+        - {x: 10.5, y: 14.375}
+        - {x: 13.5, y: 11.375}
+        - {x: 15.5, y: 11.375}
+        - {x: 18.5, y: 14.375}
+        - {x: 18.5, y: 16.375}
+        - {x: 15.5, y: 19.375}
+    - name: Gold_Poring_noBG_1
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 392.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15.5, y: 13.375}
+        - {x: -15.5, y: 13.375}
+        - {x: -20.5, y: 2.375}
+        - {x: -20.5, y: -17.625}
+        - {x: -15.5, y: -20.625}
+        - {x: 16.5, y: -20.625}
+        - {x: 21.5, y: -15.625}
+        - {x: 22.5, y: -9.625}
+        - {x: 22.5, y: 0.375}
+      - - {x: 17.5, y: 20.375}
+        - {x: 14.5, y: 17.375}
+        - {x: 14.5, y: 16.375}
+        - {x: 17.5, y: 13.375}
+        - {x: 19.5, y: 13.375}
+        - {x: 21.5, y: 15.375}
+        - {x: 21.5, y: 18.375}
+        - {x: 19.5, y: 20.375}
+    - name: Gold_Poring_noBG_2
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 392.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: -17.625}
+        - {x: -19.5, y: -21.625}
+        - {x: 24.5, y: -21.625}
+        - {x: 24.5, y: 9.375}
+        - {x: 23.5, y: 12.375}
+        - {x: -1.5, y: 12.375}
+        - {x: -20.5, y: 5.375}
+      - - {x: 20.5, y: 21.375}
+        - {x: 17.5, y: 18.375}
+        - {x: 17.5, y: 17.375}
+        - {x: 19.5, y: 15.375}
+        - {x: 21.5, y: 15.375}
+        - {x: 23.5, y: 17.375}
+        - {x: 23.5, y: 19.375}
+        - {x: 21.5, y: 21.375}
+    - name: Gold_Poring_noBG_3
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 392.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18.5, y: 18.375}
+        - {x: -3.5, y: 18.375}
+        - {x: -18.5, y: 10.375}
+        - {x: -18.5, y: -12.625}
+        - {x: -11.5, y: -18.625}
+        - {x: 22.5, y: -18.625}
+        - {x: 24.5, y: -12.625}
+        - {x: 24.5, y: 10.375}
+        - {x: 20.5, y: 15.375}
+    - name: Gold_Poring_noBG_4
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 392.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7.5, y: 14.375}
+        - {x: -16.5, y: 9.375}
+        - {x: -16.5, y: -15.625}
+        - {x: -5.5, y: -20.625}
+        - {x: 15.5, y: -20.625}
+        - {x: 24.5, y: -13.625}
+        - {x: 24.5, y: 2.375}
+        - {x: 16.5, y: 14.375}
+      - - {x: 17.5, y: 19.375}
+        - {x: 14.5, y: 16.375}
+        - {x: 14.5, y: 14.375}
+        - {x: 17.5, y: 11.375}
+        - {x: 19.5, y: 11.375}
+        - {x: 22.5, y: 14.375}
+        - {x: 22.5, y: 16.375}
+        - {x: 19.5, y: 19.375}
+    - name: Gold_Poring_noBG_5
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 392.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19.5, y: 13.375}
+        - {x: -11.5, y: 13.375}
+        - {x: -16.5, y: 2.375}
+        - {x: -16.5, y: -17.625}
+        - {x: -11.5, y: -20.625}
+        - {x: 20.5, y: -20.625}
+        - {x: 25.5, y: -15.625}
+        - {x: 26.5, y: -9.625}
+        - {x: 26.5, y: 0.375}
+      - - {x: 21.5, y: 20.375}
+        - {x: 18.5, y: 17.375}
+        - {x: 18.5, y: 16.375}
+        - {x: 21.5, y: 13.375}
+        - {x: 23.5, y: 13.375}
+        - {x: 25.5, y: 15.375}
+        - {x: 25.5, y: 18.375}
+        - {x: 23.5, y: 20.375}
+    - name: Gold_Poring_noBG_6
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 392.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3.5, y: 12.375}
+        - {x: -16.5, y: 5.375}
+        - {x: -16.5, y: -20.625}
+        - {x: -12.5, y: -21.625}
+        - {x: 28.5, y: -21.625}
+        - {x: 28.5, y: 7.375}
+        - {x: 27.5, y: 12.375}
+      - - {x: 24.5, y: 21.375}
+        - {x: 21.5, y: 18.375}
+        - {x: 21.5, y: 17.375}
+        - {x: 23.5, y: 15.375}
+        - {x: 25.5, y: 15.375}
+        - {x: 27.5, y: 17.375}
+        - {x: 27.5, y: 19.375}
+        - {x: 25.5, y: 21.375}
+    - name: Gold_Poring_noBG_7
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 392.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22.5, y: 18.375}
+        - {x: 0.5, y: 18.375}
+        - {x: -14.5, y: 10.375}
+        - {x: -14.5, y: -12.625}
+        - {x: -7.5, y: -18.625}
+        - {x: 26.5, y: -18.625}
+        - {x: 28.5, y: -12.625}
+        - {x: 28.5, y: 10.375}
+        - {x: 24.5, y: 15.375}
+    - name: Gold_Poring_noBG_8
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 392.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6.5, y: 1.375}
+        - {x: -9.5, y: 0.375}
+        - {x: -9.5, y: -9.625}
+        - {x: -8.5, y: -11.625}
+        - {x: 29.5, y: -11.625}
+        - {x: 29.5, y: -0.625}
+        - {x: 28.5, y: 1.375}
+    - name: Gold_Poring_noBG_9
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 392.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29.5, y: -1.625}
+        - {x: -29.5, y: -11.625}
+        - {x: -25.5, y: -14.625}
+        - {x: -18.5, y: -14.625}
+        - {x: -15.5, y: -13.625}
+        - {x: -15.5, y: -1.625}
+    - name: Gold_Poring_noBG_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 336.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13.5, y: 13.375}
+        - {x: -10.5, y: 13.375}
+        - {x: -20.5, y: 3.375}
+        - {x: -20.5, y: -21.625}
+        - {x: 17.5, y: -21.625}
+        - {x: 20.5, y: -17.625}
+        - {x: 20.5, y: 2.375}
+        - {x: 17.5, y: 12.375}
+    - name: Gold_Poring_noBG_11
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 336.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11.5, y: 12.375}
+        - {x: -20.5, y: 3.375}
+        - {x: -20.5, y: -13.625}
+        - {x: -17.5, y: -21.625}
+        - {x: 19.5, y: -21.625}
+        - {x: 22.5, y: -14.625}
+        - {x: 22.5, y: 5.375}
+        - {x: 16.5, y: 12.375}
+    - name: Gold_Poring_noBG_12
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 336.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13.5, y: 12.375}
+        - {x: -20.5, y: 4.375}
+        - {x: -20.5, y: -13.625}
+        - {x: -17.5, y: -21.625}
+        - {x: 21.5, y: -21.625}
+        - {x: 24.5, y: -16.625}
+        - {x: 24.5, y: 10.375}
+        - {x: 22.5, y: 12.375}
+    - name: Gold_Poring_noBG_13
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 336.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13.5, y: 13.375}
+        - {x: -16.5, y: 3.375}
+        - {x: -16.5, y: -21.625}
+        - {x: 20.5, y: -21.625}
+        - {x: 22.5, y: -16.625}
+        - {x: 22.5, y: 13.375}
+    - name: Gold_Poring_noBG_14
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 336.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12.5, y: 14.375}
+        - {x: -7.5, y: 14.375}
+        - {x: -14.5, y: 5.375}
+        - {x: -14.5, y: -20.625}
+        - {x: -7.5, y: -23.625}
+        - {x: 17.5, y: -23.625}
+        - {x: 21.5, y: -15.625}
+        - {x: 23.5, y: -9.625}
+        - {x: 23.5, y: 11.375}
+    - name: Gold_Poring_noBG_15
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 336.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13.5, y: 13.375}
+        - {x: -5.5, y: 13.375}
+        - {x: -14.5, y: 3.375}
+        - {x: -14.5, y: -15.625}
+        - {x: -3.5, y: -21.625}
+        - {x: 21.5, y: -21.625}
+        - {x: 25.5, y: -9.625}
+        - {x: 25.5, y: 11.375}
+        - {x: 16.5, y: 12.375}
+    - name: Gold_Poring_noBG_16
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 336.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2.5, y: 13.375}
+        - {x: -7.5, y: 11.375}
+        - {x: -14.5, y: 5.375}
+        - {x: -14.5, y: -12.625}
+        - {x: -11.5, y: -21.625}
+        - {x: 21.5, y: -21.625}
+        - {x: 24.5, y: -13.625}
+        - {x: 24.5, y: 4.375}
+        - {x: 14.5, y: 13.375}
+      - - {x: 23.5, y: 10.375}
+        - {x: 20.5, y: 7.375}
+        - {x: 20.5, y: 6.375}
+        - {x: 22.5, y: 4.375}
+        - {x: 24.5, y: 4.375}
+        - {x: 26.5, y: 6.375}
+        - {x: 26.5, y: 8.375}
+        - {x: 24.5, y: 10.375}
+    - name: Gold_Poring_noBG_17
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 336.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -0.5, y: 13.375}
+        - {x: -5.5, y: 11.375}
+        - {x: -12.5, y: 5.375}
+        - {x: -12.5, y: -12.625}
+        - {x: -9.5, y: -21.625}
+        - {x: 23.5, y: -21.625}
+        - {x: 26.5, y: -13.625}
+        - {x: 26.5, y: 4.375}
+        - {x: 16.5, y: 13.375}
+    - name: Gold_Poring_noBG_18
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 336.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.5, y: -18.625}
+        - {x: -14.5, y: -22.625}
+        - {x: -13.5, y: -27.625}
+        - {x: 29.5, y: -27.625}
+        - {x: 29.5, y: -19.625}
+        - {x: 18.5, y: -18.625}
+      - - {x: -6.5, y: 2.375}
+        - {x: -9.5, y: -0.625}
+        - {x: -9.5, y: -6.625}
+        - {x: 3.5, y: -16.625}
+        - {x: 6.5, y: -16.625}
+        - {x: 9.5, y: -15.625}
+        - {x: 9.5, y: -0.625}
+        - {x: 8.5, y: 2.375}
+    - name: Gold_Poring_noBG_19
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 336.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.5, y: -18.625}
+        - {x: -24.5, y: -18.625}
+        - {x: -29.5, y: -20.625}
+        - {x: -29.5, y: -27.625}
+        - {x: -15.5, y: -27.625}
+        - {x: -12.5, y: -24.625}
+        - {x: -12.5, y: -23.625}
+    - name: Gold_Poring_noBG_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 280.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.5, y: 9.375}
+        - {x: -20.5, y: 2.375}
+        - {x: -20.5, y: -21.625}
+        - {x: -19.5, y: -25.625}
+        - {x: 17.5, y: -25.625}
+        - {x: 20.5, y: -15.625}
+        - {x: 20.5, y: 0.375}
+        - {x: 14.5, y: 9.375}
+    - name: Gold_Poring_noBG_21
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 280.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13.5, y: 8.375}
+        - {x: -1.5, y: 8.375}
+        - {x: -16.5, y: 7.375}
+        - {x: -20.5, y: -3.625}
+        - {x: -20.5, y: -21.625}
+        - {x: -15.5, y: -25.625}
+        - {x: 16.5, y: -25.625}
+        - {x: 21.5, y: -20.625}
+        - {x: 22.5, y: -15.625}
+        - {x: 22.5, y: -3.625}
+    - name: Gold_Poring_noBG_22
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 280.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5.5, y: 8.375}
+        - {x: -17.5, y: 7.375}
+        - {x: -20.5, y: 1.375}
+        - {x: -20.5, y: -23.625}
+        - {x: -13.5, y: -25.625}
+        - {x: 24.5, y: -25.625}
+        - {x: 24.5, y: 2.375}
+        - {x: 23.5, y: 8.375}
+    - name: Gold_Poring_noBG_23
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 280.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11.5, y: 9.375}
+        - {x: -16.5, y: 5.375}
+        - {x: -16.5, y: -19.625}
+        - {x: -13.5, y: -25.625}
+        - {x: 14.5, y: -25.625}
+        - {x: 22.5, y: -19.625}
+        - {x: 22.5, y: 9.375}
+    - name: Gold_Poring_noBG_24
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 280.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 21.5, y: 6.375}
+        - {x: 9.5, y: 10.375}
+        - {x: -3.5, y: 10.375}
+        - {x: -14.5, y: 6.375}
+        - {x: -14.5, y: -23.625}
+        - {x: -9.5, y: -26.625}
+        - {x: -4.5, y: -27.625}
+        - {x: 13.5, y: -27.625}
+        - {x: 21.5, y: -19.625}
+        - {x: 23.5, y: -10.625}
+        - {x: 23.5, y: 3.375}
+    - name: Gold_Poring_noBG_25
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 280.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5.5, y: 9.375}
+        - {x: -13.5, y: 1.375}
+        - {x: -14.5, y: -4.625}
+        - {x: -14.5, y: -17.625}
+        - {x: -9.5, y: -25.625}
+        - {x: 19.5, y: -25.625}
+        - {x: 25.5, y: -17.625}
+        - {x: 25.5, y: 8.375}
+        - {x: 19.5, y: 9.375}
+    - name: Gold_Poring_noBG_26
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 280.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7.5, y: 9.375}
+        - {x: -14.5, y: -2.625}
+        - {x: -14.5, y: -20.625}
+        - {x: -7.5, y: -25.625}
+        - {x: 21.5, y: -25.625}
+        - {x: 24.5, y: -16.625}
+        - {x: 24.5, y: 7.375}
+        - {x: 19.5, y: 9.375}
+      - - {x: 20.5, y: 2.375}
+        - {x: 21.5, y: 0.375}
+        - {x: 26.5, y: 0.375}
+        - {x: 26.5, y: 5.375}
+        - {x: 25.5, y: 6.375}
+        - {x: 23.5, y: 6.375}
+        - {x: 20.5, y: 4.375}
+    - name: Gold_Poring_noBG_27
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 280.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24.5, y: 1.375}
+        - {x: 14.5, y: 9.375}
+        - {x: -6.5, y: 9.375}
+        - {x: -12.5, y: -0.625}
+        - {x: -12.5, y: -22.625}
+        - {x: -7.5, y: -25.625}
+        - {x: 21.5, y: -25.625}
+        - {x: 26.5, y: -15.625}
+        - {x: 26.5, y: -5.625}
+    - name: Gold_Poring_noBG_28
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 280.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 1.5, y: 11.375}
+        - {x: -8.5, y: -1.625}
+        - {x: -8.5, y: -4.625}
+        - {x: -5.5, y: -7.625}
+        - {x: 7.5, y: -7.625}
+        - {x: 10.5, y: -6.625}
+        - {x: 10.5, y: 11.375}
+      - - {x: -12.5, y: 29.375}
+        - {x: -14.5, y: 16.375}
+        - {x: -13.5, y: 14.375}
+        - {x: 29.5, y: 14.375}
+        - {x: 29.5, y: 29.375}
+    - name: Gold_Poring_noBG_29
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 280.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.5, y: 24.375}
+        - {x: -12.5, y: 27.375}
+        - {x: -12.5, y: 28.375}
+        - {x: -13.5, y: 29.375}
+        - {x: -29.5, y: 29.375}
+        - {x: -29.5, y: 14.375}
+        - {x: -25.5, y: 11.375}
+        - {x: -18.5, y: 11.375}
+        - {x: -13.5, y: 12.375}
+        - {x: -14.5, y: 23.375}
+        - {x: -17.5, y: 24.375}
+        - {x: -22.5, y: 24.375}
+    - name: Gold_Poring_noBG_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 17.5, y: -26.625}
+        - {x: 17.5, y: -27.625}
+        - {x: 25.5, y: -27.625}
+        - {x: 25.5, y: -26.625}
+        - {x: 22.5, y: -23.625}
+        - {x: 20.5, y: -23.625}
+    - name: Gold_Poring_noBG_31
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 224.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13.5, y: -7.625}
+        - {x: 11.5, y: -11.625}
+        - {x: 11.5, y: -16.625}
+        - {x: 17.5, y: -26.625}
+        - {x: 18.5, y: -27.625}
+        - {x: 29.5, y: -27.625}
+        - {x: 29.5, y: -9.625}
+        - {x: 26.5, y: -7.625}
+    - name: Gold_Poring_noBG_32
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 224.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29.5, y: -11.625}
+        - {x: -29.5, y: -27.625}
+        - {x: -22.5, y: -27.625}
+        - {x: -22.5, y: -17.625}
+        - {x: -27.5, y: -11.625}
+      - - {x: -5.5, y: -4.625}
+        - {x: -13.5, y: -4.625}
+        - {x: -20.5, y: -20.625}
+        - {x: -20.5, y: -24.625}
+        - {x: -15.5, y: -27.625}
+        - {x: -0.5, y: -27.625}
+        - {x: 2.5, y: -23.625}
+        - {x: 2.5, y: -9.625}
+        - {x: 1.5, y: -8.625}
+    - name: Gold_Poring_noBG_33
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 224.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3.5, y: -19.625}
+        - {x: -7.5, y: -25.625}
+        - {x: -7.5, y: -27.625}
+        - {x: 13.5, y: -27.625}
+        - {x: 13.5, y: -23.625}
+        - {x: 8.5, y: -19.625}
+      - - {x: 18.5, y: 4.375}
+        - {x: 14.5, y: 4.375}
+        - {x: 12.5, y: -0.625}
+        - {x: 12.5, y: -20.625}
+        - {x: 16.5, y: -22.625}
+        - {x: 21.5, y: -22.625}
+        - {x: 24.5, y: -15.625}
+        - {x: 24.5, y: -7.625}
+        - {x: 22.5, y: 2.375}
+    - name: Gold_Poring_noBG_34
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 224.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17.5, y: -6.625}
+        - {x: -19.5, y: -8.625}
+        - {x: -19.5, y: -14.625}
+        - {x: -15.5, y: -27.625}
+        - {x: 1.5, y: -27.625}
+        - {x: 1.5, y: -10.625}
+        - {x: -4.5, y: -6.625}
+    - name: Gold_Poring_noBG_35
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 224.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20.5, y: 1.375}
+        - {x: 19.5, y: -4.625}
+        - {x: 19.5, y: -22.625}
+        - {x: 20.5, y: -23.625}
+        - {x: 23.5, y: -25.625}
+        - {x: 28.5, y: -25.625}
+        - {x: 29.5, y: -24.625}
+        - {x: 29.5, y: 1.375}
+    - name: Gold_Poring_noBG_36
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 224.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24.5, y: -26.625}
+        - {x: 24.5, y: -27.625}
+        - {x: 29.5, y: -27.625}
+        - {x: 29.5, y: -23.625}
+        - {x: 27.5, y: -23.625}
+    - name: Gold_Poring_noBG_37
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 224.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23.5, y: -17.625}
+        - {x: -27.5, y: -18.625}
+        - {x: -29.5, y: -21.625}
+        - {x: -29.5, y: -27.625}
+        - {x: -6.5, y: -27.625}
+        - {x: -6.5, y: -24.625}
+        - {x: -15.5, y: -17.625}
+    - name: Gold_Poring_noBG_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 168.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20.5, y: 27.375}
+        - {x: -5.5, y: 27.375}
+        - {x: -13.5, y: 17.375}
+        - {x: -13.5, y: 0.375}
+        - {x: -11.5, y: -7.625}
+        - {x: 26.5, y: -7.625}
+        - {x: 27.5, y: -5.625}
+        - {x: 27.5, y: 16.375}
+        - {x: 24.5, y: 26.375}
+      - - {x: 17.5, y: 29.375}
+        - {x: 17.5, y: 27.375}
+        - {x: 20.5, y: 24.375}
+        - {x: 22.5, y: 24.375}
+        - {x: 25.5, y: 27.375}
+        - {x: 25.5, y: 29.375}
+    - name: Gold_Poring_noBG_39
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 168.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -0.5, y: 29.375}
+        - {x: -13.5, y: 16.375}
+        - {x: -13.5, y: 2.375}
+        - {x: -10.5, y: -5.625}
+        - {x: 21.5, y: -5.625}
+        - {x: 29.5, y: 2.375}
+        - {x: 29.5, y: 21.375}
+        - {x: 25.5, y: 29.375}
+    - name: Gold_Poring_noBG_40
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 168.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18.5, y: 29.375}
+        - {x: 19.5, y: 26.375}
+        - {x: 21.5, y: 9.375}
+        - {x: 27.5, y: 2.375}
+        - {x: 29.5, y: 2.375}
+        - {x: 29.5, y: 29.375}
+      - - {x: 5.5, y: 26.375}
+        - {x: 3.5, y: 25.375}
+        - {x: 3.5, y: 21.375}
+        - {x: 6.5, y: 15.375}
+        - {x: 16.5, y: 15.375}
+        - {x: 19.5, y: 16.375}
+        - {x: 19.5, y: 22.375}
+        - {x: 14.5, y: 26.375}
+    - name: Gold_Poring_noBG_41
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 168.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4.5, y: 28.375}
+        - {x: -5.5, y: 29.375}
+        - {x: -29.5, y: 29.375}
+        - {x: -29.5, y: 1.375}
+        - {x: -24.5, y: -0.625}
+        - {x: -4.5, y: -0.625}
+        - {x: 10.5, y: 18.375}
+        - {x: 10.5, y: 28.375}
+        - {x: 9.5, y: 29.375}
+      - - {x: -12.5, y: 29.375}
+        - {x: -12.5, y: 28.375}
+        - {x: -9.5, y: 25.375}
+        - {x: -8.5, y: 25.375}
+        - {x: -5.5, y: 28.375}
+        - {x: -5.5, y: 29.375}
+    - name: Gold_Poring_noBG_42
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 168.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19.5, y: 13.375}
+        - {x: 10.5, y: 6.375}
+        - {x: 10.5, y: -8.625}
+        - {x: 14.5, y: -9.625}
+        - {x: 29.5, y: -9.625}
+        - {x: 29.5, y: 13.375}
+      - - {x: -19.5, y: 19.375}
+        - {x: -23.5, y: 17.375}
+        - {x: -23.5, y: 4.375}
+        - {x: -18.5, y: 2.375}
+        - {x: -8.5, y: 2.375}
+        - {x: -8.5, y: 14.375}
+        - {x: -10.5, y: 19.375}
+      - - {x: -7.5, y: 29.375}
+        - {x: -8.5, y: 28.375}
+        - {x: -8.5, y: 17.375}
+        - {x: -6.5, y: 15.375}
+        - {x: 1.5, y: 15.375}
+        - {x: 9.5, y: 17.375}
+        - {x: 13.5, y: 22.375}
+        - {x: 13.5, y: 29.375}
+    - name: Gold_Poring_noBG_43
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 168.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22.5, y: 11.375}
+        - {x: -29.5, y: 11.375}
+        - {x: -29.5, y: -8.625}
+        - {x: -25.5, y: -8.625}
+        - {x: -18.5, y: -5.625}
+        - {x: -17.5, y: -4.625}
+        - {x: -17.5, y: 7.375}
+    - name: Gold_Poring_noBG_44
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 168.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19.5, y: -3.625}
+        - {x: -10.5, y: -11.625}
+        - {x: 10.5, y: -11.625}
+        - {x: 15.5, y: -9.625}
+        - {x: 15.5, y: 5.375}
+        - {x: 13.5, y: 9.375}
+        - {x: -15.5, y: 9.375}
+        - {x: -19.5, y: 6.375}
+      - - {x: 17.5, y: 13.375}
+        - {x: 17.5, y: 7.375}
+        - {x: 18.5, y: 2.375}
+        - {x: 23.5, y: -0.625}
+        - {x: 29.5, y: -0.625}
+        - {x: 29.5, y: 19.375}
+        - {x: 24.5, y: 18.375}
+    - name: Gold_Poring_noBG_45
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 168.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11.5, y: 9.375}
+        - {x: -11.5, y: -5.625}
+        - {x: -9.5, y: -11.625}
+        - {x: 7.5, y: -11.625}
+        - {x: 10.5, y: -10.625}
+        - {x: 10.5, y: 4.375}
+        - {x: 7.5, y: 9.375}
+      - - {x: -29.5, y: 20.375}
+        - {x: -29.5, y: -0.625}
+        - {x: -22.5, y: -0.625}
+        - {x: -13.5, y: 3.375}
+        - {x: -13.5, y: 14.375}
+        - {x: -22.5, y: 20.375}
+    - name: Gold_Poring_noBG_46
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 168.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12.5, y: 23.375}
+        - {x: -12.5, y: 14.375}
+        - {x: -8.5, y: 11.375}
+        - {x: -1.5, y: 6.375}
+        - {x: 13.5, y: 6.375}
+        - {x: 22.5, y: 9.375}
+        - {x: 22.5, y: 24.375}
+        - {x: 21.5, y: 27.375}
+        - {x: -6.5, y: 27.375}
+      - - {x: 24.5, y: 29.375}
+        - {x: 24.5, y: 24.375}
+        - {x: 27.5, y: 19.375}
+        - {x: 29.5, y: 19.375}
+        - {x: 29.5, y: 29.375}
+    - name: Gold_Poring_noBG_47
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 168.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3.5, y: 28.375}
+        - {x: -4.5, y: 27.375}
+        - {x: -4.5, y: 17.375}
+        - {x: -2.5, y: 10.375}
+        - {x: -0.5, y: 6.375}
+        - {x: 11.5, y: 6.375}
+        - {x: 16.5, y: 7.375}
+        - {x: 16.5, y: 25.375}
+        - {x: 11.5, y: 28.375}
+      - - {x: -29.5, y: 29.375}
+        - {x: -29.5, y: 13.375}
+        - {x: -23.5, y: 9.375}
+        - {x: -12.5, y: 9.375}
+        - {x: -7.5, y: 11.375}
+        - {x: -6.5, y: 21.375}
+        - {x: -6.5, y: 29.375}
+    - name: Gold_Poring_noBG_48
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 168.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 26.5, y: -14.625}
+        - {x: -8.5, y: -14.625}
+        - {x: -9.5, y: -16.625}
+        - {x: -9.5, y: -27.625}
+        - {x: 27.5, y: -27.625}
+        - {x: 29.5, y: -26.625}
+        - {x: 29.5, y: -17.625}
+      - - {x: -12.5, y: 26.375}
+        - {x: -12.5, y: 20.375}
+        - {x: -4.5, y: 8.375}
+        - {x: -1.5, y: 7.375}
+        - {x: 5.5, y: 7.375}
+        - {x: 6.5, y: 8.375}
+        - {x: 6.5, y: 26.375}
+    - name: Gold_Poring_noBG_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 112.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6.5, y: -5.625}
+        - {x: -13.5, y: -12.625}
+        - {x: -14.5, y: -20.625}
+        - {x: -14.5, y: -27.625}
+        - {x: 26.5, y: -27.625}
+        - {x: 26.5, y: -17.625}
+        - {x: 22.5, y: -5.625}
+      - - {x: 18.5, y: -0.625}
+        - {x: 16.5, y: -3.625}
+        - {x: 16.5, y: -7.625}
+        - {x: 18.5, y: -8.625}
+        - {x: 23.5, y: -8.625}
+        - {x: 24.5, y: -6.625}
+        - {x: 24.5, y: -1.625}
+        - {x: 21.5, y: -0.625}
+    - name: Gold_Poring_noBG_50
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 112.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -0.5, y: -2.625}
+        - {x: -13.5, y: -18.625}
+        - {x: -13.5, y: -27.625}
+        - {x: 27.5, y: -27.625}
+        - {x: 28.5, y: -26.625}
+        - {x: 28.5, y: -2.625}
+    - name: Gold_Poring_noBG_51
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 112.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3.5, y: -27.625}
+        - {x: 14.5, y: -27.625}
+        - {x: 13.5, y: -23.625}
+        - {x: 7.5, y: -22.625}
+        - {x: 2.5, y: -22.625}
+        - {x: 1.5, y: -25.625}
+      - - {x: 16.5, y: 0.375}
+        - {x: 9.5, y: -9.625}
+        - {x: 9.5, y: -17.625}
+        - {x: 12.5, y: -21.625}
+        - {x: 17.5, y: -25.625}
+        - {x: 22.5, y: -25.625}
+        - {x: 29.5, y: -22.625}
+        - {x: 29.5, y: -7.625}
+        - {x: 24.5, y: 0.375}
+    - name: Gold_Poring_noBG_52
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 112.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17.5, y: -2.625}
+        - {x: -25.5, y: -6.625}
+        - {x: -25.5, y: -27.625}
+        - {x: -12.5, y: -27.625}
+        - {x: -4.5, y: -22.625}
+        - {x: 0.5, y: -10.625}
+        - {x: 0.5, y: -2.625}
+      - - {x: 7.5, y: -27.625}
+        - {x: 6.5, y: -24.625}
+        - {x: 0.5, y: -24.625}
+        - {x: -0.5, y: -27.625}
+      - - {x: -29.5, y: -19.625}
+        - {x: -26.5, y: -18.625}
+        - {x: -26.5, y: -15.625}
+        - {x: -28.5, y: -13.625}
+        - {x: -29.5, y: -13.625}
+    - name: Gold_Poring_noBG_53
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 112.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 21.5, y: -16.625}
+        - {x: 21.5, y: -27.625}
+        - {x: 29.5, y: -27.625}
+        - {x: 29.5, y: -13.625}
+        - {x: 25.5, y: -13.625}
+      - - {x: -20.5, y: 0.375}
+        - {x: -25.5, y: -4.625}
+        - {x: -25.5, y: -20.625}
+        - {x: -22.5, y: -21.625}
+        - {x: -7.5, y: -21.625}
+        - {x: -4.5, y: -13.625}
+        - {x: -4.5, y: -2.625}
+        - {x: -5.5, y: 0.375}
+      - - {x: 12.5, y: 8.375}
+        - {x: 10.5, y: 7.375}
+        - {x: 10.5, y: -7.625}
+        - {x: 11.5, y: -13.625}
+        - {x: 13.5, y: -15.625}
+        - {x: 17.5, y: -15.625}
+        - {x: 21.5, y: -13.625}
+        - {x: 22.5, y: -11.625}
+        - {x: 22.5, y: 8.375}
+    - name: Gold_Poring_noBG_54
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 112.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: -12.625}
+        - {x: -29.5, y: -12.625}
+        - {x: -29.5, y: -27.625}
+        - {x: -16.5, y: -27.625}
+        - {x: -15.5, y: -26.625}
+        - {x: -15.5, y: -17.625}
+    - name: Gold_Poring_noBG_55
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 112.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24.5, y: 9.375}
+        - {x: 19.5, y: 7.375}
+        - {x: 18.5, y: -3.625}
+        - {x: 18.5, y: -9.625}
+        - {x: 21.5, y: -17.625}
+        - {x: 26.5, y: -17.625}
+        - {x: 29.5, y: -16.625}
+        - {x: 29.5, y: 6.375}
+        - {x: 28.5, y: 9.375}
+    - name: Gold_Poring_noBG_56
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 112.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3.5, y: -22.625}
+        - {x: -5.5, y: -24.625}
+        - {x: -5.5, y: -27.625}
+        - {x: 12.5, y: -27.625}
+        - {x: 12.5, y: -24.625}
+        - {x: 7.5, y: -22.625}
+      - - {x: 14.5, y: -20.625}
+        - {x: 14.5, y: -27.625}
+        - {x: 29.5, y: -27.625}
+        - {x: 29.5, y: -12.625}
+        - {x: 25.5, y: -12.625}
+        - {x: 16.5, y: -14.625}
+    - name: Gold_Poring_noBG_57
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 112.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29.5, y: -12.625}
+        - {x: -29.5, y: -27.625}
+        - {x: -17.5, y: -27.625}
+        - {x: -16.5, y: -25.625}
+        - {x: -16.5, y: -18.625}
+        - {x: -23.5, y: -14.625}
+      - - {x: -12.5, y: -26.625}
+        - {x: -12.5, y: -27.625}
+        - {x: 3.5, y: -27.625}
+        - {x: 3.5, y: -26.625}
+        - {x: 0.5, y: -23.625}
+        - {x: -11.5, y: -23.625}
+      - - {x: 8.5, y: -26.625}
+        - {x: 8.5, y: -27.625}
+        - {x: 17.5, y: -27.625}
+        - {x: 17.5, y: -26.625}
+        - {x: 14.5, y: -23.625}
+        - {x: 11.5, y: -23.625}
+    - name: Gold_Poring_noBG_58
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 112.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 1.5, y: 2.375}
+        - {x: -8.5, y: -10.625}
+        - {x: -8.5, y: -13.625}
+        - {x: -5.5, y: -16.625}
+        - {x: 7.5, y: -16.625}
+        - {x: 10.5, y: -15.625}
+        - {x: 10.5, y: 2.375}
+      - - {x: -9.5, y: 29.375}
+        - {x: -9.5, y: 15.375}
+        - {x: 27.5, y: 15.375}
+        - {x: 27.5, y: 29.375}
+    - name: Gold_Poring_noBG_59
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 56.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.5, y: 29.375}
+        - {x: -14.5, y: 25.375}
+        - {x: -9.5, y: 17.375}
+        - {x: 0.5, y: 15.375}
+        - {x: 17.5, y: 15.375}
+        - {x: 25.5, y: 21.375}
+        - {x: 26.5, y: 27.375}
+        - {x: 26.5, y: 29.375}
+    - name: Gold_Poring_noBG_60
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 56.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13.5, y: 29.375}
+        - {x: -13.5, y: 25.375}
+        - {x: -5.5, y: 18.375}
+        - {x: 17.5, y: 18.375}
+        - {x: 26.5, y: 25.375}
+        - {x: 26.5, y: 29.375}
+    - name: Gold_Poring_noBG_61
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 56.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3.5, y: 29.375}
+        - {x: 3.5, y: 28.375}
+        - {x: 6.5, y: 19.375}
+        - {x: 16.5, y: 4.375}
+        - {x: 29.5, y: 4.375}
+        - {x: 29.5, y: 29.375}
+    - name: Gold_Poring_noBG_62
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 56.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13.5, y: 29.375}
+        - {x: -25.5, y: 29.375}
+        - {x: -29.5, y: 25.375}
+        - {x: -29.5, y: 5.375}
+        - {x: -17.5, y: 5.375}
+        - {x: -10.5, y: 11.375}
+        - {x: -10.5, y: 23.375}
+      - - {x: -7.5, y: 21.375}
+        - {x: -6.5, y: 20.375}
+        - {x: 2.5, y: 20.375}
+        - {x: 8.5, y: 23.375}
+        - {x: 8.5, y: 29.375}
+        - {x: -3.5, y: 29.375}
+        - {x: -7.5, y: 26.375}
+    - name: Gold_Poring_noBG_63
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 56.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0.5, y: 20.375}
+        - {x: -6.5, y: 15.375}
+        - {x: -6.5, y: -2.625}
+        - {x: 22.5, y: -2.625}
+        - {x: 24.5, y: 2.375}
+        - {x: 24.5, y: 14.375}
+        - {x: 14.5, y: 20.375}
+      - - {x: 22.5, y: 29.375}
+        - {x: 22.5, y: 28.375}
+        - {x: 26.5, y: 25.375}
+        - {x: 29.5, y: 25.375}
+        - {x: 29.5, y: 29.375}
+    - name: Gold_Poring_noBG_64
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 56.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13.5, y: 26.375}
+        - {x: -15.5, y: 24.375}
+        - {x: -15.5, y: 14.375}
+        - {x: -14.5, y: 9.375}
+        - {x: -4.5, y: 9.375}
+        - {x: -0.5, y: 11.375}
+        - {x: -0.5, y: 24.375}
+        - {x: -6.5, y: 26.375}
+      - - {x: -29.5, y: 29.375}
+        - {x: -29.5, y: 23.375}
+        - {x: -23.5, y: 22.375}
+        - {x: -18.5, y: 22.375}
+        - {x: -16.5, y: 25.375}
+        - {x: -16.5, y: 29.375}
+    - name: Gold_Poring_noBG_65
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 56.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -1.5, y: 17.375}
+        - {x: -17.5, y: 17.375}
+        - {x: -19.5, y: 11.375}
+        - {x: -19.5, y: -3.625}
+        - {x: -2.5, y: -3.625}
+        - {x: 2.5, y: -1.625}
+        - {x: 2.5, y: 14.375}
+        - {x: 0.5, y: 16.375}
+      - - {x: 16.5, y: 28.375}
+        - {x: 7.5, y: 25.375}
+        - {x: 4.5, y: 20.375}
+        - {x: 4.5, y: 8.375}
+        - {x: 12.5, y: 7.375}
+        - {x: 28.5, y: 7.375}
+        - {x: 29.5, y: 9.375}
+        - {x: 29.5, y: 23.375}
+        - {x: 23.5, y: 28.375}
+    - name: Gold_Poring_noBG_66
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 56.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: 17.375}
+        - {x: -24.5, y: 13.375}
+        - {x: -24.5, y: 1.375}
+        - {x: -18.5, y: -3.625}
+        - {x: 0.5, y: -3.625}
+        - {x: 10.5, y: -2.625}
+        - {x: 10.5, y: 17.375}
+      - - {x: -29.5, y: 13.375}
+        - {x: -26.5, y: 14.375}
+        - {x: -26.5, y: 19.375}
+        - {x: -28.5, y: 21.375}
+        - {x: -29.5, y: 21.375}
+    - name: Gold_Poring_noBG_67
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 56.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8.5, y: 29.375}
+        - {x: -8.5, y: 14.375}
+        - {x: -6.5, y: 11.375}
+        - {x: 6.5, y: 11.375}
+        - {x: 11.5, y: 18.375}
+        - {x: 12.5, y: 25.375}
+        - {x: 12.5, y: 29.375}
+      - - {x: 14.5, y: 29.375}
+        - {x: 14.5, y: 19.375}
+        - {x: 15.5, y: 15.375}
+        - {x: 20.5, y: 14.375}
+        - {x: 27.5, y: 14.375}
+        - {x: 29.5, y: 15.375}
+        - {x: 29.5, y: 29.375}
+    - name: Gold_Poring_noBG_68
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 56.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.5, y: 29.375}
+        - {x: -14.5, y: 15.375}
+        - {x: -5.5, y: 11.375}
+        - {x: 11.5, y: 11.375}
+        - {x: 20.5, y: 16.375}
+        - {x: 20.5, y: 29.375}
+      - - {x: -29.5, y: 29.375}
+        - {x: -29.5, y: 16.375}
+        - {x: -22.5, y: 16.375}
+        - {x: -18.5, y: 22.375}
+        - {x: -18.5, y: 29.375}
+    - name: Gold_Poring_noBG_69
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -0.5, y: 3.375}
+        - {x: -12.5, y: 3.375}
+        - {x: -21.5, y: -1.625}
+        - {x: -21.5, y: -12.625}
+        - {x: -20.5, y: -14.625}
+        - {x: -15.5, y: -17.625}
+        - {x: -4.5, y: -17.625}
+        - {x: 2.5, y: -15.625}
+        - {x: 6.5, y: -12.625}
+        - {x: 6.5, y: -4.625}
+      - - {x: 26.5, y: 9.375}
+        - {x: 25.5, y: 5.375}
+        - {x: 25.5, y: -8.625}
+        - {x: 28.5, y: -9.625}
+        - {x: 29.5, y: -9.625}
+        - {x: 29.5, y: 9.375}
+    - name: Gold_Poring_noBG_70
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 0.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 1.5, y: 3.375}
+        - {x: -2.5, y: 0.375}
+        - {x: -2.5, y: -14.625}
+        - {x: 3.5, y: -17.625}
+        - {x: 19.5, y: -17.625}
+        - {x: 19.5, y: -2.625}
+        - {x: 17.5, y: 3.375}
+      - - {x: -27.5, y: 11.375}
+        - {x: -29.5, y: 11.375}
+        - {x: -29.5, y: -15.625}
+        - {x: -25.5, y: -15.625}
+        - {x: -22.5, y: -13.625}
+        - {x: -21.5, y: -11.625}
+        - {x: -21.5, y: -0.625}
+        - {x: -23.5, y: 9.375}
+    - name: Gold_Poring_noBG_71
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 0.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17.5, y: 4.375}
+        - {x: -21.5, y: -4.625}
+        - {x: -21.5, y: -12.625}
+        - {x: -18.5, y: -16.625}
+        - {x: -0.5, y: -16.625}
+        - {x: 1.5, y: -9.625}
+        - {x: 1.5, y: 1.375}
+        - {x: -6.5, y: 4.375}
+      - - {x: 21.5, y: 2.375}
+        - {x: 15.5, y: 0.375}
+        - {x: 15.5, y: -9.625}
+        - {x: 17.5, y: -13.625}
+        - {x: 26.5, y: -13.625}
+        - {x: 29.5, y: -9.625}
+        - {x: 29.5, y: -2.625}
+        - {x: 26.5, y: 2.375}
+    - name: Gold_Poring_noBG_72
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 0.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18.5, y: 1.375}
+        - {x: -18.5, y: -8.625}
+        - {x: -17.5, y: -11.625}
+        - {x: 29.5, y: -11.625}
+        - {x: 29.5, y: 1.375}
+    - name: Gold_Poring_noBG_73
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 0.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29.5, y: -1.625}
+        - {x: -29.5, y: -10.625}
+        - {x: -27.5, y: -11.625}
+        - {x: -21.5, y: -11.625}
+        - {x: -20.5, y: -9.625}
+        - {x: -20.5, y: -1.625}
+    - name: Gold_Poring_noBG_74
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 0.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12.5, y: 27.375}
+        - {x: 12.5, y: -27.625}
+        - {x: 17.5, y: -27.625}
+        - {x: 29.5, y: 21.375}
+        - {x: 29.5, y: 29.375}
+        - {x: 14.5, y: 29.375}
+      - - {x: 25.5, y: 22.375}
+        - {x: 21.5, y: 21.375}
+        - {x: 21.5, y: -19.625}
+        - {x: 29.5, y: -19.625}
+        - {x: 29.5, y: 22.375}
+    - name: Gold_Poring_noBG_75
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 0.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29.5, y: 22.375}
+        - {x: -29.5, y: -18.625}
+        - {x: -27.5, y: -22.625}
+        - {x: 20.5, y: -22.625}
+        - {x: 29.5, y: -20.625}
+        - {x: 29.5, y: 22.375}
+      - - {x: -29.5, y: 24.375}
+        - {x: 29.5, y: 24.375}
+        - {x: 29.5, y: 29.375}
+        - {x: -29.5, y: 29.375}
+    - name: Gold_Poring_noBG_76
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 0.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 9.5, y: 0.375}
+        - {x: 26.5, y: 0.375}
+        - {x: 29.5, y: 5.375}
+        - {x: 29.5, y: 11.375}
+        - {x: 19.5, y: 13.375}
+        - {x: -27.5, y: 13.375}
+        - {x: -29.5, y: 9.375}
+        - {x: -29.5, y: -21.625}
+        - {x: -28.5, y: -22.625}
+        - {x: 28.5, y: -22.625}
+        - {x: 29.5, y: -21.625}
+        - {x: 29.5, y: -0.625}
+        - {x: 25.5, y: 0.375}
+      - - {x: -26.5, y: 6.375}
+        - {x: -26.5, y: 9.375}
+        - {x: -29.5, y: 10.375}
+        - {x: -29.5, y: 5.375}
+      - - {x: -29.5, y: 24.375}
+        - {x: 29.5, y: 24.375}
+        - {x: 29.5, y: 29.375}
+        - {x: -29.5, y: 29.375}
+    - name: Gold_Poring_noBG_77
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 0.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 16.5, y: -12.625}
+        - {x: 16.5, y: -14.625}
+        - {x: 16.5, y: -11.625}
+        - {x: 5.5, y: 2.375}
+        - {x: -29.5, y: 2.375}
+        - {x: -29.5, y: -9.625}
+        - {x: -26.5, y: -9.625}
+        - {x: -29.5, y: -9.625}
+        - {x: -29.5, y: -19.625}
+        - {x: -26.5, y: -22.625}
+        - {x: 19.5, y: -22.625}
+        - {x: 29.5, y: -21.625}
+        - {x: 29.5, y: -7.625}
+        - {x: 18.5, y: -8.625}
+      - - {x: -29.5, y: 24.375}
+        - {x: 29.5, y: 24.375}
+        - {x: 29.5, y: 29.375}
+        - {x: -29.5, y: 29.375}
+    - name: Gold_Poring_noBG_78
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 0.875
+        width: 59
+        height: 56.125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25.5, y: -6.625}
+        - {x: -28.5, y: -8.625}
+        - {x: -29.5, y: -15.625}
+        - {x: -29.5, y: -19.625}
+        - {x: -13.5, y: -19.625}
+        - {x: -13.5, y: -10.625}
+        - {x: -22.5, y: -6.625}
+      - - {x: -29.5, y: 24.375}
+        - {x: 29.5, y: 24.375}
+        - {x: 29.5, y: 29.375}
+        - {x: -29.5, y: 29.375}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

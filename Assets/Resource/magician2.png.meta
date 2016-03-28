@@ -1,0 +1,1445 @@
+fileFormatVersion: 2
+guid: 0e374b3e0b9ea9e46ad6b34c3f91b7a9
+timeCreated: 1459106909
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: magician2_0
+    21300002: magician2_1
+    21300004: magician2_2
+    21300006: magician2_3
+    21300008: magician2_4
+    21300010: magician2_5
+    21300012: magician2_6
+    21300014: magician2_7
+    21300016: magician2_8
+    21300018: magician2_9
+    21300020: magician2_10
+    21300022: magician2_11
+    21300024: magician2_12
+    21300026: magician2_13
+    21300028: magician2_14
+    21300030: magician2_15
+    21300032: magician2_16
+    21300034: magician2_17
+    21300036: magician2_18
+    21300038: magician2_19
+    21300040: magician2_20
+    21300042: magician2_21
+    21300044: magician2_22
+    21300046: magician2_23
+    21300048: magician2_24
+    21300050: magician2_25
+    21300052: magician2_26
+    21300054: magician2_27
+    21300056: magician2_28
+    21300058: magician2_29
+    21300060: magician2_30
+    21300062: magician2_31
+    21300064: magician2_32
+    21300066: magician2_33
+    21300068: magician2_34
+    21300070: magician2_35
+    21300072: magician2_36
+    21300074: magician2_37
+    21300076: magician2_38
+    21300078: magician2_39
+    21300080: magician2_40
+    21300082: magician2_41
+    21300084: magician2_42
+    21300086: magician2_43
+    21300088: magician2_44
+    21300090: magician2_45
+    21300092: magician2_46
+    21300094: magician2_47
+    21300096: magician2_48
+    21300098: magician2_49
+    21300100: magician2_50
+    21300102: magician2_51
+    21300104: magician2_52
+    21300106: magician2_53
+    21300108: magician2_54
+    21300110: magician2_55
+    21300112: magician2_56
+    21300114: magician2_57
+    21300116: magician2_58
+    21300118: magician2_59
+    21300120: magician2_60
+    21300122: magician2_61
+    21300124: magician2_62
+    21300126: magician2_63
+    21300128: magician2_64
+    21300130: magician2_65
+    21300132: magician2_66
+    21300134: magician2_67
+    21300136: magician2_68
+    21300138: magician2_69
+    21300140: magician2_70
+    21300142: magician2_71
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 20
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: magician2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 16}
+        - {x: -14, y: 12}
+        - {x: -14, y: -13}
+        - {x: -8, y: -16}
+        - {x: 14, y: -16}
+        - {x: 14, y: 15}
+        - {x: 11, y: 16}
+    - name: magician2_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 16}
+        - {x: -14, y: -16}
+        - {x: 11, y: -16}
+        - {x: 14, y: -15}
+        - {x: 14, y: 16}
+    - name: magician2_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: 16}
+        - {x: -14, y: 16}
+        - {x: -14, y: -13}
+        - {x: -10, y: -16}
+        - {x: 5, y: -16}
+        - {x: 9, y: -15}
+        - {x: 14, y: -11}
+        - {x: 14, y: 15}
+    - name: magician2_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8, y: 16}
+        - {x: -8, y: 16}
+        - {x: -12, y: 14}
+        - {x: -12, y: -16}
+        - {x: 13, y: -16}
+        - {x: 13, y: 12}
+    - name: magician2_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 16}
+        - {x: -13, y: 10}
+        - {x: -12, y: 4}
+        - {x: -13, y: -2}
+        - {x: -13, y: -15}
+        - {x: -12, y: -16}
+        - {x: 14, y: -16}
+        - {x: 14, y: 16}
+    - name: magician2_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 16}
+        - {x: -12, y: -16}
+        - {x: 13, y: -16}
+        - {x: 13, y: 16}
+    - name: magician2_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 16}
+        - {x: -13, y: -15}
+        - {x: -12, y: -16}
+        - {x: 12, y: -16}
+        - {x: 14, y: -11}
+        - {x: 14, y: 15}
+        - {x: 10, y: 16}
+    - name: magician2_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 16}
+        - {x: -13, y: 10}
+        - {x: -13, y: -16}
+        - {x: 14, y: -16}
+        - {x: 14, y: 13}
+        - {x: 10, y: 16}
+    - name: magician2_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 16}
+        - {x: -13, y: 15}
+        - {x: -13, y: -16}
+        - {x: 14, y: -16}
+        - {x: 14, y: 15}
+        - {x: 10, y: 16}
+    - name: magician2_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 9, y: 16}
+        - {x: -10, y: 16}
+        - {x: -13, y: 9}
+        - {x: -13, y: -14}
+        - {x: -8, y: -16}
+        - {x: 10, y: -16}
+        - {x: 14, y: -11}
+        - {x: 14, y: 11}
+    - name: magician2_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 16}
+        - {x: -13, y: 14}
+        - {x: -13, y: -13}
+        - {x: -9, y: -16}
+        - {x: 8, y: -16}
+        - {x: 14, y: -12}
+        - {x: 14, y: 11}
+        - {x: 10, y: 16}
+    - name: magician2_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 16}
+        - {x: -13, y: 13}
+        - {x: -13, y: -10}
+        - {x: -10, y: -16}
+        - {x: 12, y: -16}
+        - {x: 14, y: -9}
+        - {x: 14, y: 13}
+        - {x: 10, y: 16}
+    - name: magician2_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 16}
+        - {x: -14, y: 12}
+        - {x: -14, y: 6}
+        - {x: -10, y: -16}
+        - {x: 11, y: -16}
+        - {x: 12, y: -15}
+        - {x: 12, y: 12}
+        - {x: 10, y: 16}
+    - name: magician2_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 16}
+        - {x: -14, y: 12}
+        - {x: -13, y: 3}
+        - {x: -7, y: -16}
+        - {x: 9, y: -16}
+        - {x: 12, y: -7}
+        - {x: 12, y: 16}
+    - name: magician2_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 16}
+        - {x: -14, y: -7}
+        - {x: -10, y: -16}
+        - {x: 9, y: -16}
+        - {x: 12, y: 2}
+        - {x: 12, y: 13}
+        - {x: 10, y: 16}
+    - name: magician2_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 16}
+        - {x: -13, y: 15}
+        - {x: -13, y: 1}
+        - {x: -10, y: -16}
+        - {x: 11, y: -16}
+        - {x: 12, y: -15}
+        - {x: 12, y: 10}
+        - {x: 10, y: 16}
+    - name: magician2_16
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 16}
+        - {x: -13, y: -7}
+        - {x: -9, y: -16}
+        - {x: 11, y: -16}
+        - {x: 12, y: -9}
+        - {x: 12, y: 16}
+    - name: magician2_17
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 16}
+        - {x: -13, y: 10}
+        - {x: -13, y: -1}
+        - {x: -10, y: -16}
+        - {x: 9, y: -16}
+        - {x: 12, y: -13}
+        - {x: 12, y: 16}
+    - name: magician2_18
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12, y: 15}
+        - {x: 8, y: 16}
+        - {x: -10, y: 16}
+        - {x: -13, y: 14}
+        - {x: -13, y: -4}
+        - {x: -12, y: -16}
+        - {x: 10, y: -16}
+        - {x: 12, y: -6}
+    - name: magician2_19
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 16}
+        - {x: -13, y: 14}
+        - {x: -13, y: -6}
+        - {x: -11, y: -13}
+        - {x: -7, y: -16}
+        - {x: 10, y: -16}
+        - {x: 12, y: -4}
+        - {x: 12, y: 16}
+    - name: magician2_20
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 16}
+        - {x: -13, y: 11}
+        - {x: -13, y: 0}
+        - {x: -10, y: -16}
+        - {x: 10, y: -16}
+        - {x: 12, y: -8}
+        - {x: 12, y: 16}
+    - name: magician2_21
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 16}
+        - {x: -13, y: 14}
+        - {x: -13, y: -4}
+        - {x: -11, y: -16}
+        - {x: 11, y: -16}
+        - {x: 11, y: 16}
+    - name: magician2_22
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: 16}
+        - {x: -8, y: 16}
+        - {x: -13, y: 14}
+        - {x: -13, y: 0}
+        - {x: -7, y: -16}
+        - {x: 5, y: -16}
+        - {x: 8, y: -14}
+        - {x: 11, y: 2}
+        - {x: 11, y: 14}
+    - name: magician2_23
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: -9}
+        - {x: -12, y: -16}
+        - {x: 7, y: -16}
+        - {x: 11, y: -12}
+        - {x: 11, y: 16}
+        - {x: -13, y: 16}
+    - name: magician2_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11, y: 16}
+        - {x: -8, y: 16}
+        - {x: -12, y: 13}
+        - {x: -12, y: -16}
+        - {x: 9, y: -16}
+        - {x: 14, y: 1}
+        - {x: 14, y: 15}
+    - name: magician2_25
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 16}
+        - {x: -12, y: 15}
+        - {x: -12, y: -4}
+        - {x: -10, y: -16}
+        - {x: 7, y: -16}
+        - {x: 14, y: 1}
+        - {x: 14, y: 16}
+    - name: magician2_26
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 16}
+        - {x: -12, y: 14}
+        - {x: -12, y: -16}
+        - {x: 10, y: -16}
+        - {x: 14, y: -3}
+        - {x: 14, y: 15}
+        - {x: 11, y: 16}
+    - name: magician2_27
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 16}
+        - {x: -12, y: -16}
+        - {x: 10, y: -16}
+        - {x: 13, y: -1}
+        - {x: 13, y: 11}
+        - {x: 10, y: 16}
+    - name: magician2_28
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 16}
+        - {x: -12, y: -16}
+        - {x: 7, y: -16}
+        - {x: 13, y: -2}
+        - {x: 13, y: 15}
+        - {x: 10, y: 16}
+    - name: magician2_29
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 16}
+        - {x: -12, y: 14}
+        - {x: -12, y: -13}
+        - {x: -9, y: -16}
+        - {x: 11, y: -16}
+        - {x: 13, y: -11}
+        - {x: 13, y: 11}
+        - {x: 10, y: 16}
+    - name: magician2_30
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 16}
+        - {x: -12, y: 15}
+        - {x: -12, y: -9}
+        - {x: -11, y: -16}
+        - {x: 9, y: -16}
+        - {x: 12, y: -9}
+        - {x: 12, y: 16}
+    - name: magician2_31
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12, y: 16}
+        - {x: -12, y: 16}
+        - {x: -12, y: -16}
+        - {x: 6, y: -16}
+        - {x: 9, y: -12}
+        - {x: 12, y: -1}
+    - name: magician2_32
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 16}
+        - {x: -12, y: 12}
+        - {x: -12, y: -7}
+        - {x: -10, y: -16}
+        - {x: 11, y: -16}
+        - {x: 12, y: -11}
+        - {x: 12, y: 14}
+        - {x: 8, y: 16}
+    - name: magician2_33
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7, y: 16}
+        - {x: -11, y: 16}
+        - {x: -11, y: -16}
+        - {x: 9, y: -16}
+        - {x: 13, y: -5}
+        - {x: 13, y: 11}
+    - name: magician2_34
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 16}
+        - {x: -11, y: 13}
+        - {x: -11, y: -3}
+        - {x: -6, y: -16}
+        - {x: 7, y: -16}
+        - {x: 13, y: -2}
+        - {x: 13, y: 13}
+        - {x: 8, y: 16}
+    - name: magician2_35
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 16}
+        - {x: -11, y: -8}
+        - {x: -8, y: -16}
+        - {x: 12, y: -16}
+        - {x: 13, y: -9}
+        - {x: 13, y: 15}
+        - {x: 11, y: 16}
+    - name: magician2_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 16}
+        - {x: -13, y: 16}
+        - {x: -13, y: -16}
+        - {x: 10, y: -16}
+        - {x: 13, y: -11}
+        - {x: 13, y: -8}
+        - {x: 15, y: 8}
+    - name: magician2_37
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: -16}
+        - {x: 10, y: -16}
+        - {x: 15, y: -15}
+        - {x: 15, y: 13}
+        - {x: 14, y: 16}
+        - {x: -13, y: 16}
+        - {x: -13, y: -13}
+    - name: magician2_38
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 16}
+        - {x: -13, y: -12}
+        - {x: -5, y: -16}
+        - {x: 8, y: -16}
+        - {x: 15, y: -13}
+        - {x: 15, y: 16}
+    - name: magician2_39
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8, y: 16}
+        - {x: -8, y: 16}
+        - {x: -12, y: 11}
+        - {x: -12, y: -16}
+        - {x: 9, y: -16}
+        - {x: 13, y: -12}
+        - {x: 13, y: 12}
+    - name: magician2_40
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 16}
+        - {x: -13, y: 12}
+        - {x: -13, y: -16}
+        - {x: 12, y: -16}
+        - {x: 14, y: -12}
+        - {x: 14, y: 15}
+        - {x: 11, y: 16}
+    - name: magician2_41
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8, y: 16}
+        - {x: -9, y: 16}
+        - {x: -12, y: 15}
+        - {x: -12, y: -14}
+        - {x: -11, y: -16}
+        - {x: 13, y: -16}
+        - {x: 13, y: 11}
+    - name: magician2_42
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 16}
+        - {x: -13, y: 15}
+        - {x: -13, y: -16}
+        - {x: 14, y: -16}
+        - {x: 14, y: 16}
+    - name: magician2_43
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 16}
+        - {x: -13, y: 10}
+        - {x: -13, y: -16}
+        - {x: 14, y: -16}
+        - {x: 14, y: 15}
+        - {x: 11, y: 16}
+    - name: magician2_44
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 16}
+        - {x: -13, y: 13}
+        - {x: -13, y: -13}
+        - {x: -10, y: -16}
+        - {x: 14, y: -16}
+        - {x: 14, y: 14}
+        - {x: 10, y: 16}
+    - name: magician2_45
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 16}
+        - {x: -12, y: 13}
+        - {x: -12, y: -12}
+        - {x: -6, y: -16}
+        - {x: 9, y: -16}
+        - {x: 13, y: -13}
+        - {x: 13, y: 14}
+        - {x: 9, y: 16}
+    - name: magician2_46
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8, y: 16}
+        - {x: -8, y: 16}
+        - {x: -13, y: 12}
+        - {x: -13, y: -13}
+        - {x: -8, y: -16}
+        - {x: 9, y: -16}
+        - {x: 14, y: -11}
+        - {x: 14, y: -2}
+        - {x: 13, y: 10}
+    - name: magician2_47
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 16}
+        - {x: -12, y: 14}
+        - {x: -12, y: -16}
+        - {x: 7, y: -16}
+        - {x: 13, y: -13}
+        - {x: 13, y: 9}
+        - {x: 10, y: 16}
+    - name: magician2_48
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 15}
+        - {x: -15, y: -16}
+        - {x: 12, y: -16}
+        - {x: 13, y: -15}
+        - {x: 13, y: 13}
+        - {x: 5, y: 15}
+    - name: magician2_49
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 16}
+        - {x: -12, y: 11}
+        - {x: -12, y: -7}
+        - {x: -11, y: -16}
+        - {x: 14, y: -16}
+        - {x: 15, y: -14}
+        - {x: 15, y: 7}
+        - {x: 9, y: 16}
+    - name: magician2_50
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 16}
+        - {x: -15, y: 5}
+        - {x: -15, y: -16}
+        - {x: 13, y: -16}
+        - {x: 16, y: -13}
+        - {x: 16, y: 7}
+        - {x: 7, y: 16}
+    - name: magician2_51
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 16}
+        - {x: -16, y: 0}
+        - {x: -14, y: -6}
+        - {x: -8, y: -16}
+        - {x: 14, y: -16}
+        - {x: 16, y: -12}
+        - {x: 16, y: 14}
+        - {x: 15, y: 16}
+    - name: magician2_52
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 16}
+        - {x: -14, y: 13}
+        - {x: -14, y: 2}
+        - {x: -11, y: -13}
+        - {x: -10, y: -16}
+        - {x: 14, y: -16}
+        - {x: 14, y: 16}
+    - name: magician2_53
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 11}
+        - {x: 12, y: 13}
+        - {x: 8, y: 16}
+        - {x: -8, y: 16}
+        - {x: -12, y: 11}
+        - {x: -12, y: -16}
+        - {x: 12, y: -16}
+        - {x: 13, y: -14}
+    - name: magician2_54
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 16}
+        - {x: -13, y: 10}
+        - {x: -13, y: -16}
+        - {x: 14, y: -16}
+        - {x: 14, y: 13}
+        - {x: 10, y: 16}
+    - name: magician2_55
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 16}
+        - {x: -13, y: 10}
+        - {x: -13, y: -16}
+        - {x: 14, y: -16}
+        - {x: 14, y: 13}
+        - {x: 10, y: 16}
+    - name: magician2_56
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 16}
+        - {x: -13, y: 10}
+        - {x: -13, y: -16}
+        - {x: 14, y: -16}
+        - {x: 14, y: 13}
+        - {x: 10, y: 16}
+    - name: magician2_57
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 16}
+        - {x: -16, y: 7}
+        - {x: -16, y: -12}
+        - {x: -10, y: -16}
+        - {x: 11, y: -16}
+        - {x: 16, y: -13}
+        - {x: 16, y: 10}
+        - {x: 13, y: 16}
+    - name: magician2_58
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 16}
+        - {x: -14, y: 13}
+        - {x: -14, y: 2}
+        - {x: -11, y: -13}
+        - {x: -10, y: -16}
+        - {x: 14, y: -16}
+        - {x: 14, y: 16}
+    - name: magician2_59
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4, y: 14}
+        - {x: -11, y: 6}
+        - {x: -11, y: -16}
+        - {x: 15, y: -16}
+        - {x: 16, y: -12}
+        - {x: 16, y: 14}
+      - - {x: -14, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: 8}
+        - {x: -15, y: 7}
+        - {x: -10, y: 7}
+        - {x: -7, y: 11}
+        - {x: -8, y: 14}
+        - {x: -9, y: 15}
+    - name: magician2_60
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 15}
+        - {x: -16, y: -6}
+        - {x: -13, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 15}
+    - name: magician2_61
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4, y: 14}
+        - {x: -11, y: 6}
+        - {x: -11, y: -16}
+        - {x: 15, y: -16}
+        - {x: 16, y: -12}
+        - {x: 16, y: 14}
+      - - {x: -14, y: 15}
+        - {x: -16, y: 14}
+        - {x: -16, y: 8}
+        - {x: -15, y: 7}
+        - {x: -10, y: 7}
+        - {x: -7, y: 11}
+        - {x: -8, y: 14}
+        - {x: -9, y: 15}
+    - name: magician2_62
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 14}
+        - {x: -13, y: 8}
+        - {x: -13, y: -16}
+        - {x: 14, y: -16}
+        - {x: 16, y: -11}
+        - {x: 16, y: 14}
+      - - {x: -16, y: 15}
+        - {x: -16, y: 7}
+        - {x: -13, y: 7}
+        - {x: -8, y: 11}
+        - {x: -9, y: 14}
+        - {x: -12, y: 15}
+    - name: magician2_63
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: 10}
+        - {x: 7, y: 13}
+        - {x: 4, y: 14}
+        - {x: -4, y: 14}
+        - {x: -12, y: 10}
+        - {x: -13, y: 6}
+        - {x: -13, y: -11}
+        - {x: -10, y: -16}
+        - {x: 13, y: -16}
+        - {x: 13, y: 0}
+        - {x: 11, y: 7}
+    - name: magician2_64
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 14}
+        - {x: -13, y: 8}
+        - {x: -13, y: -16}
+        - {x: 14, y: -16}
+        - {x: 16, y: -11}
+        - {x: 16, y: 14}
+      - - {x: -16, y: 15}
+        - {x: -16, y: 7}
+        - {x: -13, y: 7}
+        - {x: -8, y: 11}
+        - {x: -9, y: 14}
+        - {x: -12, y: 15}
+    - name: magician2_65
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 14}
+        - {x: -16, y: -1}
+        - {x: -11, y: -16}
+        - {x: 13, y: -16}
+        - {x: 16, y: -8}
+        - {x: 16, y: 14}
+    - name: magician2_66
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 14}
+        - {x: -13, y: 11}
+        - {x: -13, y: -16}
+        - {x: 13, y: -16}
+        - {x: 14, y: -9}
+        - {x: 14, y: 11}
+        - {x: 7, y: 14}
+    - name: magician2_67
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 14}
+        - {x: -16, y: -1}
+        - {x: -11, y: -16}
+        - {x: 13, y: -16}
+        - {x: 16, y: -8}
+        - {x: 16, y: 14}
+    - name: magician2_68
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 16}
+        - {x: -15, y: -13}
+        - {x: -9, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 14}
+        - {x: 15, y: 16}
+    - name: magician2_69
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 16}
+        - {x: -15, y: 13}
+        - {x: -15, y: -16}
+        - {x: 12, y: -16}
+        - {x: 14, y: -15}
+        - {x: 14, y: 14}
+        - {x: 9, y: 16}
+    - name: magician2_70
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 16}
+        - {x: -16, y: 6}
+        - {x: -16, y: -16}
+        - {x: 13, y: -16}
+        - {x: 13, y: 11}
+        - {x: 9, y: 16}
+    - name: magician2_71
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 8}
+        - {x: -16, y: 3}
+        - {x: -16, y: -16}
+        - {x: 13, y: -16}
+        - {x: 16, y: -13}
+        - {x: 16, y: -4}
+        - {x: 0, y: 8}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
