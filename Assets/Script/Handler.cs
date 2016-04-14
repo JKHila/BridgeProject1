@@ -1,26 +1,60 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Handler : MonoBehaviour {
 
 	// Use this for initialization
-	float BK_Boffset = 0.0f, BK_speed = 0.4f;
-	float createTime = 0;
+	private int score=0;
+	private float time=180;
 
 	public GameObject background;
+	public GameObject Slime;
 	public GameObject Warrior;
+	public GameObject spawn;
+	public GameObject slimes;
+	public Text scoreText;
+	public Text timeText;
+
+	void checkTime(){
+		time -= Time.deltaTime;
+		timeText.text = (int)time / 60 + ":";
+		if ((int)time % 60 > 9) {
+			timeText.text += (int)time % 60;
+		} else {
+			timeText.text += "0" + (int)time % 60;
+		}
+	}
+	public void addScore(){
+		score++;
+		scoreText.text = score.ToString(); 
+	}
+	IEnumerator CreateSlime(){
+		for (int i = 0; i < 5; i++) {
+			float a = Random.Range (-1.0f, 1.0f);
+			GameObject tmp = (GameObject)Instantiate (Slime, new Vector2 (spawn.transform.position.x+a, spawn.transform.position.y), this.transform.rotation);
+			tmp.transform.SetParent (slimes.transform);
+			tmp.GetComponent<Rigidbody2D> ().AddForce (Vector2.right * 10,ForceMode2D.Impulse);
+			yield return new WaitForSeconds (3.0f);
+		}
+		yield return new WaitForSeconds (1.0f);
+		Instantiate (Warrior, new Vector2 (spawn.transform.position.x, spawn.transform.position.y), this.transform.rotation);
+	}
+
 	void Start () {
-	
+		StartCoroutine (CreateSlime ());
 	}
 	// Update is called once per frame
 	void Update () {
-		BK_Boffset += (Time.deltaTime * BK_speed);
-		background.GetComponent<Renderer> ().material.mainTextureOffset = new Vector2 (BK_Boffset, 0);
-	
-		createTime += Time.deltaTime;
-		if (createTime > 2) {
-			Instantiate (Warrior, new Vector2 (-10.0f, 1.3f), this.transform.rotation);
-			createTime = -5000;
+		checkTime ();
+		for (int i = 0; i < Input.touchCount; ++i) {
+			if (Input.GetTouch(i).phase == TouchPhase.Began) {
+				RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.GetTouch(i).position),Vector2.zero);
+				if (hit) {
+					Destroy(hit.collider.gameObject);
+				}
+			}
 		}
 	}
+
 }

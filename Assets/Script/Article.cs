@@ -2,15 +2,14 @@
 using System.Collections;
 
 public class Article : MonoBehaviour {
-
-	private float speed =-0.1f;
-	// Use this for initialization
+	
+//	int[,] mapsize = new int[14,7];
 	void Start () {
-	
+		
 	}
-	
+		
 	// Update is called once per frame
 	void Update () {
-		transform.Translate (Vector2.right * speed);
+		
 	}
 }
