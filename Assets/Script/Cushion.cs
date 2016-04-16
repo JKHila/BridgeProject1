@@ -20,14 +20,11 @@ public class Cushion : MonoBehaviour {
 	void Update () {
 	
 	}
-	void OnColliderEnter2D(Collider2D coll){
-		//anim.SetTrigger ("collision");
-		//StopCoroutine("bound");
-		//if (coll.tag == "Slime") {
-			Debug.Log ("Sdf");
-			coll.GetComponent<Moving> ().Jump ();
+	void OnCollisionEnter2D(Collision2D coll){
+		if (coll.gameObject.tag == "Slime") {
+			coll.gameObject.GetComponent<Moving> ().Jump ();
 			StartCoroutine ("bound");
-		//}
+		}
 
 	}
 }
