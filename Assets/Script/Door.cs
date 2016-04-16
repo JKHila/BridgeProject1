@@ -21,7 +21,8 @@ public class Door : Wall {
 			handler.addScore ();
 			Destroy (coll.gameObject);
 		} else {
-			base.moveBack(coll.collider);
+			coll.gameObject.GetComponent<Moving> ().moveBack();
+			//base.moveBack(coll.collider);
 		}
 	}
 	// Update is called once per frame

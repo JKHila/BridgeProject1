@@ -5,7 +5,22 @@ public class Warrior : Moving {
 
 	SpriteRenderer sr;
 	public Sprite[] sp = new Sprite[3];
-
+	public GameObject hitArea;
+	GameObject tmpObj;
+	void OnTriggerEnter2D(Collider2D coll){
+		if (coll.tag == "Slime" && tmpObj != coll.gameObject) {
+			coll.GetComponent<Rigidbody2D> ().AddForce (Vector2.right * 100 * GetComponent<Moving> ().speed, ForceMode2D.Impulse);
+			coll.GetComponent<Slime> ().StartCoroutine ("dieAction");
+			tmpObj = coll.gameObject;
+		} else if(coll.tag == "Article"){
+			base.moveBack ();
+		}
+	}
+	void OnCollisionEnter2D(Collision2D coll){
+		if (coll.gameObject.tag == "Slime") {
+			base.moveBack ();
+		}
+	}
 	// Use this for initialization
 	void Start () {
 		sr = transform.GetComponent<SpriteRenderer> ();
@@ -24,12 +39,11 @@ public class Warrior : Moving {
 	// Update is called once per frame
 	void Update () {
 		MovingFunc ();
-		/*Ray2D Ray;
-		RaycastHit2D hit = Physics2D.Raycast (Ray.origin, Vector2.right);
-		if (hit) {
-			Debug.Log ("Sdf");
-		}*/
-
+		if (GetComponent<Moving>().speed > 0) {
+			hitArea.GetComponent<CircleCollider2D> ().offset = new Vector2 (0.39f, -0.45f);
+		} else {
+			hitArea.GetComponent<CircleCollider2D> ().offset = new Vector2 (-0.38f, -0.45f);
+		}
 	}
 
 }

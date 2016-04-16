@@ -14,10 +14,42 @@ public class Handler : MonoBehaviour {
 	public GameObject Warrior;
 	public GameObject spawn;
 	public GameObject slimes;
+	public GameObject upDrill;
 	public Text scoreText;
 	public Text timeText;
+	public GameObject clearPnl;
 	public void drillBtnDown(){
 		isdrillOn = true;
+	}
+	void checkClear(){
+		if (score >= 5) {
+			clearPnl.SetActive (true);
+		}
+	}
+	void checkTouch(){
+		for (int i = 0; i < Input.touchCount; ++i) { //touch check
+			if (Input.GetTouch (i).phase == TouchPhase.Began && isdrillOn) {
+				Instantiate (upDrill, Input.GetTouch (i).position, transform.rotation);
+				/*RaycastHit2D hit = Physics2D.Raycast (Camera.main.ScreenToWorldPoint (Input.GetTouch (i).position), Vector2.zero);
+				if (hit) {
+					isdrillOn = false;
+					Destroy (hit.collider.gameObject);
+				}*/
+			} else if (Input.GetTouch (i).phase == TouchPhase.Moved && isdrillOn) {
+				upDrill.transform.position = Input.GetTouch (i).position;
+			} else if (Input.GetTouch (i).phase == TouchPhase.Ended && isdrillOn) {
+				RaycastHit2D hit = Physics2D.Raycast (Camera.main.ScreenToWorldPoint (Input.GetTouch (i).position), Vector2.zero);
+				if (hit) {
+					isdrillOn = false;
+					Destroy (hit.collider.gameObject);
+				}
+			}
+		}
+	}
+	void checkEndGame(){
+		if (Input.GetKeyDown (KeyCode.Escape)) { //Quit game
+			Application.Quit();
+		}
 	}
 	void checkTime(){
 		time -= Time.deltaTime;
@@ -50,18 +82,9 @@ public class Handler : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		checkTime ();
-		for (int i = 0; i < Input.touchCount; ++i) { //touch check
-			if (Input.GetTouch(i).phase == TouchPhase.Began && isdrillOn) {
-				RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.GetTouch(i).position),Vector2.zero);
-				if (hit) {
-					isdrillOn = false;
-					Destroy(hit.collider.gameObject);
-				}
-			}
-		}
-		if (Input.GetKeyDown (KeyCode.Escape)) { //Quit game
-			Application.Quit();
-		}
+		checkEndGame ();
+		checkTouch ();
+		checkClear ();
 	}
 
 }

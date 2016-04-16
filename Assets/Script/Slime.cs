@@ -37,6 +37,16 @@ public class Slime : Moving {
 	// Update is called once per frame
 	void Update () {
 		MovingFunc ();
+		if (base.speed > 0) {
+			checkArea.GetComponent<BoxCollider2D>().offset = new Vector2 (0.32f, 0);
+		} else {
+			checkArea.GetComponent<BoxCollider2D>().offset = new Vector2 (-0.32f, 0);
+		}
+	}
+	void OnTriggerEnter2D(Collider2D coll){ ///checkArea에 충돌
+		if (coll.tag == "Article") {
+			base.moveBack ();
+		}
 	}
 	void OnCollisionEnter2D (Collision2D coll){
 		if (coll.gameObject.tag != "cushion") {
