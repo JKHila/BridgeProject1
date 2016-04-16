@@ -17,7 +17,7 @@ public class Door : Wall {
 		}
 	}
 	void OnCollisionEnter2D(Collision2D coll){
-		if (coll.gameObject.name == "Slime(Clone)") {
+		if (coll.gameObject.tag == "Slime" && coll.gameObject.GetComponent<Moving>().isAlive) {
 			handler.addScore ();
 			Destroy (coll.gameObject);
 		} else {

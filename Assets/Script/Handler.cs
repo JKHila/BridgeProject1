@@ -7,6 +7,7 @@ public class Handler : MonoBehaviour {
 	// Use this for initialization
 	private int score=0;
 	private float time=180;
+	private bool isdrillOn = false;
 
 	public GameObject background;
 	public GameObject Slime;
@@ -15,7 +16,9 @@ public class Handler : MonoBehaviour {
 	public GameObject slimes;
 	public Text scoreText;
 	public Text timeText;
-
+	public void drillBtnDown(){
+		isdrillOn = true;
+	}
 	void checkTime(){
 		time -= Time.deltaTime;
 		timeText.text = (int)time / 60 + ":";
@@ -47,13 +50,17 @@ public class Handler : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		checkTime ();
-		for (int i = 0; i < Input.touchCount; ++i) {
-			if (Input.GetTouch(i).phase == TouchPhase.Began) {
+		for (int i = 0; i < Input.touchCount; ++i) { //touch check
+			if (Input.GetTouch(i).phase == TouchPhase.Began && isdrillOn) {
 				RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.GetTouch(i).position),Vector2.zero);
 				if (hit) {
+					isdrillOn = false;
 					Destroy(hit.collider.gameObject);
 				}
 			}
+		}
+		if (Input.GetKeyDown (KeyCode.Escape)) { //Quit game
+			Application.Quit();
 		}
 	}
 

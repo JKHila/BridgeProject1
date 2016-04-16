@@ -5,6 +5,7 @@ public class Warrior : Moving {
 
 	SpriteRenderer sr;
 	public Sprite[] sp = new Sprite[3];
+
 	// Use this for initialization
 	void Start () {
 		sr = transform.GetComponent<SpriteRenderer> ();
@@ -30,9 +31,5 @@ public class Warrior : Moving {
 		}*/
 
 	}
-	void OnCollisionEnter2D(Collision2D coll){
-		if (coll.gameObject.name == "Slime(Clone)") {
-			Destroy (coll.gameObject);
-		}
-	}
+
 }

@@ -7,13 +7,13 @@ public class Slime : Moving {
 	SpriteRenderer sr;
 	public Sprite[] sp = new Sprite[3];
 	public Sprite[] die = new Sprite[6];
+	public GameObject checkArea;
 
 	// Use this for initialization
 	void Start () {
 		sr = transform.GetComponent<SpriteRenderer> ();
 		curY = transform.position.y;
 		StartCoroutine ("moveAction");
-		 
 	}
 	IEnumerator moveAction(){
 		while (true) {
@@ -26,6 +26,8 @@ public class Slime : Moving {
 		}
 	}
 	IEnumerator dieAction(){
+		base.isAlive = false;
+		StopCoroutine ("moveAction");
 		for (int i = 0; i < 6; i++) {
 			sr.sprite = die [i];
 			yield return new WaitForSeconds (0.1f);
@@ -40,7 +42,6 @@ public class Slime : Moving {
 		if (coll.gameObject.tag != "cushion") {
 			if (transform.position.y < curY && curY - transform.position.y > 3.2f) {
 				base.speed = 0;
-				StopCoroutine ("moveAction");
 				StartCoroutine (dieAction());
 			}
 			curY = transform.position.y;

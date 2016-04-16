@@ -2,10 +2,12 @@
 using System.Collections;
 
 public class Moving : MonoBehaviour {
+	public bool isAlive = true;
 	public float speed;
 	public Rigidbody2D rbody;
 	public void MovingFunc(){
-		transform.Translate (Vector2.right * speed * Time.deltaTime);
+		if(isAlive)
+			transform.Translate (Vector2.right * speed * Time.deltaTime);
 	}
 	public void Jump(){
 		rbody = GetComponent<Rigidbody2D> ();
