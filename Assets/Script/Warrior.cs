@@ -17,8 +17,11 @@ public class Warrior : Moving {
 		}
 	}
 	void OnCollisionEnter2D(Collision2D coll){
-		if (coll.gameObject.tag == "Slime") {
+		if (coll.gameObject.tag == "Slime" && tmpObj != coll.gameObject) {
 			base.moveBack ();
+			coll.gameObject.GetComponent<Rigidbody2D> ().AddForce (Vector2.right * 100 * GetComponent<Moving> ().speed, ForceMode2D.Impulse);
+			coll.gameObject.GetComponent<Slime> ().StartCoroutine ("dieAction");
+			tmpObj = coll.gameObject;
 		}
 	}
 	// Use this for initialization
