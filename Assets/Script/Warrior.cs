@@ -5,29 +5,53 @@ public class Warrior : Moving {
 
 	SpriteRenderer sr;
 	public Sprite[] sp = new Sprite[3];
+	public Sprite[] hitsp = new Sprite[7];
 	public GameObject hitArea;
-	GameObject tmpObj;
+	public GameObject tmpObj;
+	bool isHit = false;
+	void hitProcess(float tpspd,Collider2D coll){
+		coll.GetComponent<Rigidbody2D> ().AddForce (Vector2.right * 100 * tpspd, ForceMode2D.Impulse);
+		coll.GetComponent<Slime> ().StartCoroutine ("dieAction");
+		//base.speed = 0;
+
+	}
 	void OnTriggerEnter2D(Collider2D coll){
-		if (coll.tag == "Slime" && tmpObj != coll.gameObject) {
-			coll.GetComponent<Rigidbody2D> ().AddForce (Vector2.right * 100 * GetComponent<Moving> ().speed, ForceMode2D.Impulse);
-			coll.GetComponent<Slime> ().StartCoroutine ("dieAction");
-			tmpObj = coll.gameObject;
+		if (coll.tag == "Slime" && tmpObj != coll.gameObject && !isHit) {
+			isHit = true;
+			StartCoroutine (hitAction(base.speed, coll));
 		} else if(coll.tag == "Article"){
 			base.moveBack ();
 		}
 	}
 	void OnCollisionEnter2D(Collision2D coll){
-		if (coll.gameObject.tag == "Slime" && tmpObj != coll.gameObject) {
+		if (coll.gameObject.tag == "Slime" && tmpObj != coll.gameObject && !isHit) {
+			isHit = true;
 			base.moveBack ();
-			coll.gameObject.GetComponent<Rigidbody2D> ().AddForce (Vector2.right * 100 * GetComponent<Moving> ().speed, ForceMode2D.Impulse);
-			coll.gameObject.GetComponent<Slime> ().StartCoroutine ("dieAction");
-			tmpObj = coll.gameObject;
+			StartCoroutine (hitAction(base.speed, coll.collider));
 		}
 	}
 	// Use this for initialization
 	void Start () {
 		sr = transform.GetComponent<SpriteRenderer> ();
-		StartCoroutine (moveAction ());
+		StartCoroutine ("moveAction");
+	}
+	IEnumerator hitAction(float tpspd,Collider2D coll){
+		StopCoroutine ("moveAction");
+		base.speed = 0;
+		for (int i = 0; i < 7; i++) {
+			sr.sprite = hitsp [i];
+			if (i == 4) {
+				hitProcess (tpspd,coll);
+			}
+			yield return new WaitForSeconds (0.05f);
+
+		}
+		yield return new WaitForSeconds (0.6f);
+		//Debug.Log (tpspd);
+		base.speed = tpspd;
+		StartCoroutine ("moveAction");
+		tmpObj = coll.gameObject;
+		isHit = false;
 	}
 	IEnumerator moveAction(){
 		while (true) {
