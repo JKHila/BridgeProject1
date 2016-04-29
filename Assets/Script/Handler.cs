@@ -8,7 +8,10 @@ public class Handler : MonoBehaviour {
 	private int score=0;
 	private float time=180;
 	private bool isdrillOn = false;
+	private GameObject tpObj;
+	private Vector3 tpPos;
 
+	//public GameObject drillBtn;
 	public GameObject background;
 	public GameObject Slime;
 	public GameObject Warrior;
@@ -20,6 +23,7 @@ public class Handler : MonoBehaviour {
 	public GameObject clearPnl;
 	public void drillBtnDown(){
 		isdrillOn = true;
+		Debug.Log (isdrillOn);
 	}
 	void checkClear(){
 		if (score >= 5) {
@@ -27,14 +31,58 @@ public class Handler : MonoBehaviour {
 		}
 	}
 	void checkTouch(){
-		for (int i = 0; i < Input.touchCount; ++i) { //touch check
+		if(Input.GetMouseButtonDown(0) == true)
+		{
+			RaycastHit2D hit = Physics2D.Raycast (Camera.main.ScreenToWorldPoint (Input.mousePosition), Vector2.zero);
+			if (hit && hit.transform.gameObject.name == "DrillIcon") {
+				Debug.Log (hit.transform.name);
+				isdrillOn = true;
+				tpPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+
+				tpObj = (GameObject)Instantiate (upDrill, (Vector2)tpPos, transform.rotation);
+				tpObj.transform.SetParent (slimes.transform);
+				tpObj.SetActive(true);
+			}
+		}
+		else if(Input.GetMouseButtonUp(0) == true && isdrillOn)
+		{
+			isdrillOn = false;
+			tpObj.GetComponent<CircleCollider2D> ().enabled = true;
+			//마우스 뗌.
+		}
+		else if(Input.GetMouseButton(0) == true && isdrillOn)
+		{
+			tpPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+			tpObj.transform.position = (Vector2)tpPos; //마우스 누르고 있음.
+		}
+		/*
+		 if(0 < Input.touchCount) 
+		   {
+		    for(int t = 0; t < 1; ++t)  //멀티 터치를 막아놨음. t < 1 의 뒷부분의 숫자가 최대 멀티터치 숫자임.
+		    {
+		     if(Input.GetTouch(t).phase == TouchPhase.Began)
+		     {
+		      //터치 시작.
+		     }
+		     else if(Input.GetTouch(t).phase == TouchPhase.Ended)
+		     {
+		      //터치 끝.
+		     }
+		     else if(Input.GetTouch(t).phase == TouchPhase.Moved || Input.GetTouch(t).phase == TouchPhase.Stationary) 
+		     {
+		//터치 중, 터치후 이동중.
+		     }
+		    }
+		   }
+		 * /
+		/*for (int i = 0; i < Input.touchCount; ++i) {  //touch check
 			if (Input.GetTouch (i).phase == TouchPhase.Began && isdrillOn) {
 				Instantiate (upDrill, Input.GetTouch (i).position, transform.rotation);
-				/*RaycastHit2D hit = Physics2D.Raycast (Camera.main.ScreenToWorldPoint (Input.GetTouch (i).position), Vector2.zero);
+				RaycastHit2D hit = Physics2D.Raycast (Camera.main.ScreenToWorldPoint (Input.GetTouch (i).position), Vector2.zero);
 				if (hit) {
 					isdrillOn = false;
 					Destroy (hit.collider.gameObject);
-				}*/
+				}
 			} else if (Input.GetTouch (i).phase == TouchPhase.Moved && isdrillOn) {
 				upDrill.transform.position = Input.GetTouch (i).position;
 			} else if (Input.GetTouch (i).phase == TouchPhase.Ended && isdrillOn) {
@@ -44,7 +92,7 @@ public class Handler : MonoBehaviour {
 					Destroy (hit.collider.gameObject);
 				}
 			}
-		}
+		}*/
 	}
 	void checkEndGame(){
 		if (Input.GetKeyDown (KeyCode.Escape)) { //Quit game
