@@ -33,6 +33,7 @@ public class Drill : MonoBehaviour {
 			isAct = true;
 			articleSr = coll.GetComponent<SpriteRenderer> ();
 			StartCoroutine (drillAction ());
+			GetComponent<CircleCollider2D> ().enabled = false;
 
 		}
 	}
