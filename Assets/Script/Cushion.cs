@@ -4,7 +4,9 @@ using System.Collections;
 public class Cushion : MonoBehaviour {
 	//public Animator anim;
 	// Use this for initialization
+	//private GameObject tmpObj;
 	public Sprite[] sp = new Sprite[9];
+
 	SpriteRenderer sr;
 	IEnumerator bound(){
 		for(int i = 0;i<9;i++){
@@ -23,7 +25,7 @@ public class Cushion : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D coll){
 		if (coll.gameObject.tag == "Slime") {
 			coll.gameObject.GetComponent<Moving> ().Jump ();
-			StartCoroutine ("bound");
+			StartCoroutine (bound());
 		}
 
 	}

@@ -1,0 +1,24 @@
+From f3fa927b04a037785b3f1b85ffb9b8ee6910b05e Mon Sep 17 00:00:00 2001
+From: Gun-Hee Jo <ckheee93@naver.com>
+Date: Sat, 30 Apr 2016 22:17:55 +0900
+Subject: [PATCH] when drill break the land collider of drill is unable
+
+---
+ Assets/Script/Drill.cs | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/Assets/Script/Drill.cs b/Assets/Script/Drill.cs
+index c38ed1d..095b342 100644
+--- a/Assets/Script/Drill.cs
++++ b/Assets/Script/Drill.cs
+@@ -33,6 +33,7 @@ public class Drill : MonoBehaviour {
+ 			isAct = true;
+ 			articleSr = coll.GetComponent<SpriteRenderer> ();
+ 			StartCoroutine (drillAction ());
++			GetComponent<CircleCollider2D> ().enabled = false;
+ 
+ 		}
+ 	}
+-- 
+2.6.1.windows.1
+

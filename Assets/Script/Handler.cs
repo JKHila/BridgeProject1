@@ -7,7 +7,7 @@ public class Handler : MonoBehaviour {
 	// Use this for initialization
 	private int score=0;
 	private float time=180;
-	private bool isdrillOn = false;
+	private bool isBtnOn = false;
 	private GameObject tpObj;
 	private Vector3 tpPos;
 
@@ -18,13 +18,11 @@ public class Handler : MonoBehaviour {
 	public GameObject spawn;
 	public GameObject slimes;
 	public GameObject upDrill;
+	public GameObject Cusion;
+	public GameObject dummyCusion;
 	public Text scoreText;
 	public Text timeText;
 	public GameObject clearPnl;
-	public void drillBtnDown(){
-		isdrillOn = true;
-		Debug.Log (isdrillOn);
-	}
 	void checkClear(){
 		if (score >= 5) {
 			clearPnl.SetActive (true);
@@ -34,23 +32,36 @@ public class Handler : MonoBehaviour {
 		if(Input.GetMouseButtonDown(0) == true)
 		{
 			RaycastHit2D hit = Physics2D.Raycast (Camera.main.ScreenToWorldPoint (Input.mousePosition), Vector2.zero);
-			if (hit && hit.transform.gameObject.name == "DrillIcon") {
-				Debug.Log (hit.transform.name);
-				isdrillOn = true;
-				tpPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+			if (hit) {
+				if (hit.transform.gameObject.name == "DrillIcon") {
+					isBtnOn = true;
+					tpPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 
-				tpObj = (GameObject)Instantiate (upDrill, (Vector2)tpPos, transform.rotation);
-				tpObj.transform.SetParent (slimes.transform);
-				tpObj.SetActive(true);
+					tpObj = (GameObject)Instantiate (upDrill, (Vector2)tpPos, transform.rotation);
+					tpObj.transform.SetParent (slimes.transform);
+					tpObj.SetActive (true);
+				} else if (hit.transform.gameObject.name == "CushionIcon") {
+					isBtnOn = true;
+					tpPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+
+					tpObj = (GameObject)Instantiate (dummyCusion, (Vector2)tpPos, transform.rotation);
+					tpObj.transform.SetParent (slimes.transform);
+					tpObj.SetActive (true);
+				}
 			}
 		}
-		else if(Input.GetMouseButtonUp(0) == true && isdrillOn)
+		else if(Input.GetMouseButtonUp(0) == true && isBtnOn)
 		{
-			isdrillOn = false;
-			tpObj.GetComponent<CircleCollider2D> ().enabled = true;
+			isBtnOn = false;
+			if (tpObj.gameObject.tag == "drill") {
+				tpObj.GetComponent<CircleCollider2D> ().enabled = true;
+			} else {
+				tpObj.SetActive (false);
+				Instantiate (Cusion, (Vector2)tpPos, transform.rotation);
+			}
 			//마우스 뗌.
 		}
-		else if(Input.GetMouseButton(0) == true && isdrillOn)
+		else if(Input.GetMouseButton(0) == true && isBtnOn)
 		{
 			tpPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 			tpObj.transform.position = (Vector2)tpPos; //마우스 누르고 있음.
