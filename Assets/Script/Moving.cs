@@ -23,6 +23,9 @@ public class Moving : MonoBehaviour {
 	}
 	public void Jump(){
 		rbody = GetComponent<Rigidbody2D> ();
-		rbody.AddForce(new Vector2(speed*7,50), ForceMode2D.Impulse);
+		Debug.Log (rbody.velocity);
+		if (rbody.velocity.y < 0.1f) {
+			rbody.AddForce (new Vector2 (speed * 12, rbody.velocity.y*-8.5f), ForceMode2D.Impulse);
+		}
 	}
 }

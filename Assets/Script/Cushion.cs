@@ -22,10 +22,12 @@ public class Cushion : MonoBehaviour {
 	void Update () {
 	
 	}
-	void OnCollisionEnter2D(Collision2D coll){
+	void OnTriggerEnter2D(Collider2D coll){
 		if (coll.gameObject.tag == "Slime") {
-			coll.gameObject.GetComponent<Moving> ().Jump ();
-			StartCoroutine (bound());
+			if (coll.GetComponent<Rigidbody2D> ().velocity.y < 0.0f) {
+				coll.gameObject.GetComponent<Moving> ().Jump ();
+				StartCoroutine (bound ());
+			}
 		}
 
 	}
