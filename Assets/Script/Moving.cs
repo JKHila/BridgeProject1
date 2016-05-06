@@ -6,6 +6,10 @@ public class Moving : MonoBehaviour {
 	public bool isAlive = true;
 	public float speed;
 	public Rigidbody2D rbody;
+	void Start()
+	{
+		
+	}
 	public void moveBack(){
 		if (isAlive) {
 			speed *= -1;
@@ -18,14 +22,17 @@ public class Moving : MonoBehaviour {
 		}
 	}
 	public void MovingFunc(){
-		if(isAlive)
+		if (isAlive)
 			transform.Translate (Vector2.right * speed * Time.deltaTime);
+			//rbody = GetComponent<Rigidbody2D> ();
+		//rbody.AddForce (Vector2.right * speed*100, ForceMode2D.Force);
 	}
 	public void Jump(){
 		rbody = GetComponent<Rigidbody2D> ();
-		Debug.Log (rbody.velocity);
-		if (rbody.velocity.y < 0.1f) {
-			rbody.AddForce (new Vector2 (speed * 12, rbody.velocity.y*-8.5f), ForceMode2D.Impulse);
-		}
+		float height = rbody.velocity.y * -8.5f;
+		if (height > 130.0f)
+			height = 130.0f;
+		rbody.velocity.Set (0, 0);
+		rbody.AddForce (new Vector2 (speed * 12, height), ForceMode2D.Impulse);
 	}
 }

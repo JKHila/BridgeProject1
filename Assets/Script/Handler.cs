@@ -8,10 +8,14 @@ public class Handler : MonoBehaviour {
 	private int score=0;
 	private float time=180;
 	private bool isBtnOn = false;
+	private bool isMoved = false;
 	private GameObject tpObj;
 	private Vector3 tpPos;
+	private Vector2 initMousePos;
+	public float minY = 50, maxY = 50,minX = 50, maxX = 50;
 
 	//public GameObject drillBtn;
+	public GameObject WarriorSpawn;
 	public GameObject background;
 	public GameObject Slime;
 	public GameObject Warrior;
@@ -23,6 +27,10 @@ public class Handler : MonoBehaviour {
 	public Text scoreText;
 	public Text timeText;
 	public GameObject clearPnl;
+	public SpriteRenderer slimeSpawnSr;
+	public SpriteRenderer WarriorSpawnSr;
+	public Sprite[] slimeSpawnSp;
+	public Sprite[] warriorSpawnSp;
 	void checkClear(){
 		if (score >= 5) {
 			clearPnl.SetActive (true);
@@ -47,24 +55,52 @@ public class Handler : MonoBehaviour {
 					tpObj = (GameObject)Instantiate (dummyCusion, (Vector2)tpPos, transform.rotation);
 					tpObj.transform.SetParent (slimes.transform);
 					tpObj.SetActive (true);
+				} else {
+					if (Time.timeScale != 0) {
+						initMousePos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+						isMoved = true;
+					}
+				}
+			} else {
+				if (Time.timeScale != 0) {
+					initMousePos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+					isMoved = true;
 				}
 			}
 		}
-		else if(Input.GetMouseButtonUp(0) == true && isBtnOn)
+		else if(Input.GetMouseButtonUp(0))
 		{
-			isBtnOn = false;
-			if (tpObj.gameObject.tag == "drill") {
-				tpObj.GetComponent<CircleCollider2D> ().enabled = true;
+			if (isBtnOn) {
+				isBtnOn = false;
+				if (tpObj.gameObject.tag == "drill") {
+					tpObj.GetComponent<CircleCollider2D> ().enabled = true;
+				} else {
+					tpObj.SetActive (false);
+					Instantiate (Cusion, (Vector2)tpPos, transform.rotation);
+				}
 			} else {
-				tpObj.SetActive (false);
-				Instantiate (Cusion, (Vector2)tpPos, transform.rotation);
+				isMoved = false;
 			}
 			//마우스 뗌.
 		}
-		else if(Input.GetMouseButton(0) == true && isBtnOn)
+		else if(Input.GetMouseButton(0))
 		{
-			tpPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-			tpObj.transform.position = (Vector2)tpPos; //마우스 누르고 있음.
+			if (isBtnOn) {
+				tpPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+				tpObj.transform.position = (Vector2)tpPos; //마우스 누르고 있음.
+			} else {
+				if(Time.timeScale !=0 && isMoved)
+				{
+					Vector2 worldpoint;
+					worldpoint = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+					Vector2 diffPos = (worldpoint - initMousePos)*Time.deltaTime*20;
+				
+					transform.position = new Vector3 (Mathf.Clamp((transform.position.x - diffPos.x),minX,maxX),Mathf.Clamp ((transform.position.y - diffPos.y),minY,maxY),-23);
+					initMousePos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+				}
+
+			}
+
 		}
 		/*
 		 if(0 < Input.touchCount) 
@@ -119,10 +155,22 @@ public class Handler : MonoBehaviour {
 			timeText.text += "0" + (int)time % 60;
 		}
 	}
+	IEnumerator warriorSpawnAni(){
+		for (int i = 0; i < 16; i++) {
+			WarriorSpawnSr.sprite = warriorSpawnSp [i];
+			yield return new WaitForSeconds (0.1f);
+			if (i == 8) {
+				GameObject tmp2 = (GameObject)Instantiate (Warrior, new Vector2 (WarriorSpawn.transform.position.x, WarriorSpawn.transform.position.y), this.transform.rotation);
+				tmp2.transform.SetParent (slimes.transform);
+			}
+		}
+
+	}
 	public void addScore(){
 		score++;
 		scoreText.text = score.ToString(); 
 	}
+
 	IEnumerator CreateSlime(){
 		for (int i = 0; i < 5; i++) {
 			//float a = Random.Range (-1.0f, 1.0f);
@@ -132,10 +180,12 @@ public class Handler : MonoBehaviour {
 			yield return new WaitForSeconds (3.0f);
 		}
 		yield return new WaitForSeconds (1.0f);
-		Instantiate (Warrior, new Vector2 (spawn.transform.position.x, spawn.transform.position.y), this.transform.rotation);
+		StartCoroutine (warriorSpawnAni());
 	}
-
+	
 	void Start () {
+		WarriorSpawnSr = WarriorSpawn.GetComponent<SpriteRenderer> ();
+		slimeSpawnSr = spawn.GetComponent<SpriteRenderer> ();
 		StartCoroutine (CreateSlime ());
 	}
 	// Update is called once per frame

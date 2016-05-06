@@ -46,6 +46,8 @@ public class Slime : Moving {
 	void OnTriggerEnter2D(Collider2D coll){ ///checkArea에 충돌
 		if (coll.tag == "Article") {
 			base.moveBack ();
+		} else {
+			curY = transform.position.y;
 		}
 	}
 	void OnCollisionEnter2D (Collision2D coll){
@@ -57,6 +59,7 @@ public class Slime : Moving {
 			curY = transform.position.y;
 		} else {
 			curY = transform.position.y;
+			Debug.Log (curY);
 		}
 	}
 }
