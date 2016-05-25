@@ -7,7 +7,7 @@ public class Jumping : MonoBehaviour {
 	private SpriteRenderer sr;
 	private bool isAct;
 	void OnTriggerEnter2D(Collider2D coll){
-		if (coll.tag == "Article") {
+		if (coll.tag == "Article" && coll.name != "Wall(Clone)") {
 			isAct = true;
 			transform.position = new Vector2 (coll.transform.position.x, coll.transform.position.y + 0.7f);
 		} else if (coll.tag == "Slime") {
