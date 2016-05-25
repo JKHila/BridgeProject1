@@ -15,51 +15,69 @@ public class Handler : MonoBehaviour {
 	public float minY = 50, maxY = 50,minX = 50, maxX = 50;
 
 	//public GameObject drillBtn;
+	//Map Obj
+	public GameObject spawn;
 	public GameObject WarriorSpawn;
 	public GameObject background;
+	//Moving Obj
 	public GameObject Slime;
 	public GameObject Warrior;
-	public GameObject spawn;
-	public GameObject slimes;
+	//Item Obj
 	public GameObject upDrill;
 	public GameObject Cusion;
+	public GameObject Wall;
+	//Dummy Obj
 	public GameObject dummyCusion;
+	public GameObject dummyWall;
+	public GameObject dummyjumping;
+	//UI Obj;
 	public Text scoreText;
 	public Text timeText;
 	public GameObject clearPnl;
+	//etc.
 	public SpriteRenderer slimeSpawnSr;
 	public SpriteRenderer WarriorSpawnSr;
 	public Sprite[] slimeSpawnSp;
 	public Sprite[] warriorSpawnSp;
+	public GameObject slimes;
+
 	void checkClear(){
 		if (score >= 5) {
 			clearPnl.SetActive (true);
 		}
+	}
+	void createDummy(GameObject obj){
+		isBtnOn = true;
+		tpPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+		tpObj = (GameObject)Instantiate (obj, (Vector2)tpPos, transform.rotation);
+		tpObj.transform.SetParent (slimes.transform);
+		tpObj.SetActive (true);
 	}
 	void checkTouch(){
 		if(Input.GetMouseButtonDown(0) == true)
 		{
 			RaycastHit2D hit = Physics2D.Raycast (Camera.main.ScreenToWorldPoint (Input.mousePosition), Vector2.zero);
 			if (hit) {
-				if (hit.transform.gameObject.name == "DrillIcon") {
-					isBtnOn = true;
-					tpPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-
-					tpObj = (GameObject)Instantiate (upDrill, (Vector2)tpPos, transform.rotation);
-					tpObj.transform.SetParent (slimes.transform);
-					tpObj.SetActive (true);
-				} else if (hit.transform.gameObject.name == "CushionIcon") {
-					isBtnOn = true;
-					tpPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-
-					tpObj = (GameObject)Instantiate (dummyCusion, (Vector2)tpPos, transform.rotation);
-					tpObj.transform.SetParent (slimes.transform);
-					tpObj.SetActive (true);
-				} else {
+				string tmp = hit.transform.gameObject.name;
+				switch(tmp) {
+				case "DrillIcon":
+					createDummy (upDrill);
+					break;
+				case "CushionIcon":
+					createDummy (dummyCusion);
+					break;
+				case "WallIcon":
+					createDummy (dummyWall);
+					break;
+				case "JumpingIcon":
+					createDummy (dummyjumping);
+					break;
+				default:
 					if (Time.timeScale != 0) {
 						initMousePos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 						isMoved = true;
 					}
+					break;
 				}
 			} else {
 				if (Time.timeScale != 0) {
@@ -70,18 +88,30 @@ public class Handler : MonoBehaviour {
 		}
 		else if(Input.GetMouseButtonUp(0))
 		{
+			//마우스 뗌.
 			if (isBtnOn) {
 				isBtnOn = false;
-				if (tpObj.gameObject.tag == "drill") {
+				string temp = tpObj.gameObject.tag;
+				switch (temp) {
+				case"drill": 
 					tpObj.GetComponent<CircleCollider2D> ().enabled = true;
-				} else {
+					break;
+				case "cushion":
 					tpObj.SetActive (false);
 					Instantiate (Cusion, (Vector2)tpPos, transform.rotation);
+					break;
+				case "Wall":
+					tpObj.SetActive (false);
+					Instantiate (Wall, (Vector2)tpPos, transform.rotation);
+					break;
+				case "Jumping":
+					tpObj.GetComponent<BoxCollider2D> ().enabled = true;
+					break;
+				default:
+					isMoved = false;
+					break;
 				}
-			} else {
-				isMoved = false;
 			}
-			//마우스 뗌.
 		}
 		else if(Input.GetMouseButton(0))
 		{
