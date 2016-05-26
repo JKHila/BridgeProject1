@@ -202,11 +202,18 @@ public class Handler : MonoBehaviour {
 	}
 
 	IEnumerator CreateSlime(){
+		
+		
 		for (int i = 0; i < 5; i++) {
+			for (int j = 0; j < 6; j++) {
+				slimeSpawnSr.sprite = slimeSpawnSp [j];
+				yield return new WaitForSeconds (0.1f);
+			}
+			slimeSpawnSr.sprite = slimeSpawnSp [0];
 			//float a = Random.Range (-1.0f, 1.0f);
-			GameObject tmp = (GameObject)Instantiate (Slime, new Vector2 (spawn.transform.position.x, spawn.transform.position.y), this.transform.rotation);
+			GameObject tmp = (GameObject)Instantiate (Slime, new Vector2 (spawn.transform.position.x+1.4f, spawn.transform.position.y-1.5f), this.transform.rotation);
 			tmp.transform.SetParent (slimes.transform);
-			tmp.GetComponent<Rigidbody2D> ().AddForce (Vector2.right * 10,ForceMode2D.Impulse);
+			//tmp.GetComponent<Rigidbody2D> ().AddForce (Vector2.right * 10,ForceMode2D.Impulse);
 			yield return new WaitForSeconds (3.0f);
 		}
 		yield return new WaitForSeconds (1.0f);
