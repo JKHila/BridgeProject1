@@ -3,11 +3,16 @@ using System.Collections;
 
 public class Warrior : Moving {
 
+	//public Transform real;
+	public Transform dummy;
+
 	SpriteRenderer sr;
 	public Sprite[] sp = new Sprite[3];
 	public Sprite[] hitsp = new Sprite[7];
 	public GameObject hitArea;
 	public GameObject tmpObj;
+
+
 	bool isHit = false;
 	void hitProcess(float tpspd,Collider2D coll){
 		coll.GetComponent<Rigidbody2D> ().AddForce (Vector2.right * 100 * tpspd, ForceMode2D.Impulse);
@@ -34,8 +39,13 @@ public class Warrior : Moving {
 	void Start () {
 		sr = transform.GetComponent<SpriteRenderer> ();
 		StartCoroutine ("moveAction");
+		//real = transform.FindChild ("worrior");
+		//dummy = transform.FindChild ("DummyWarrior");
 	}
 	IEnumerator hitAction(float tpspd,Collider2D coll){
+		//Physics2D.IgnoreLayerCollision (8, 10);
+		GetComponent<CircleCollider2D>().enabled = false;
+		GetComponent<Rigidbody2D> ().gravityScale = 0;
 		StopCoroutine ("moveAction");
 		base.speed = 0;
 		for (int i = 0; i < 7; i++) {
@@ -52,6 +62,8 @@ public class Warrior : Moving {
 		StartCoroutine ("moveAction");
 		tmpObj = coll.gameObject;
 		isHit = false;
+		GetComponent<CircleCollider2D>().enabled = true;
+		GetComponent<Rigidbody2D> ().gravityScale = 4;
 	}
 	IEnumerator moveAction(){
 		while (true) {

@@ -12,9 +12,9 @@ public class Handler : MonoBehaviour {
 	private GameObject tpObj;
 	private Vector3 tpPos;
 	private Vector2 initMousePos;
-	public float minY = 50, maxY = 50,minX = 50, maxX = 50;
 
-	//public GameObject drillBtn;
+	//Camera Opt
+	public float minY = 50, maxY = 50,minX = 50, maxX = 50;
 	//Map Obj
 	public GameObject spawn;
 	public GameObject WarriorSpawn;
