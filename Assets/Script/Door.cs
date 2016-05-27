@@ -16,12 +16,12 @@ public class Door : Wall {
 			yield return new WaitForSeconds (0.08f);
 		}
 	}
-	void OnCollisionEnter2D(Collision2D coll){
+	void OnTriggerEnter2D(Collider2D coll){
 		if (coll.gameObject.tag == "Slime" && coll.gameObject.GetComponent<Moving>().isAlive) {
 			handler.addScore ();
 			Destroy (coll.gameObject);
 		} else {
-			coll.gameObject.GetComponent<Moving> ().moveBack();
+			//coll.gameObject.GetComponent<Moving> ().moveBack();
 			//base.moveBack(coll.collider);
 		}
 	}

@@ -21,7 +21,6 @@ public class Handler : MonoBehaviour {
 	public GameObject background;
 	//Moving Obj
 	public GameObject Slime;
-	public GameObject Warrior;
 	//Item Obj
 	public GameObject upDrill;
 	public GameObject Cusion;
@@ -36,9 +35,7 @@ public class Handler : MonoBehaviour {
 	public GameObject clearPnl;
 	//etc.
 	public SpriteRenderer slimeSpawnSr;
-	public SpriteRenderer WarriorSpawnSr;
 	public Sprite[] slimeSpawnSp;
-	public Sprite[] warriorSpawnSp;
 	public GameObject slimes;
 
 	void checkClear(){
@@ -185,17 +182,7 @@ public class Handler : MonoBehaviour {
 			timeText.text += "0" + (int)time % 60;
 		}
 	}
-	IEnumerator warriorSpawnAni(){
-		for (int i = 0; i < 16; i++) {
-			WarriorSpawnSr.sprite = warriorSpawnSp [i];
-			yield return new WaitForSeconds (0.1f);
-			if (i == 8) {
-				GameObject tmp2 = (GameObject)Instantiate (Warrior, new Vector2 (WarriorSpawn.transform.position.x, WarriorSpawn.transform.position.y), this.transform.rotation);
-				tmp2.transform.SetParent (slimes.transform);
-			}
-		}
-
-	}
+	
 	public void addScore(){
 		score++;
 		scoreText.text = score.ToString(); 
@@ -216,9 +203,6 @@ public class Handler : MonoBehaviour {
 			//tmp.GetComponent<Rigidbody2D> ().AddForce (Vector2.right * 10,ForceMode2D.Impulse);
 			yield return new WaitForSeconds (3.0f);
 		}
-		yield return new WaitForSeconds (1.0f);
-		if(WarriorSpawn.GetComponent<SpriteRenderer>().isVisible)
-			StartCoroutine (warriorSpawnAni());
 	}
 	
 	void Start () {
@@ -226,7 +210,7 @@ public class Handler : MonoBehaviour {
 		WarriorSpawn = GameObject.Find ("WarriorSpawn");
 		spawn = GameObject.Find ("Spawn");
 		slimes = GameObject.Find ("MovingObj");
-		WarriorSpawnSr = WarriorSpawn.GetComponent<SpriteRenderer> ();
+		//WarriorSpawnSr = WarriorSpawn.GetComponent<SpriteRenderer> ();
 		slimeSpawnSr = spawn.GetComponent<SpriteRenderer> ();
 		StartCoroutine (CreateSlime ());
 	}

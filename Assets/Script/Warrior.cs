@@ -15,7 +15,7 @@ public class Warrior : Moving {
 
 	bool isHit = false;
 	void hitProcess(float tpspd,Collider2D coll){
-		coll.GetComponent<Rigidbody2D> ().AddForce (Vector2.right * 100 * tpspd, ForceMode2D.Impulse);
+		coll.GetComponent<Rigidbody2D> ().AddForce (Vector2.right * 300 * tpspd, ForceMode2D.Impulse);
 		coll.GetComponent<Slime> ().StartCoroutine ("dieAction");
 		//base.speed = 0;
 
@@ -24,7 +24,7 @@ public class Warrior : Moving {
 		if (coll.tag == "Slime" && tmpObj != coll.gameObject && !isHit) {
 			isHit = true;
 			StartCoroutine (hitAction(base.speed, coll));
-		} else if(coll.tag == "Article"){
+		} else if(coll.tag == "Article" || coll.tag =="warriorblock"){
 			base.moveBack ();
 		}
 	}

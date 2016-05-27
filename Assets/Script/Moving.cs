@@ -39,6 +39,6 @@ public class Moving : MonoBehaviour {
 	public void boardJump(){
 		rbody = GetComponent<Rigidbody2D> ();
 		rbody.velocity.Set (0, 0);
-		rbody.AddForce (new Vector2 (speed * 18, 40), ForceMode2D.Impulse);
+		rbody.AddForce (new Vector2 (speed * 20f, 200), ForceMode2D.Impulse);
 	}
 }

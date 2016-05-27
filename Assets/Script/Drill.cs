@@ -29,7 +29,7 @@ public class Drill : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D coll){
-		if (coll.tag == "Article" && coll.name !="Wall(Clone)") {
+		if (coll.tag == "Article" && coll.name =="Land") {
 			isAct = true;
 			articleSr = coll.GetComponent<SpriteRenderer> ();
 			StartCoroutine (drillAction ());
