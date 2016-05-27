@@ -44,6 +44,7 @@ public class Warrior : Moving {
 	}
 	IEnumerator hitAction(float tpspd,Collider2D coll){
 		//Physics2D.IgnoreLayerCollision (8, 10);
+		Transform tptr = transform;
 		GetComponent<CircleCollider2D>().enabled = false;
 		GetComponent<Rigidbody2D> ().gravityScale = 0;
 		StopCoroutine ("moveAction");
@@ -64,6 +65,7 @@ public class Warrior : Moving {
 		isHit = false;
 		GetComponent<CircleCollider2D>().enabled = true;
 		GetComponent<Rigidbody2D> ().gravityScale = 4;
+		transform.position = tptr.position;
 	}
 	IEnumerator moveAction(){
 		while (true) {
