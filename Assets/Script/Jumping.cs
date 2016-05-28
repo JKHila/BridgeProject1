@@ -7,7 +7,7 @@ public class Jumping : MonoBehaviour {
 	private SpriteRenderer sr;
 	private bool isAct;
 	void OnTriggerEnter2D(Collider2D coll){
-		if (coll.tag == "Article" && coll.name != "Wall(Clone)") {
+		if (coll.tag == "Article" && coll.name != "Wall(Clone)" && coll.name != "Wall") {
 			isAct = true;
 			transform.position = new Vector2 (coll.transform.position.x, coll.transform.position.y + 0.7f);
 		} else if (coll.tag == "Slime") {
@@ -16,13 +16,15 @@ public class Jumping : MonoBehaviour {
 	}
 	IEnumerator spring(Collider2D coll){
 		
-		yield return new WaitForSeconds (0.05f);
-		for (int i = 0; i < 6; i++) {
-			sr.sprite = sp [i];
-			yield return new WaitForSeconds (0.05f);
-			if (i == 0) {
-				coll.GetComponent<Moving> ().boardJump ();
-				coll.GetComponent<Slime> ().setJump ();
+		//yield return new WaitForSeconds (0.05f);
+		if (coll.gameObject.GetComponent<Moving> ().isAlive) {
+			for (int i = 0; i < 6; i++) {
+				sr.sprite = sp [i];
+				yield return new WaitForSeconds (0.05f);
+				if (i == 0) {
+					coll.GetComponent<Moving> ().boardJump ();
+					coll.GetComponent<Slime> ().setJump ();
+				}
 			}
 		}
 		coll.GetComponent<Slime> ().setJump ();

@@ -9,6 +9,7 @@ public class Slime : Moving {
 	public Sprite[] sp = new Sprite[3];
 	public Sprite[] die = new Sprite[6];
 	public GameObject checkArea;
+	public GameObject handler;
 
 	public void setJump(){
 		if (isJump) {
@@ -23,6 +24,7 @@ public class Slime : Moving {
 	// Use this for initialization
 	void Start () {
 		sr = transform.GetComponent<SpriteRenderer> ();
+		handler = GameObject.Find ("Main Camera");
 		curY = transform.position.y;
 		StartCoroutine ("moveAction");
 	}
@@ -38,6 +40,7 @@ public class Slime : Moving {
 	}
 	IEnumerator dieAction(){
 		base.isAlive = false;
+		handler.GetComponent<Handler>().addDieCnt ();
 		StopCoroutine ("moveAction");
 		for (int i = 0; i < 6; i++) {
 			sr.sprite = die [i];
@@ -53,6 +56,10 @@ public class Slime : Moving {
 		} else {
 			checkArea.GetComponent<BoxCollider2D>().offset = new Vector2 (-0.32f, 0);
 		}
+		if (transform.position.y < -20) {
+			handler.GetComponent<Handler> ().addDieCnt ();
+			Destroy (this.gameObject);
+		}
 	}
 	void OnTriggerEnter2D(Collider2D coll){ ///checkArea에 충돌
 		if (coll.tag == "Article") {
@@ -63,12 +70,14 @@ public class Slime : Moving {
 	}
 	void OnCollisionEnter2D (Collision2D coll){
 		if (coll.gameObject.tag != "cushion") {
-			if (transform.position.y < curY && curY - transform.position.y > 3.2f) {
+			if (transform.position.y < curY && curY - transform.position.y > 2.1f) {
+				base.isAlive = false;
 				base.speed = 0;
 				StartCoroutine (dieAction());
 			}
 			curY = transform.position.y;
-		} else {
+		}
+		else {
 			curY = transform.position.y;
 			Debug.Log (curY);
 		}

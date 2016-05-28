@@ -5,6 +5,7 @@ public class Drill : MonoBehaviour {
 	SpriteRenderer drillSr;
 	SpriteRenderer articleSr;
 
+	public GameObject emptyBlock;
 	public Sprite[] drillSp;
 	public Sprite[] articleSp;
 	public bool isAct = false;
@@ -32,6 +33,7 @@ public class Drill : MonoBehaviour {
 		if (coll.tag == "Article" && coll.name =="Land") {
 			isAct = true;
 			articleSr = coll.GetComponent<SpriteRenderer> ();
+			Instantiate (emptyBlock, new Vector2(coll.transform.position.x,coll.transform.position.y + 1),transform.rotation);
 			StartCoroutine (drillAction ());
 			GetComponent<CircleCollider2D> ().enabled = false;
 

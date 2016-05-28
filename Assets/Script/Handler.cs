@@ -5,8 +5,9 @@ using UnityEngine.UI;
 public class Handler : MonoBehaviour {
 
 	// Use this for initialization
+	private int numDie=0;
 	private int score=0;
-	private float time=180;
+	private float time=60;
 	private bool isBtnOn = false;
 	private bool isMoved = false;
 	private GameObject tpObj;
@@ -32,6 +33,10 @@ public class Handler : MonoBehaviour {
 	//UI Obj;
 	public Text scoreText;
 	public Text timeText;
+	public Text endScoreText;
+	public Text ClearText;
+	public Image[] scoreStar;
+	public Sprite noStar;
 	public GameObject clearPnl;
 	//etc.
 	public SpriteRenderer slimeSpawnSr;
@@ -39,7 +44,20 @@ public class Handler : MonoBehaviour {
 	public GameObject slimes;
 
 	void checkClear(){
-		if (score >= 5) {
+		if (score+numDie >= 20) {
+			endScoreText.text = "X " + score + "/20";
+			if (score < 3) {
+				ClearText.text = "FAIL!";
+				scoreStar [0].sprite = noStar;	
+				scoreStar [1].sprite = noStar;	
+				scoreStar [2].sprite = noStar;	
+			}
+			else if (score < 10) {
+				scoreStar [1].sprite = noStar;	
+				scoreStar [2].sprite = noStar;	
+			}
+			else if(score >=10 && score <20)
+				scoreStar [2].sprite = noStar;	
 			clearPnl.SetActive (true);
 		}
 	}
@@ -182,19 +200,19 @@ public class Handler : MonoBehaviour {
 			timeText.text += "0" + (int)time % 60;
 		}
 	}
-	
+	public void addDieCnt(){
+		numDie++;
+	}
 	public void addScore(){
 		score++;
 		scoreText.text = score.ToString(); 
 	}
 
 	IEnumerator CreateSlime(){
-		
-		
 		for (int i = 0; i < 20; i++) {
 			for (int j = 0; j < 6; j++) {
 				slimeSpawnSr.sprite = slimeSpawnSp [j];
-				yield return new WaitForSeconds (0.1f);
+				yield return new WaitForSeconds (0.05f);
 			}
 			slimeSpawnSr.sprite = slimeSpawnSp [0];
 			//float a = Random.Range (-1.0f, 1.0f);

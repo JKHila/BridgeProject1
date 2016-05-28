@@ -33,7 +33,7 @@ public class Moving : MonoBehaviour {
 		Debug.Log (height);
 		if (height > 300.0f)*/
 		float height = 300.0f;
-		rbody.velocity = transform.up*15 + transform.right*2*speed;
+		rbody.velocity = transform.up*10 + transform.right*2*speed;
 		//rbody.AddForce (new Vector2 (speed * 30f, height), ForceMode2D.Impulse);
 	}
 
@@ -41,7 +41,7 @@ public class Moving : MonoBehaviour {
 		rbody = GetComponent<Rigidbody2D> ();
 		rbody.velocity.Set (0, 0);
 		//Debug.Log (rbody.gameObject.GetComponent<Slime> ().getJump ());
-		if (!rbody.gameObject.GetComponent<Slime> ().getJump()) {
+		if (rbody.gameObject.GetComponent<Moving>().isAlive && !rbody.gameObject.GetComponent<Slime> ().getJump()) {
 			
 			rbody.AddForce (new Vector2 (speed * 25f, 180), ForceMode2D.Impulse);
 		}

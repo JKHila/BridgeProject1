@@ -10,6 +10,7 @@ public class Warrior : Moving {
 	public Sprite[] sp = new Sprite[3];
 	public Sprite[] hitsp = new Sprite[7];
 	public GameObject hitArea;
+	//public GameObject walkArea;
 	//public GameObject backHitArea;
 	public GameObject tmpObj;
 
@@ -17,7 +18,7 @@ public class Warrior : Moving {
 	bool isHit = false;
 	void hitProcess(float tpspd,Collider2D coll){
 		if(coll.gameObject){
-			coll.GetComponent<Rigidbody2D> ().AddForce (Vector2.right * 300 * tpspd, ForceMode2D.Impulse);
+			coll.GetComponent<Rigidbody2D> ().AddForce (Vector2.right * 100 * tpspd, ForceMode2D.Impulse);
 			coll.GetComponent<Slime> ().StartCoroutine ("dieAction");
 			//base.speed = 0;
 		}
@@ -26,8 +27,9 @@ public class Warrior : Moving {
 	void OnTriggerEnter2D(Collider2D coll){
 		if (coll.tag == "Slime" && tmpObj != coll.gameObject && !isHit) {
 			isHit = true;
-			if (coll.transform.position.x < transform.position.x)
-				base.moveBack ();
+			hitArea.GetComponent<CircleCollider2D> ().enabled = false;
+			/*if (coll.transform.position.x < transform.position.x)
+				base.moveBack ();*/
 			StartCoroutine (hitAction(base.speed, coll));
 		} else if(coll.tag == "Article" || coll.tag =="warriorblock"){
 			base.moveBack ();
@@ -36,7 +38,7 @@ public class Warrior : Moving {
 	void OnCollisionEnter2D(Collision2D coll){
 		if (coll.gameObject.tag == "Slime" && tmpObj != coll.gameObject && !isHit) {
 			isHit = true;
-			base.moveBack ();
+			//base.moveBack ();
 			StartCoroutine (hitAction(base.speed, coll.collider));
 		}
 	}
@@ -71,6 +73,7 @@ public class Warrior : Moving {
 		tmpObj = coll.gameObject;
 		isHit = false;
 		GetComponent<CircleCollider2D>().enabled = true;
+		hitArea.GetComponent<CircleCollider2D> ().enabled = true;
 		//GetComponent<Rigidbody2D> ().gravityScale = 4;
 		transform.position = tptr.position;
 	}
@@ -87,11 +90,13 @@ public class Warrior : Moving {
 	// Update is called once per frame
 	void Update () {
 		MovingFunc ();
-		/*if (GetComponent<Moving>().speed > 0) {
+		if (GetComponent<Moving>().speed > 0) {
 			hitArea.GetComponent<CircleCollider2D> ().offset = new Vector2 (0.39f, -0.45f);
+			//walkArea.GetComponent<BoxCollider2D> ().offset = new Vector2 (0,0);
 		} else {
 			hitArea.GetComponent<CircleCollider2D> ().offset = new Vector2 (-0.38f, -0.45f);
-		}*/
+			//walkArea.GetComponent<BoxCollider2D> ().offset = new Vector2 (-2,0);
+		}
 	}
 
 }
