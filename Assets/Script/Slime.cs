@@ -2,13 +2,24 @@
 using System.Collections;
 
 public class Slime : Moving {
-	private float curY; 
+	private float curY;  
+	private bool isJump=false;
 
 	SpriteRenderer sr;
 	public Sprite[] sp = new Sprite[3];
 	public Sprite[] die = new Sprite[6];
 	public GameObject checkArea;
 
+	public void setJump(){
+		if (isJump) {
+			isJump = false;
+		} else {
+			isJump = true;
+		}
+	}
+	public bool getJump(){
+		return isJump;
+	}
 	// Use this for initialization
 	void Start () {
 		sr = transform.GetComponent<SpriteRenderer> ();

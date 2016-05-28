@@ -29,16 +29,21 @@ public class Moving : MonoBehaviour {
 	}
 	public void Jump(){
 		rbody = GetComponent<Rigidbody2D> ();
-		float height = rbody.velocity.y * -8.5f;
-		if (height > 130.0f)
-			height = 130.0f;
-		rbody.velocity.Set (0, 0);
-		rbody.AddForce (new Vector2 (speed * 12, height), ForceMode2D.Impulse);
+		/*float height = rbody.velocity.y * -10f;
+		Debug.Log (height);
+		if (height > 300.0f)*/
+		float height = 300.0f;
+		rbody.velocity = transform.up*15 + transform.right*2*speed;
+		//rbody.AddForce (new Vector2 (speed * 30f, height), ForceMode2D.Impulse);
 	}
 
 	public void boardJump(){
 		rbody = GetComponent<Rigidbody2D> ();
 		rbody.velocity.Set (0, 0);
-		rbody.AddForce (new Vector2 (speed * 20f, 200), ForceMode2D.Impulse);
+		//Debug.Log (rbody.gameObject.GetComponent<Slime> ().getJump ());
+		if (!rbody.gameObject.GetComponent<Slime> ().getJump()) {
+			
+			rbody.AddForce (new Vector2 (speed * 25f, 180), ForceMode2D.Impulse);
+		}
 	}
 }

@@ -18,7 +18,7 @@ public class Title : MonoBehaviour {
 	void Update () {
 	}
 	public void SelectStage(){
-		SceneManager.LoadScene ("main");
+		SceneManager.LoadScene (3);
 	}
 	public void SelectChapter(){
 		SceneManager.LoadScene (2,LoadSceneMode.Single);

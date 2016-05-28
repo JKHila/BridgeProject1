@@ -15,14 +15,19 @@ public class Jumping : MonoBehaviour {
 		}
 	}
 	IEnumerator spring(Collider2D coll){
+		
 		yield return new WaitForSeconds (0.05f);
 		for (int i = 0; i < 6; i++) {
 			sr.sprite = sp [i];
 			yield return new WaitForSeconds (0.05f);
-			if (i == 0)
-				coll.GetComponent<Moving> ().boardJump();
+			if (i == 0) {
+				coll.GetComponent<Moving> ().boardJump ();
+				coll.GetComponent<Slime> ().setJump ();
+			}
 		}
+		coll.GetComponent<Slime> ().setJump ();
 		sr.sprite = sp [0];
+
 	}
 	IEnumerator checkColl(){
 		yield return new WaitForSeconds (0.1f);
