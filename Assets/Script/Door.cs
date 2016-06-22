@@ -6,6 +6,7 @@ public class Door : Wall {
 	public Sprite[] doorSp = new Sprite[7];
 	// Use this for initialization
 	void Start () {
+		handler = GameObject.Find ("Main Camera").GetComponent<Handler> ();
 		StartCoroutine (openDoor ());
 	}
 	IEnumerator openDoor(){

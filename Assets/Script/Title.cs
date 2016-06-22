@@ -17,8 +17,24 @@ public class Title : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	}
-	public void SelectStage(){
-		SceneManager.LoadScene (3);
+	public void nextBtnDown(){
+		SceneManager.LoadScene (++userData.curStageNum+3);
+	}
+	public void menuBtnDown(){
+		SceneManager.LoadScene (2);
+	}
+	public void replayBtnDown(){
+		SceneManager.LoadScene (3+userData.curStageNum);
+	}
+	public void pausBtnDown(){
+		if (Time.timeScale > 0)
+			Time.timeScale = 0;
+		else
+			Time.timeScale = 1;
+	}
+	public void SelectStage(int n){
+		userData.curStageNum = n;
+		SceneManager.LoadScene (3+n);
 	}
 	public void SelectChapter(){
 		SceneManager.LoadScene (2,LoadSceneMode.Single);
