@@ -12,14 +12,19 @@ public class SlimeSpawn : MonoBehaviour {
     {
         for (int i = 0; i < numOfSlime; i++)
         {
-            for (int j = 0; j < 6; j++)
+            for (int j = 0; j < 8; j++)
             {
                 slimeSpawnSr.sprite = slimeSpawnSp[j];
                 yield return new WaitForSeconds(0.05f);
             }
             slimeSpawnSr.sprite = slimeSpawnSp[0];
             //float a = Random.Range (-1.0f, 1.0f);
-            GameObject tmp = (GameObject)Instantiate(Slime, new Vector2(transform.position.x + 1.4f, transform.position.y - 1.5f), this.transform.rotation);
+            float x;
+            if (direct == 1)
+                x = 0.6f;
+            else
+                x = -0.5f;
+            GameObject tmp = (GameObject)Instantiate(Slime, new Vector2(transform.position.x+x, transform.position.y-0.6f ), this.transform.rotation);
             tmp.transform.SetParent(slimes.transform);
             if(direct < 0)
                 tmp.GetComponent<Moving>().moveBack();

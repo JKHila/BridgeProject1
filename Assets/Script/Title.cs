@@ -3,22 +3,26 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class Title : MonoBehaviour {
-	Image fade;
+	public Image fade;
     public Button fastBtn;
 	// Use this for initialization
-	void Awake () {
+	void Start () {
         fade = GameObject.Find("Fade").GetComponent<Image>();
-        fade.color = new Color(0, 0,0,255);
-        fade.CrossFadeAlpha(0,1.0f,false);
-        StartCoroutine (fadeIn ());
-
+        fade.color = new Color(0,0,0,255);
+        StartCoroutine ("fadein");
 	}
-	IEnumerator fadeIn(){
-		while (fade.color.a < 255) {
-			yield return new WaitForSeconds (0.1f);
-            
-		}
+	IEnumerator fadein(){
+        fade.CrossFadeAlpha(0.0f, 1, true);
+        yield return new WaitForSeconds (1.0f);
+        fade.canvasRenderer.SetAlpha(0.0f);
+        fade.gameObject.SetActive(false);
 	}
+    IEnumerator fadeOut()
+    {
+        fade.gameObject.SetActive(true);
+        fade.CrossFadeAlpha(255, 1.0f, false);
+        yield return new WaitForSeconds(1.0f);
+    }
 	// Update is called once per frame
 	void Update () {
 	}
@@ -53,6 +57,8 @@ public class Title : MonoBehaviour {
 		SceneManager.LoadScene (2,LoadSceneMode.Single);
 	}
 	public void GameStart(){
-		SceneManager.LoadScene (1,LoadSceneMode.Single);
+        //StartCoroutine(fadeOut());
+        SceneManager.LoadScene (1,LoadSceneMode.Single);
+       
 	}
 }
