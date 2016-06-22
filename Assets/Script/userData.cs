@@ -2,32 +2,28 @@
 //enum ITEM{DRILL,CUSHION,WALL,JUMPING};
 public class usingitem{
 	private string itemName;
-	private int numOfItem;
+	//private int numOfItem;
 
 	public usingitem clone(){
-		usingitem temp = new usingitem ( this.itemName,this.numOfItem);
+		usingitem temp = new usingitem ( this.itemName);
 		return temp;
 	}
-	public usingitem(string s,int n){
+	public usingitem(string s){
 		itemName = s;
-		numOfItem = n;
+		//numOfItem = n;
 	}
 	public string getItemName(){
 		return itemName;
 	}
-	public int getNumOfItem(){
-		return numOfItem;
-	}
-	public void useItem(){
-		numOfItem--;
-	}
 }
 public class Stage{
 	private int score = 0;
+    private int numOfItem;
 	private bool isCleared = false;
 	private ArrayList itemList = new ArrayList();
 
-	public Stage(usingitem[] usi){
+	public Stage(usingitem[] usi,int n){
+        numOfItem = n;
 		foreach (usingitem tp in usi) {
 			itemList.Add (tp);
 		}
@@ -41,6 +37,10 @@ public class Stage{
 	public int getScore(){
 		return score;
 	}
+    public int getNumOfItem()
+    {
+        return numOfItem;
+    }
 	public bool isClear(){
 		return isCleared;
 	}
@@ -54,17 +54,17 @@ public static class userData{
 
 
 	public static Stage[] stage = new Stage[5]{
-		new Stage(new usingitem[1]{new usingitem("drill",2)}),
-		new Stage(new usingitem[1]{new usingitem("jumping",2)}),
-		new Stage(new usingitem[1]{new usingitem("cushion",2)}),
+		new Stage(new usingitem[1]{new usingitem("drill")},2),
+		new Stage(new usingitem[1]{new usingitem("jumping")},2),
+		new Stage(new usingitem[1]{new usingitem("cushion")},2),
 		new Stage(new usingitem[2]{
-			new usingitem("wall",2),
-			new usingitem("cushion",1)}),
-		new Stage(new usingitem[3]{
-			new usingitem("drill",1),
-			new usingitem("jumping",1),
-			new usingitem("cushion",1)
-		})
+			new usingitem("wall"),
+			new usingitem("cushion")
+        },3),
+		new Stage(new usingitem[2]{
+			new usingitem("drill"),
+			new usingitem("jumping")
+		},2)
 	};
 
 

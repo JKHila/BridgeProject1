@@ -6,7 +6,8 @@ public class Handler : MonoBehaviour {
 
 	// Use this for initialization
 	private ArrayList itemList;
-	private usingitem drillItem,cushionItem,wallItem,jumpingItem;
+    private int numOfItem;
+	//private usingitem drillItem,cushionItem,wallItem,jumpingItem;
 	private int numDie=0;
 	private int score=0;
 	private float time=60;
@@ -33,8 +34,8 @@ public class Handler : MonoBehaviour {
 	public GameObject dummyCusion;
 	public GameObject dummyWall;
 	public GameObject dummyjumping;
-	//UI Obj;
-	public Text[] itemNumText = new Text[userData.numOfItemKind]; 
+    //UI Obj;
+    public Text itemNumText;
 	public GameObject[] icon = new GameObject[userData.numOfItemKind];
 	public Text scoreText;
 	public Text timeText;
@@ -43,19 +44,27 @@ public class Handler : MonoBehaviour {
 	public Image[] scoreStar;
 	public Sprite noStar;
 	public GameObject clearPnl;
+    public Button nextBtn;
 	//etc.
-	public SpriteRenderer slimeSpawnSr;
-	public Sprite[] slimeSpawnSp;
+	//public SpriteRenderer slimeSpawnSr;
+	//public Sprite[] slimeSpawnSp;
 	public GameObject slimes;
 
 	void checkClear(){
+        
 		if (score > userData.stage [userData.curStageNum].getScore ()) { 
 			userData.stage [userData.curStageNum].setScore (score);
 		}
-		if (userData.curStageNum > userData.clearedStage)
-			userData.clearedStage = userData.curStageNum;
-		if (score+numDie >= 20) {
-			endScoreText.text = "X " + score + "/20";
+        if (score+numDie >= 20) {
+            if (userData.curStageNum > userData.clearedStage && numDie < 18)
+            {
+                
+                userData.clearedStage = userData.curStageNum;
+            }
+            if(userData.curStageNum <= userData.clearedStage)
+                nextBtn.interactable = true;
+            Time.timeScale = 0;
+            endScoreText.text = "X " + score + "/20";
 			if (score < 3) {
 				ClearText.text = "FAIL!";
 				scoreStar [0].sprite = noStar;	
@@ -79,26 +88,26 @@ public class Handler : MonoBehaviour {
 		tpObj.SetActive (true);
 	}
 	void checkTouch(){
-		if(Input.GetMouseButtonDown(0) == true)
+		if(Input.GetMouseButtonDown(0) == true && Time.timeScale > 0)
 		{
 			RaycastHit2D hit = Physics2D.Raycast (Camera.main.ScreenToWorldPoint (Input.mousePosition), Vector2.zero);
 			if (hit) {
 				string tmp = hit.transform.gameObject.name;
 				switch(tmp) {
 				case "DrillIcon":
-					if (drillItem.getNumOfItem() > 0)
+					if (numOfItem > 0)
 						createDummy (upDrill);
 					break;
 				case "CushionIcon":
-					if(cushionItem.getNumOfItem() > 0)
+					if(numOfItem > 0)
 						createDummy (dummyCusion);
 					break;
 				case "WallIcon":
-					if(wallItem.getNumOfItem() > 0)
+					if(numOfItem > 0)
 					createDummy (dummyWall);
 					break;
 				case "JumpingIcon":
-					if(jumpingItem.getNumOfItem() > 0)
+					if(numOfItem > 0)
 						createDummy (dummyjumping);
 					break;
 				default:
@@ -124,26 +133,26 @@ public class Handler : MonoBehaviour {
 				switch (temp) {
 				case"drill": 
 					tpObj.GetComponent<CircleCollider2D> ().enabled = true;
-					drillItem.useItem ();
-					UpdateItemNum (seqOfItem[0], drillItem.getNumOfItem());
+                    numOfItem--;
+					UpdateItemNum ();
 					break;
 				case "cushion":
 					tpObj.SetActive (false);
 					Instantiate (Cusion, (Vector2)tpPos, transform.rotation);
-					cushionItem.useItem ();
-					UpdateItemNum (seqOfItem[1], cushionItem.getNumOfItem());
-					break;
+                        numOfItem--;
+                        UpdateItemNum();
+                        break;
 				case "Wall":
 					tpObj.SetActive (false);
 					Instantiate (Wall, (Vector2)tpPos, transform.rotation);
-					wallItem.useItem ();
-					UpdateItemNum (seqOfItem[2], wallItem.getNumOfItem());
-					break;
+                        numOfItem--;
+                        UpdateItemNum();
+                        break;
 				case "Jumping":
 					tpObj.GetComponent<BoxCollider2D> ().enabled = true;
-					jumpingItem.useItem ();
-					UpdateItemNum (seqOfItem[3], jumpingItem.getNumOfItem());
-					break;
+                        numOfItem--;
+                        UpdateItemNum();
+                        break;
 				default:
 					isMoved = false;
 					break;
@@ -221,6 +230,10 @@ public class Handler : MonoBehaviour {
 		} else {
 			timeText.text += "0" + (int)time % 60;
 		}
+        if(time <= 0)
+        {
+            numDie = 20;
+        }
 	}
 	public void addDieCnt(){
 		numDie++;
@@ -229,71 +242,55 @@ public class Handler : MonoBehaviour {
 		score++;
 		scoreText.text = score.ToString(); 
 	}
-	public void UpdateItemNum(int n,int numOfItem){ //남은 아이템 갯수
-		itemNumText [n].text = numOfItem.ToString ();
+	public void UpdateItemNum(){ //남은 아이템 갯수
+		itemNumText.text = numOfItem.ToString ();
 	}
 	
 //시작처리
-	IEnumerator CreateSlime(){
-		for (int i = 0; i < 20; i++) {
-			for (int j = 0; j < 6; j++) {
-				slimeSpawnSr.sprite = slimeSpawnSp [j];
-				yield return new WaitForSeconds (0.05f);
-			}
-			slimeSpawnSr.sprite = slimeSpawnSp [0];
-			//float a = Random.Range (-1.0f, 1.0f);
-			GameObject tmp = (GameObject)Instantiate (Slime, new Vector2 (spawn.transform.position.x+1.4f, spawn.transform.position.y-1.5f), this.transform.rotation);
-			tmp.transform.SetParent (slimes.transform);
-			//tmp.GetComponent<Rigidbody2D> ().AddForce (Vector2.right * 10,ForceMode2D.Impulse);
-			yield return new WaitForSeconds (0.1f);
-		}
-	}
 
 	void setItem(){
 		float x = -2.75f, y = -0.23f;
 		int i = 0;
 		itemList = userData.stage [userData.curStageNum].getItemList ();
-		foreach (usingitem usi in itemList) {
+        numOfItem = userData.stage[userData.curStageNum].getNumOfItem();
+        foreach (usingitem usi in itemList) {
 		string str = usi.getItemName();
 			switch (str) {
 			case "drill":
 				icon [0].transform.localPosition = new Vector2 (x, y);
-				seqOfItem [0] = i;
-				itemNumText [i++].text = usi.getNumOfItem ().ToString ();
-				drillItem = usi.clone ();
+				//seqOfItem [0] = i;
+				//drillItem = usi.clone ();
 				break;
 			case "cushion":
 				icon [1].transform.localPosition = new Vector2 (x, y);
-				seqOfItem [1] = i;
-				itemNumText [i++].text = usi.getNumOfItem ().ToString ();
-				cushionItem = usi.clone ();
+				//seqOfItem [1] = i;
+				//cushionItem = usi.clone ();
 				break;
 			case "wall":
 				icon [2].transform.localPosition = new Vector2 (x, y);
-				seqOfItem [2] = i;
-				itemNumText [i++].text = usi.getNumOfItem ().ToString ();
-				wallItem = usi.clone ();
+				//seqOfItem [2] = i;
+				//wallItem = usi.clone ();
 				break;
 			case "jumping":
 				icon [3].transform.localPosition = new Vector2 (x, y);
-				seqOfItem [3] = i;
-				itemNumText [i++].text = usi.getNumOfItem ().ToString ();
-				jumpingItem = usi.clone ();
+				//seqOfItem [3] = i;
+				//jumpingItem = usi.clone ();
 				break;
 			}
 			x += 2.28f;
 		}
+        UpdateItemNum();
 	}
 
 	void Start () {
+        Time.timeScale = 1;
 		setItem ();
 		background = GameObject.Find ("Background");
-		WarriorSpawn = GameObject.Find ("WarriorSpawn");
-		spawn = GameObject.Find ("Spawn");
+		//WarriorSpawn = GameObject.Find ("WarriorSpawn");
+		//spawn = GameObject.Find ("Spawn");
 		slimes = GameObject.Find ("MovingObj");
 		//WarriorSpawnSr = WarriorSpawn.GetComponent<SpriteRenderer> ();
-		slimeSpawnSr = spawn.GetComponent<SpriteRenderer> ();
-		StartCoroutine (CreateSlime ());
+		//slimeSpawnSr = spawn.GetComponent<SpriteRenderer> ();
 	}
 	// Update is called once per frame
 	void Update () {
