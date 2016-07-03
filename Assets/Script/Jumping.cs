@@ -35,7 +35,8 @@ public class Jumping : MonoBehaviour {
 		yield return new WaitForSeconds (0.1f);
 		if (!isAct && GetComponent<BoxCollider2D>().isActiveAndEnabled) {
 			Destroy (this.gameObject);
-		}
+            GameObject.Find("Main Camera").SendMessage("canceledItem");
+        }
 	}
 	// Use this for initialization
 	void Start () {

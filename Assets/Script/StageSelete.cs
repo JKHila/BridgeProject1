@@ -16,7 +16,7 @@ public class StageSelete : MonoBehaviour {
 				btn [i].GetComponent<Image> ().sprite = sp [1];
 			else if(score >=10 && score <20)
 				btn [i].GetComponent<Image> ().sprite = sp [2];
-			else
+			else 
 				btn [i].GetComponent<Image> ().sprite = sp [3];
 			btn [i].transform.FindChild ("Text").gameObject.SetActive (true);
 			btn [i].GetComponent<Button> ().interactable = true;

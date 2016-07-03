@@ -50,15 +50,16 @@ public class Handler : MonoBehaviour {
 	//public Sprite[] slimeSpawnSp;
 	public GameObject slimes;
 
-	void checkClear(){
-        
-		if (score > userData.stage [userData.curStageNum].getScore ()) { 
-			userData.stage [userData.curStageNum].setScore (score);
-		}
+	void checkClear(){ 
         if (score+numDie >= 20) {
+            if (score > userData.stage[userData.curStageNum].getScore())
+            {
+               // Debug.Log("setsore1:"+userData.stage[userData.curStageNum].getScore());
+                userData.stage[userData.curStageNum].setScore(score);
+                //Debug.Log("setsore2:" + userData.stage[userData.curStageNum].getScore());
+            }
             if (userData.curStageNum > userData.clearedStage && numDie < 18)
             {
-                
                 userData.clearedStage = userData.curStageNum;
             }
             if(userData.curStageNum <= userData.clearedStage)
@@ -81,9 +82,11 @@ public class Handler : MonoBehaviour {
 		}
 	}
 	void createDummy(GameObject obj){
-		isBtnOn = true;
+        numOfItem--;
+        UpdateItemNum();
+        isBtnOn = true;
 		tpPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-		tpObj = (GameObject)Instantiate (obj, (Vector2)tpPos, transform.rotation);
+		tpObj = (GameObject)Instantiate (obj, new Vector2(tpPos.x - 1.0f,tpPos.y - 1.0f), transform.rotation);
 		tpObj.transform.SetParent (slimes.transform);
 		tpObj.SetActive (true);
 	}
@@ -133,25 +136,17 @@ public class Handler : MonoBehaviour {
 				switch (temp) {
 				case"drill": 
 					tpObj.GetComponent<CircleCollider2D> ().enabled = true;
-                    numOfItem--;
-					UpdateItemNum ();
 					break;
 				case "cushion":
 					tpObj.SetActive (false);
-					Instantiate (Cusion, (Vector2)tpPos, transform.rotation);
-                        numOfItem--;
-                        UpdateItemNum();
+					Instantiate (Cusion, new Vector2(tpPos.x - 1.0f, tpPos.y - 1.0f), transform.rotation);
                         break;
 				case "Wall":
 					tpObj.SetActive (false);
-					Instantiate (Wall, (Vector2)tpPos, transform.rotation);
-                        numOfItem--;
-                        UpdateItemNum();
+					Instantiate (Wall, new Vector2(tpPos.x - 1.0f, tpPos.y - 1.0f), transform.rotation);
                         break;
 				case "Jumping":
 					tpObj.GetComponent<BoxCollider2D> ().enabled = true;
-                        numOfItem--;
-                        UpdateItemNum();
                         break;
 				default:
 					isMoved = false;
@@ -163,7 +158,7 @@ public class Handler : MonoBehaviour {
 		{
 			if (isBtnOn) {
 				tpPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-				tpObj.transform.position = (Vector2)tpPos; //마우스 누르고 있음.
+				tpObj.transform.position = new Vector2(tpPos.x - 1.0f, tpPos.y - 1.0f); //마우스 누르고 있음.
 			} else {
 				if(Time.timeScale !=0 && isMoved)
 				{
@@ -232,6 +227,7 @@ public class Handler : MonoBehaviour {
 		}
         if(time <= 0)
         {
+            score = 0;
             numDie = 20;
         }
 	}
@@ -245,7 +241,11 @@ public class Handler : MonoBehaviour {
 	public void UpdateItemNum(){ //남은 아이템 갯수
 		itemNumText.text = numOfItem.ToString ();
 	}
-	
+	public void canceledItem()
+    {
+        numOfItem++;
+        UpdateItemNum();
+    }
 //시작처리
 
 	void setItem(){

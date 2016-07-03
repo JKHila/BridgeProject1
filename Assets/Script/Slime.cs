@@ -28,6 +28,11 @@ public class Slime : Moving {
 		curY = transform.position.y;
 		StartCoroutine ("moveAction");
 	}
+    IEnumerator stopping()
+    {
+        yield return new WaitForSeconds(0.5f);
+        base.speed = 0;
+    }
 	IEnumerator moveAction(){
 		while (true) {
 			for (int i = 0; i < 3; i++) {
@@ -62,11 +67,18 @@ public class Slime : Moving {
 		}
 	}
 	void OnTriggerEnter2D(Collider2D coll){ ///checkArea에 충돌
-		if (coll.tag == "Article") {
-			base.moveBack ();
-		} else {
-			curY = transform.position.y;
-		}
+		if (coll.tag == "Article")
+        {
+            base.moveBack();
+        }
+        else if (coll.tag == "grab")
+        {
+            StartCoroutine(stopping());
+        }
+        else
+        {
+            curY = transform.position.y;
+        }
 	}
 	void OnCollisionEnter2D (Collision2D coll){
 		if (coll.gameObject.tag != "cushion") {

@@ -44,6 +44,7 @@ public class Drill : MonoBehaviour {
 		yield return new WaitForSeconds (0.1f);
 		if (!isAct && GetComponent<CircleCollider2D>().isActiveAndEnabled) {
 			Destroy (this.gameObject);
+            GameObject.Find("Main Camera").SendMessage("canceledItem");
 		}
 	}
 	// Use this for initialization
