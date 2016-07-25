@@ -4,7 +4,7 @@ using System.Collections;
 public class Drill : MonoBehaviour {
 	SpriteRenderer drillSr;
 	SpriteRenderer articleSr;
-
+    
 	public GameObject emptyBlock;
 	public Sprite[] drillSp;
 	public Sprite[] articleSp;
@@ -13,7 +13,8 @@ public class Drill : MonoBehaviour {
 	IEnumerator drillAction(){
 		GameObject tmp = articleSr.gameObject;
 		transform.position = new Vector2 (tmp.transform.position.x, tmp.transform.position.y+1.3f);
-		int j;
+        GameObject.Find("Main Camera").SendMessage("initIcon");
+        int j;
 		for (int i = 0; i < 8; i++) {
 			drillSr.sprite = drillSp [i];
 			transform.Translate (Vector2.up *-2.3f* Time.deltaTime);
@@ -50,7 +51,7 @@ public class Drill : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		drillSr = GetComponent<SpriteRenderer> ();
-
+       GameObject.Find("Main Camera").GetComponent<Handler>();
 	}
 	
 	// Update is called once per frame
