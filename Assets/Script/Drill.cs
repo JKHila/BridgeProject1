@@ -51,7 +51,6 @@ public class Drill : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		drillSr = GetComponent<SpriteRenderer> ();
-       GameObject.Find("Main Camera").GetComponent<Handler>();
 	}
 	
 	// Update is called once per frame

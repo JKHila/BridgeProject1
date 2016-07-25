@@ -121,7 +121,7 @@ public class Handler : MonoBehaviour
             if (hit)
             {
                 string tmp = hit.transform.gameObject.name;
-               
+                Debug.Log(tmp);
                 if (numOfItem > 0)
                 {
                     switch (tmp)
@@ -139,6 +139,16 @@ public class Handler : MonoBehaviour
                             createDummy(dummyjumping); selectedItem(3);
                             break;
                         default:
+                            //설치형클릭후 땅 클릭했을때
+                            if (OnItem == 0)
+                            {
+                                createDummy(upDrill); tpObj.GetComponent<CircleCollider2D>().enabled = true;
+                            }
+                            else if (OnItem == 3)
+                            {
+                                createDummy(dummyjumping); tpObj.GetComponent<BoxCollider2D>().enabled = true;
+                            }
+                            initIcon();
                             if (Time.timeScale != 0)
                             {
                                 initMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -154,10 +164,8 @@ public class Handler : MonoBehaviour
                 tpPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 switch (OnItem)
                 {
-                    case 0: createDummy(upDrill); tpObj.GetComponent<CircleCollider2D>().enabled = true; break;
                     case 1: Instantiate(Cusion, new Vector2(tpPos.x, tpPos.y), transform.rotation); numOfItem--; UpdateItemNum(); break;
                     case 2: Instantiate(Wall, new Vector2(tpPos.x, tpPos.y), transform.rotation); numOfItem--; UpdateItemNum(); break;
-                    case 3: createDummy(upDrill); tpObj.GetComponent<BoxCollider2D>().enabled = true; break;
                 }
                 initIcon();
 

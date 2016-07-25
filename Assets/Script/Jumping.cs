@@ -6,14 +6,20 @@ public class Jumping : MonoBehaviour {
 
 	private SpriteRenderer sr;
 	private bool isAct;
+    
 	void OnTriggerEnter2D(Collider2D coll){
-		if (coll.tag == "Article" && coll.name != "Wall(Clone)" && coll.name != "Wall") {
-			isAct = true;
-			transform.position = new Vector2 (coll.transform.position.x, coll.transform.position.y + 0.7f);
+		if (coll.tag == "Article" && coll.name =="Land") {
+            StartCoroutine(setPos(coll));
+            isAct = true;
 		} else if (coll.tag == "Slime") {
 			StartCoroutine (spring (coll));
 		}
 	}
+    IEnumerator setPos(Collider2D coll)
+    {
+        yield return new WaitForSeconds(0.1f);
+        transform.position = new Vector2(coll.transform.position.x, coll.transform.position.y + 0.7f);
+    }
 	IEnumerator spring(Collider2D coll){
 		
 		//yield return new WaitForSeconds (0.05f);
