@@ -63,6 +63,7 @@ public class Handler : MonoBehaviour
 			clearPnl.SetActive(true);
 			PlayerPrefs.SetInt ("Stage0Score", 20);
 			PlayerPrefs.SetInt("clearedStage",userData.curStageNum);
+			isTuto = false;
 		}
         else if (score + numDie >= 20)
         {
