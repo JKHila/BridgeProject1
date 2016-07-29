@@ -25,6 +25,15 @@ public class Title : MonoBehaviour {
     }
 	// Update is called once per frame
 	void Update () {
+		debugging ();
+	}
+	void debugging()
+	{
+		if (Input.GetKeyDown(KeyCode.Delete))
+		{
+			PlayerPrefs.DeleteAll();
+			Debug.Log ("deleteAll");
+		}
 	}
     public void fastBtnDown()
     {

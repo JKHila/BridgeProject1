@@ -32,7 +32,7 @@ public class Moving : MonoBehaviour {
 		/*float height = rbody.velocity.y * -10f;
 		Debug.Log (height);
 		if (height > 300.0f)*/
-		float height = 300.0f;
+		//float height = 300.0f;
 		rbody.velocity = transform.up*10 + transform.right*2*speed;
 		//rbody.AddForce (new Vector2 (speed * 30f, height), ForceMode2D.Impulse);
 	}

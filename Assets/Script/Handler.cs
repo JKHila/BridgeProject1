@@ -5,6 +5,9 @@ using UnityEngine.UI;
 public class Handler : MonoBehaviour
 {
 
+	public static bool isPause;
+	public static bool isTuto;
+
     // Use this for initialization
     private ArrayList itemList;
     private int numOfItem;
@@ -17,7 +20,7 @@ public class Handler : MonoBehaviour
     private GameObject tpObj;
     private Vector3 tpPos;
     private Vector2 initMousePos;
-    private int[] seqOfItem = new int[userData.numOfItemKind];
+    //private int[] seqOfItem = new int[userData.numOfItemKind];
     private int OnItem = -1;
 
     //Camera Opt
@@ -54,19 +57,28 @@ public class Handler : MonoBehaviour
 
     void checkClear()
     {
-        if (score + numDie >= 20)
+		if (isTuto && score > 0) {
+			PlayerPrefs.SetInt ("isNotFirst", 1);
+			nextBtn.interactable = true;
+			clearPnl.SetActive(true);
+			PlayerPrefs.SetInt ("Stage0Score", 20);
+			PlayerPrefs.SetInt("clearedStage",userData.curStageNum);
+		}
+        else if (score + numDie >= 20)
         {
-            if (score > userData.stage[userData.curStageNum].getScore())
+			string stageText = "Stage" + userData.curStageNum + "Score";
+			if (score > PlayerPrefs.GetInt(stageText)) //userData.stage[userData.curStageNum].getScore())
             {
                 // Debug.Log("setsore1:"+userData.stage[userData.curStageNum].getScore());
-                userData.stage[userData.curStageNum].setScore(score);
+				PlayerPrefs.SetInt(stageText,score);
+                //userData.stage[userData.curStageNum].setScore(score);
                 //Debug.Log("setsore2:" + userData.stage[userData.curStageNum].getScore());
             }
-            if (userData.curStageNum > userData.clearedStage && numDie < 18)
+			if (userData.curStageNum > PlayerPrefs.GetInt("clearedStage") && numDie < 18)
             {
-                userData.clearedStage = userData.curStageNum;
+				PlayerPrefs.SetInt("clearedStage",userData.curStageNum);
             }
-            if (userData.curStageNum <= userData.clearedStage)
+			if (userData.curStageNum <= PlayerPrefs.GetInt("clearedStage"))
                 nextBtn.interactable = true;
             Time.timeScale = 0;
             endScoreText.text = "X " + score + "/20";
@@ -114,7 +126,7 @@ public class Handler : MonoBehaviour
     }
     void checkTouch()
     {
-        if (Input.GetMouseButtonDown(0) == true && Time.timeScale > 0)
+		if (Input.GetMouseButtonDown(0) == true && Time.timeScale > 0)
         {
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
             
@@ -124,48 +136,128 @@ public class Handler : MonoBehaviour
                 Debug.Log(tmp);
                 if (numOfItem > 0)
                 {
-                    switch (tmp)
-                    {
-                        case "DrillIcon":
-                            createDummy(upDrill); selectedItem(0);
-                            break;
-                        case "CushionIcon":
-                            createDummy(dummyCusion); selectedItem(1);
-                            break;
-                        case "WallIcon":
-                            createDummy(dummyWall); selectedItem(2);
-                            break;
-                        case "JumpingIcon":
-                            createDummy(dummyjumping); selectedItem(3);
-                            break;
-                        default:
+					if (isTuto) {
+						//튜토리얼 일때
+						switch (tmp) {
+						case "DrillIcon":
+							if (Tutorial.isDrillCo) {
+								createDummy (upDrill);
+								selectedItem (0);
+							}
+							break;
+						case "CushionIcon":
+							if (Tutorial.isCushionCo) {
+								createDummy (dummyCusion);
+								selectedItem (1);
+								Tutorial.isCushionCo = false;
+							}
+							break;
+						case "WallIcon":
+							if (Tutorial.isWallCo) {
+								createDummy (dummyWall);
+								selectedItem (2);
+							}
+							break;
+						case "JumpingIcon":
+							if (Tutorial.isJumpingCo) {
+								createDummy (dummyjumping);
+								selectedItem (3);
+							}
+							break;
+						//튜토리얼 일때 물리형 클릭소환
+						case "CushionCheck":
+							if (Tutorial.isCushionCo2) {
+								Vector3 temp = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+								Instantiate (Cusion, new Vector2 (temp.x, temp.y), transform.rotation);
+								numOfItem--;
+								UpdateItemNum ();
+								Tutorial.isCushionCo2 = false; 
+								initIcon ();
+							}
+							break;
+						case "WallCheck":
+							if (Tutorial.isWallCo) {
+								Vector3 temp = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+								Instantiate (Wall, new Vector2 (temp.x, temp.y), transform.rotation);
+								numOfItem--;
+								UpdateItemNum ();
+								Tutorial.isWallCo = false;
+								initIcon ();
+							}
+							break;
+						default:
+							//설치형클릭후 땅 클릭했을때
+							if (OnItem == 0) {
+								createDummy (upDrill);
+								tpObj.GetComponent<CircleCollider2D> ().enabled = true;
+							} else if (OnItem == 3) {
+								createDummy (dummyjumping);
+								tpObj.GetComponent<BoxCollider2D> ().enabled = true;
+							}
+							if(!Tutorial.isCushionCo2)
+								initIcon ();
+							if (Time.timeScale != 0) {
+								initMousePos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+								isMoved = true;
+							}
+
+							break;
+						}
+					} else {
+						switch (tmp) {
+						case "DrillIcon":
+							createDummy (upDrill);
+							selectedItem (0);
+							break;
+						case "CushionIcon":
+							createDummy (dummyCusion);
+							selectedItem (1);
+							break;
+						case "WallIcon":
+							createDummy (dummyWall);
+							selectedItem (2);
+							break;
+						case "JumpingIcon":
+							createDummy (dummyjumping);
+							selectedItem (3);
+							break;
+						default:
                             //설치형클릭후 땅 클릭했을때
-                            if (OnItem == 0)
-                            {
-                                createDummy(upDrill); tpObj.GetComponent<CircleCollider2D>().enabled = true;
-                            }
-                            else if (OnItem == 3)
-                            {
-                                createDummy(dummyjumping); tpObj.GetComponent<BoxCollider2D>().enabled = true;
-                            }
-                            initIcon();
-                            if (Time.timeScale != 0)
-                            {
-                                initMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                                isMoved = true;
-                            }
-                            break;
-                    }
+							if (OnItem == 0) {
+								createDummy (upDrill);
+								Tutorial.isDrillCo = false;
+								tpObj.GetComponent<CircleCollider2D> ().enabled = true;
+							} else if (OnItem == 3) {
+								createDummy (dummyjumping);
+								Tutorial.isJumpingCo = false;
+								tpObj.GetComponent<BoxCollider2D> ().enabled = true;
+							}
+							initIcon ();
+							if (Time.timeScale != 0) {
+								initMousePos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+								isMoved = true;
+							}
+							break;
+						}
+					}
                 }
 
             }
-            else if (OnItem > -1)
-            {
+			else if (OnItem > -1 && !isTuto)
+            {//물리 적용된것
                 tpPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 switch (OnItem)
                 {
-                    case 1: Instantiate(Cusion, new Vector2(tpPos.x, tpPos.y), transform.rotation); numOfItem--; UpdateItemNum(); break;
-                    case 2: Instantiate(Wall, new Vector2(tpPos.x, tpPos.y), transform.rotation); numOfItem--; UpdateItemNum(); break;
+				case 1:
+					Instantiate (Cusion, new Vector2 (tpPos.x, tpPos.y), transform.rotation);
+					numOfItem--;
+					UpdateItemNum ();
+					break;
+				case 2:
+					Instantiate (Wall, new Vector2 (tpPos.x, tpPos.y), transform.rotation);
+					numOfItem--;
+					UpdateItemNum ();
+					break;
                 }
                 initIcon();
 
@@ -187,36 +279,41 @@ public class Handler : MonoBehaviour
             {
                 isBtnOn = false;
                 string temp = tpObj.gameObject.tag;
-                switch (temp)
-                {
-                    case "drill":
-                        tpObj.GetComponent<CircleCollider2D>().enabled = true;
-                        break;
-                    case "cushion":
-                        tpObj.SetActive(false);
-                        tpObj = Instantiate(Cusion, new Vector2(tpPos.x, tpPos.y), transform.rotation) as GameObject;
-                        if (tpObj.transform.position.y < -3)
-                        {
-                            Destroy(tpObj);
-                            canceledItem();
-                        }
-                        break;
-                    case "Wall":
-                        tpObj.SetActive(false);
-                        tpObj = Instantiate(Wall, new Vector2(tpPos.x, tpPos.y), transform.rotation) as GameObject;
-                        if (tpObj.transform.position.y < -3)
-                        {
-                            Destroy(tpObj);
-                            canceledItem();
-                        }
-                        break;
-                    case "Jumping":
-                        tpObj.GetComponent<BoxCollider2D>().enabled = true;
-                        break;
-                    default:
-                        isMoved = false;
-                        break;
-                }
+				switch (temp) {
+				case "drill":
+					tpObj.GetComponent<CircleCollider2D> ().enabled = true;
+					break;
+				case "cushion":
+						
+					tpObj.SetActive (false);
+					tpObj = Instantiate (Cusion, new Vector2 (tpPos.x, tpPos.y), transform.rotation) as GameObject;
+					if (tpObj.transform.position.y < -3) {
+						Destroy (tpObj);
+						canceledItem ();
+					} else {
+						//Tutorial.isCushionCo = false;
+						initIcon ();
+					}
+					break;
+				case "Wall":
+					tpObj.SetActive (false);
+					tpObj = Instantiate (Wall, new Vector2 (tpPos.x, tpPos.y), transform.rotation) as GameObject;
+					if (tpObj.transform.position.y < -3) {
+						Destroy (tpObj);
+						canceledItem ();
+					} else {
+						Tutorial.isWallCo = false;
+						initIcon ();
+					}
+					break;
+				case "Jumping":
+					tpObj.GetComponent<BoxCollider2D> ().enabled = true;
+					break;
+				default:
+					isMoved = false;
+					break;
+				}
+
             }
         }
         else if (Input.GetMouseButton(0))
@@ -289,21 +386,19 @@ public class Handler : MonoBehaviour
     }
     void checkTime()
     {
-        time -= Time.deltaTime;
-        timeText.text = (int)time / 60 + ":";
-        if ((int)time % 60 > 9)
-        {
-            timeText.text += (int)time % 60;
-        }
-        else
-        {
-            timeText.text += "0" + (int)time % 60;
-        }
-        if (time <= 0)
-        {
-            score = 0;
-            numDie = 20;
-        }
+		if (!isPause) {
+			time -= Time.deltaTime;
+			timeText.text = (int)time / 60 + ":";
+			if ((int)time % 60 > 9) {
+				timeText.text += (int)time % 60;
+			} else {
+				timeText.text += "0" + (int)time % 60;
+			}
+			if (time <= 0) {
+				score = 0;
+				numDie = 20;
+			}
+		}
     }
     public void addDieCnt()
     {
@@ -372,13 +467,7 @@ public class Handler : MonoBehaviour
         UpdateItemNum();
     }
 
-    void debugging()
-    {
-        if (Input.GetKeyDown(KeyCode.Delete))
-        {
-            PlayerPrefs.DeleteAll();
-        }
-    }
+   
 
     void Start()
     {
@@ -394,7 +483,6 @@ public class Handler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        debugging();
         checkTime();
         checkEndGame();
         checkTouch();

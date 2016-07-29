@@ -5,6 +5,7 @@ public class Cushion : MonoBehaviour {
 	//public Animator anim;
 	// Use this for initialization
 	//private GameObject tmpObj;
+	public  bool tutoCheck;
 	public Sprite[] sp = new Sprite[9];
 
 	SpriteRenderer sr;
@@ -14,15 +15,31 @@ public class Cushion : MonoBehaviour {
 			yield return new WaitForSeconds (0.05f);
 		}
 	}
+	IEnumerator checkDelay(){
+		yield return new WaitForSeconds (0.1f);
+		if (!tutoCheck) {
+			Destroy (this.gameObject);
+			GameObject.Find("Main Camera").SendMessage("canceledItem");
+		} else {
+			Tutorial.isCushionCo2 = false;
+		}
+	}
 	void Start () {
 		sr = GetComponent<SpriteRenderer> ();
+		if (Handler.isTuto) {
+			StartCoroutine (checkDelay ());
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
 	}
+
 	void OnTriggerEnter2D(Collider2D coll){
+		if (Handler.isTuto && coll.gameObject.name == "CushionCheck") {
+			tutoCheck = true;
+		}
 		if (coll.gameObject.tag == "Slime") {
 			if (coll.GetComponent<Rigidbody2D> ().velocity.y < 0.0f) {
 				coll.gameObject.GetComponent<Moving> ().Jump ();

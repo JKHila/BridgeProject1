@@ -6,9 +6,10 @@ public class Jumping : MonoBehaviour {
 
 	private SpriteRenderer sr;
 	private bool isAct;
-    
+	private string objName;
+
 	void OnTriggerEnter2D(Collider2D coll){
-		if (coll.tag == "Article" && coll.name =="Land") {
+		if (coll.tag == "Article" && coll.name ==objName) {
             StartCoroutine(setPos(coll));
             isAct = true;
 		} else if (coll.tag == "Slime") {
@@ -17,7 +18,10 @@ public class Jumping : MonoBehaviour {
 	}
     IEnumerator setPos(Collider2D coll)
     {
+		if (Handler.isTuto) //when tutorial
+			Tutorial.isJumpingCo = false;
         yield return new WaitForSeconds(0.1f);
+		GameObject.Find("Main Camera").SendMessage("initIcon");
         transform.position = new Vector2(coll.transform.position.x, coll.transform.position.y + 0.7f);
     }
 	IEnumerator spring(Collider2D coll){
@@ -47,6 +51,10 @@ public class Jumping : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		sr = GetComponent<SpriteRenderer> ();
+		if (!Tutorial.isJumpingCo)
+			objName = "Land";
+		else
+			objName = "TuLand2";
 	}
 	
 	// Update is called once per frame

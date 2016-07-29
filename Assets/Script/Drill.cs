@@ -1,9 +1,10 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using UnityEngine;
 
 public class Drill : MonoBehaviour {
 	SpriteRenderer drillSr;
 	SpriteRenderer articleSr;
+	private string objName;
     
 	public GameObject emptyBlock;
 	public Sprite[] drillSp;
@@ -11,6 +12,9 @@ public class Drill : MonoBehaviour {
 	public bool isAct = false;
 
 	IEnumerator drillAction(){
+		if (Handler.isTuto) //when tutorial
+			Tutorial.isDrillCo = false;
+		
 		GameObject tmp = articleSr.gameObject;
 		transform.position = new Vector2 (tmp.transform.position.x, tmp.transform.position.y+1.3f);
         GameObject.Find("Main Camera").SendMessage("initIcon");
@@ -27,11 +31,13 @@ public class Drill : MonoBehaviour {
 		}
 		Destroy (articleSr.gameObject);
 		Destroy (this.gameObject);
+
+
 		isAct = false;
 	}
 
 	void OnTriggerEnter2D(Collider2D coll){
-		if (coll.tag == "Article" && coll.name =="Land") {
+		if (coll.tag == "Article" && coll.name == objName) {
 			isAct = true;
 			articleSr = coll.GetComponent<SpriteRenderer> ();
 			Instantiate (emptyBlock, new Vector2(coll.transform.position.x,coll.transform.position.y + 1),transform.rotation);
@@ -51,6 +57,10 @@ public class Drill : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		drillSr = GetComponent<SpriteRenderer> ();
+		if (!Tutorial.isDrillCo)
+			objName = "Land";
+		else
+			objName = "TuLand";
 	}
 	
 	// Update is called once per frame

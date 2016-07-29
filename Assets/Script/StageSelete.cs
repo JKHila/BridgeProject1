@@ -8,8 +8,9 @@ public class StageSelete : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		
-		for (int i = 0; i <= userData.clearedStage+1; i++) {
-			int score = userData.stage [i].getScore();
+		for (int i = 0; i <= PlayerPrefs.GetInt("clearedStage")+1; i++) {
+			string stageText = "Stage" + i + "Score";
+			int score = PlayerPrefs.GetInt (stageText);
 			if (score < 3)
 				btn [i].GetComponent<Image> ().sprite = sp [0];
 			else if(score < 10)
