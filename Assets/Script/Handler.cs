@@ -293,7 +293,8 @@ public class Handler : MonoBehaviour
 						canceledItem ();
 					} else {
 						//Tutorial.isCushionCo = false;
-						initIcon ();
+						if(!isTuto)
+							initIcon ();
 					}
 					break;
 				case "Wall":
@@ -303,8 +304,9 @@ public class Handler : MonoBehaviour
 						Destroy (tpObj);
 						canceledItem ();
 					} else {
-						Tutorial.isWallCo = false;
-						initIcon ();
+						//Tutorial.isWallCo = false;
+						if(!isTuto)
+							initIcon ();
 					}
 					break;
 				case "Jumping":

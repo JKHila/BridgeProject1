@@ -2,9 +2,11 @@
 using System.Collections;
 
 public class Wall : MonoBehaviour {
-	public static bool tutoCheck;
+	public bool tutoCheck;
 	void Start(){
-		StartCoroutine (checkDelay ());
+		if (Handler.isTuto) {
+			StartCoroutine (checkDelay ());
+		}
 	}
 	IEnumerator checkDelay(){
 		yield return new WaitForSeconds (0.1f);
@@ -12,7 +14,8 @@ public class Wall : MonoBehaviour {
 			Destroy (this.gameObject);
 			GameObject.Find("Main Camera").SendMessage("canceledItem");
 		} else {
-			Tutorial.isCushionCo = false;
+			Tutorial.isWallCo = false;
+			GameObject.Find("Main Camera").SendMessage("initIcon");
 		}
 	}
 	public void moveBack(Collider2D coll){
@@ -26,11 +29,12 @@ public class Wall : MonoBehaviour {
 			}
 		}
 	}
-	void OnCollisionEnter2D(Collision2D coll){
-		if (Handler.isTuto && coll.gameObject.name == "WallCheck") {
+	void OnTriggerEnter2D(Collider2D coll){
+		if (Handler.isTuto && coll.gameObject.name == "CushionCheck") {
 			tutoCheck = true;
-		} else {
-			moveBack (coll.collider);
 		}
+	}
+	void OnCollisionEnter2D(Collision2D coll){	
+		moveBack (coll.collider);
 	}
 }

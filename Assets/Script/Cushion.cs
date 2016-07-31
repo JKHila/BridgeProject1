@@ -22,6 +22,7 @@ public class Cushion : MonoBehaviour {
 			GameObject.Find("Main Camera").SendMessage("canceledItem");
 		} else {
 			Tutorial.isCushionCo2 = false;
+			GameObject.Find("Main Camera").SendMessage("initIcon");
 		}
 	}
 	void Start () {

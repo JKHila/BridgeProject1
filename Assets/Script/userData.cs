@@ -48,7 +48,7 @@ public class Stage{
 
 public static class userData{
 	public static int totalScore;
-	public static int clearedStage=3;
+	public static int clearedStage=-1;
 	public static int curStageNum;
 	public static int numOfItemKind = 4;
 
