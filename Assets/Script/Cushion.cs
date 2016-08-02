@@ -42,6 +42,7 @@ public class Cushion : MonoBehaviour {
 			tutoCheck = true;
 		}
 		if (coll.gameObject.tag == "Slime") {
+			Debug.Log (coll.GetComponent<Rigidbody2D> ().velocity.y);
 			if (coll.GetComponent<Rigidbody2D> ().velocity.y < 0.0f) {
 				coll.gameObject.GetComponent<Moving> ().Jump ();
 				StartCoroutine (bound ());

@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class SlimeSpawn : MonoBehaviour {
+	public int delay = 0;
     public int numOfSlime;
     public int direct=1;
     public GameObject Slime;
@@ -10,6 +11,7 @@ public class SlimeSpawn : MonoBehaviour {
     public SpriteRenderer slimeSpawnSr;
     IEnumerator CreateSlime()
     {
+		yield return new WaitForSeconds (delay);
         for (int i = 0; i < numOfSlime; i++)
         {
             for (int j = 0; j < 8; j++)

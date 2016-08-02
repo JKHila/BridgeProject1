@@ -30,11 +30,11 @@ public class Wall : MonoBehaviour {
 		}
 	}
 	void OnTriggerEnter2D(Collider2D coll){
-		if (Handler.isTuto && coll.gameObject.name == "CushionCheck") {
+		if (Handler.isTuto && coll.gameObject.name == "WallCheck") {
 			tutoCheck = true;
 		}
 	}
-	void OnCollisionEnter2D(Collision2D coll){	
+	/*void OnCollisionEnter2D(Collision2D coll){	
 		moveBack (coll.collider);
-	}
+	}*/
 }

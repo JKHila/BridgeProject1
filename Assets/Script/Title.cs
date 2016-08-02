@@ -44,13 +44,13 @@ public class Title : MonoBehaviour {
       
     }
 	public void nextBtnDown(){
-		SceneManager.LoadScene (++userData.curStageNum+3);
+		SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex+1);
 	}
 	public void menuBtnDown(){
 		SceneManager.LoadScene (2);
 	}
 	public void replayBtnDown(){
-		SceneManager.LoadScene (3+userData.curStageNum);
+		SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex);
 	}
 	public void pausBtnDown(){
 		if (Time.timeScale > 0)

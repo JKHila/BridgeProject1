@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Handler : MonoBehaviour
@@ -46,6 +47,7 @@ public class Handler : MonoBehaviour
     public Text timeText;
     public Text endScoreText;
     public Text ClearText;
+	public Text stageNumText;
     public Image[] scoreStar;
     public Sprite noStar;
     public GameObject clearPnl;
@@ -62,12 +64,13 @@ public class Handler : MonoBehaviour
 			nextBtn.interactable = true;
 			clearPnl.SetActive(true);
 			PlayerPrefs.SetInt ("Stage0Score", 20);
-			PlayerPrefs.SetInt("clearedStage",userData.curStageNum);
+			PlayerPrefs.SetInt("clearedStage",SceneManager.GetActiveScene().buildIndex-3);
 			isTuto = false;
 		}
         else if (score + numDie >= 20)
         {
-			string stageText = "Stage" + userData.curStageNum + "Score";
+			int curStageNum = SceneManager.GetActiveScene ().buildIndex - 3;
+			string stageText = "Stage" + curStageNum + "Score";
 			if (score > PlayerPrefs.GetInt(stageText)) //userData.stage[userData.curStageNum].getScore())
             {
                 // Debug.Log("setsore1:"+userData.stage[userData.curStageNum].getScore());
@@ -77,7 +80,7 @@ public class Handler : MonoBehaviour
             }
 			if (userData.curStageNum > PlayerPrefs.GetInt("clearedStage") && numDie < 18)
             {
-				PlayerPrefs.SetInt("clearedStage",userData.curStageNum);
+				PlayerPrefs.SetInt("clearedStage",SceneManager.GetActiveScene().buildIndex-3);
             }
 			if (userData.curStageNum <= PlayerPrefs.GetInt("clearedStage"))
                 nextBtn.interactable = true;
@@ -97,6 +100,7 @@ public class Handler : MonoBehaviour
             }
             else if (score >= 10 && score < 20)
                 scoreStar[2].sprite = noStar;
+			stageNumText.text = "Stage" + (curStageNum++);
             clearPnl.SetActive(true);
         }
     }
@@ -474,6 +478,7 @@ public class Handler : MonoBehaviour
 
     void Start()
     {
+		Screen.SetResolution(Screen.width,(Screen.width/16)*9,true);
         Time.timeScale = 1;
         setItem();
         background = GameObject.Find("Background");
