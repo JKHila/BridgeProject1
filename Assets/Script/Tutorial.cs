@@ -22,9 +22,11 @@ public class Tutorial : MonoBehaviour {
 	public Text slimeText;
 	IEnumerator tuto(){
 		Handler.isTuto = true;
+		Handler.isPause = true;;
 		pingImg.SetActive (true);
 		talkImg.SetActive (true);
 		yield return new WaitUntil (()=>Input.GetMouseButtonDown(0));
+		Handler.isPause = false;
 		StartCoroutine (spawnco ());
 	}
 	IEnumerator spawnco(){

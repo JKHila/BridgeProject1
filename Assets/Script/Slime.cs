@@ -4,13 +4,16 @@ using System.Collections;
 public class Slime : Moving {
 	private float curY;  
 	private bool isJump=false;
+	private bool isTemp = false;
 
 	SpriteRenderer sr;
 	public Sprite[] sp = new Sprite[3];
 	public Sprite[] die = new Sprite[6];
 	public GameObject checkArea;
 	public GameObject handler;
-
+	public float getCurY(){
+		return curY;
+	}
 	public void setJump(){
 		if (isJump) {
 			isJump = false;
@@ -67,22 +70,28 @@ public class Slime : Moving {
 		}
 	}
 	void OnTriggerEnter2D(Collider2D coll){ ///checkArea에 충돌
-		if (coll.tag == "Article")
-        {
-            base.moveBack();
-        }
-        else if (coll.tag == "grab")
-        {
-            StartCoroutine(stopping());
-        }
-        else
-        {
-            curY = transform.position.y;
-        }
+		if (coll.tag == "Article") {
+			base.moveBack ();
+		} else if (coll.tag == "grab") {
+			StartCoroutine (stopping ());
+		} else if (coll.gameObject.tag == "temp") {
+			isTemp = true;
+			base.speed = 0;
+			transform.Translate (Vector2.right * -0.1f);
+			Debug.Log (base.speed);
+		} else {
+			curY = transform.position.y;
+		}
 	}
 	void OnCollisionEnter2D (Collision2D coll){
-		if (coll.gameObject.tag != "cushion") {
+		if (coll.gameObject.tag != "cushion" && coll.gameObject.tag != "temp" || coll.gameObject.tag == "Jumping") {
+			
+			if (isTemp) {
+				base.speed = 1.5f;
+				isTemp = false;
+			}
 			if (transform.position.y < curY && curY - transform.position.y > 2.1f) {
+				Debug.Log ("VVA");
 				base.isAlive = false;
 				base.speed = 0;
 				StartCoroutine (dieAction());
@@ -91,7 +100,6 @@ public class Slime : Moving {
 		}
 		else {
 			curY = transform.position.y;
-			Debug.Log (curY);
 		}
 	}
 }

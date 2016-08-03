@@ -32,7 +32,6 @@ public class Drill : MonoBehaviour {
 		Destroy (articleSr.gameObject);
 		Destroy (this.gameObject);
 
-
 		isAct = false;
 	}
 

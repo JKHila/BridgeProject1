@@ -12,7 +12,7 @@ public class Jumping : MonoBehaviour {
 		if (coll.tag == "Article" && coll.name ==objName) {
             StartCoroutine(setPos(coll));
             isAct = true;
-		} else if (coll.tag == "Slime") {
+		} else if (coll.tag == "Slime" && coll.GetComponent<Slime>().getCurY()<=coll.transform.position.y) {
 			StartCoroutine (spring (coll));
 		}
 	}
@@ -26,7 +26,7 @@ public class Jumping : MonoBehaviour {
     }
 	IEnumerator spring(Collider2D coll){
 		
-		//yield return new WaitForSeconds (0.05f);
+		//yield return new WaitForSeconds (0.1f);
 		if (coll.gameObject.GetComponent<Moving> ().isAlive) {
 			for (int i = 0; i < 6; i++) {
 				sr.sprite = sp [i];

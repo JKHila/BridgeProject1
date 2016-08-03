@@ -20,8 +20,7 @@ public class StageSelete : MonoBehaviour {
 			else 
 				btn [i].GetComponent<Image> ().sprite = sp [3];
 			btn [i].transform.FindChild ("Text").gameObject.SetActive (true);
-			btn [i].GetComponent<Button> ().interactable = true;
-		}
+			btn [i].GetComponent<Button> ().interactable = true;		}
 	}
 	
 	// Update is called once per frame
