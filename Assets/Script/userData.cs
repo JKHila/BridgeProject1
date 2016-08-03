@@ -53,7 +53,7 @@ public static class userData{
 	public static int numOfItemKind = 4;
 
 
-	public static Stage[] stage = new Stage[8]{
+	public static Stage[] stage = new Stage[9]{
 		new Stage(new usingitem[4]{
 			new usingitem("drill"),
 			new usingitem("cushion"),
@@ -83,6 +83,11 @@ public static class userData{
 			new usingitem("wall"),
 			new usingitem("jumping")
 		},7),
+		new Stage(new usingitem[3]{
+			new usingitem("drill"),
+			new usingitem("cushion"),
+			new usingitem("jumping")
+		},8)
 	};
 
 

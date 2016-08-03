@@ -61,6 +61,7 @@ public class Handler : MonoBehaviour
     {
 		if (isTuto && score > 0) {
 			PlayerPrefs.SetInt ("isNotFirst", 1);
+			endScoreText.text = "X 1/1";
 			nextBtn.interactable = true;
 			clearPnl.SetActive(true);
 			PlayerPrefs.SetInt ("Stage0Score", 20);
