@@ -23,8 +23,16 @@ public class Tutorial : MonoBehaviour {
 	IEnumerator tuto(){
 		Handler.isTuto = true;
 		Handler.isPause = true;;
-		pingImg.SetActive (true);
+
 		talkImg.SetActive (true);
+		yield return new WaitUntil (()=>Input.GetMouseButtonDown(0));
+		slimeText.text = "우리는 이 나무에서 한마리씩 나와!\n아이템을 사용해서 우리가 앞으로 갈 수 있게 해줘!";
+		pingImg.SetActive (true);
+		yield return new WaitForSeconds (0.5f);
+		yield return new WaitUntil (()=>Input.GetMouseButtonDown(0));
+		slimeText.text = "이 숫자는 아이템을 사용할 수 있는 총 횟수야!";
+		pingImg.GetComponent<RectTransform> ().localPosition = new Vector2 (-356, -139);
+		yield return new WaitForSeconds (0.5f);
 		yield return new WaitUntil (()=>Input.GetMouseButtonDown(0));
 		Handler.isPause = false;
 		StartCoroutine (spawnco ());
@@ -41,7 +49,7 @@ public class Tutorial : MonoBehaviour {
 		slime = GameObject.Find ("Slime(Clone)");
 		pauseAction (true);
 		pingImg2.SetActive (true);
-		slimeText.text = "드릴 아이템을 사용하여 슬라임을 이동시켜줘!";
+		slimeText.text = "드릴 아이템을 사용하여 슬라임을 이동시켜줘! 드릴은 풀있는 땅에만 쓸 수 있어!";
 		talkImg.SetActive (true);
 
 		yield return new WaitUntil (() => !isDrillCo);
@@ -55,13 +63,17 @@ public class Tutorial : MonoBehaviour {
 		isCushionCo = true;
 		pauseAction (true);
 		pingImg2.GetComponent<RectTransform> ().localPosition = new Vector2 (-210, -200);
-		pingImg2.GetComponent<Animator> ().runtimeAnimatorController = rac [0];
+		pingImg2.GetComponent<Animator> ().runtimeAnimatorController = rac [1];
 		pingImg2.SetActive (true);
-		slimeText.text = "떨어지는 슬라임들은 베개 아이템을 사용해서 구해줘!";
+		slimeText.text = "높은 곳에서 떨어지는 슬라임들은 베개 아이템을 사용해서 구해줘!";
 		talkImg.SetActive (true);
 
 		yield return new WaitUntil (() => !isCushionCo);
-		StartCoroutine (cushionco2 ());
+		pingImg2.SetActive (false);
+		talkImg.SetActive (false);
+		pauseAction (false);
+		StartCoroutine (wallco ());
+		//StartCoroutine (cushionco2 ());
 	}
 	IEnumerator cushionco2(){
 		isCushionCo2 = true;
@@ -78,7 +90,7 @@ public class Tutorial : MonoBehaviour {
 		pauseAction (true);
 		slimeText.text = "벽 아이템을 사용해서 슬라임의 방향을 바꿔줘!";
 		pingImg2.GetComponent<Image> ().color = new Color32 (255, 255, 255, 255);
-		pingImg2.GetComponent<Animator> ().runtimeAnimatorController = rac [1];
+		pingImg2.GetComponent<Animator> ().runtimeAnimatorController = rac [3];
 		pingImg2.SetActive (true);
 		talkImg.SetActive (true);
 

@@ -41,14 +41,14 @@ public class Drill : MonoBehaviour {
 			articleSr = coll.GetComponent<SpriteRenderer> ();
 			Instantiate (emptyBlock, new Vector2(coll.transform.position.x,coll.transform.position.y + 1),transform.rotation);
 			StartCoroutine (drillAction ());
-			GetComponent<CircleCollider2D> ().enabled = false;
+			GetComponent<BoxCollider2D> ().enabled = false;
 
 		}
 	}
 
 	IEnumerator checkColl(){
 		yield return new WaitForSeconds (0.1f);
-		if (!isAct && GetComponent<CircleCollider2D>().isActiveAndEnabled) {
+		if (!isAct && GetComponent<BoxCollider2D>().isActiveAndEnabled) {
 			Destroy (this.gameObject);
             GameObject.Find("Main Camera").SendMessage("canceledItem");
 		}
@@ -64,7 +64,7 @@ public class Drill : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (GetComponent<CircleCollider2D> ().isActiveAndEnabled) {
+		if (GetComponent<BoxCollider2D> ().isActiveAndEnabled) {
 			StartCoroutine (checkColl ());
 		}
 	}

@@ -4,20 +4,58 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class Title : MonoBehaviour {
 	public Image fade;
-    public Button fastBtn;
+	public Image cutScene;
+	public Text cutText;
+	public Button fastBtn;
+
 	public GameObject optPanel;
 	public GameObject creditPanel;
 	public GameObject pausePanel;
+	public GameObject cutPanel;
 
 	public Button[] On_Off = new Button[3];
 	public Sprite[] On_Off_Sprite = new Sprite[2];
+	public Sprite[] cutScene_Sprite = new Sprite[2];
 	// Use this for initialization
 	void Start () {
 		Debug.Log (PlayerPrefs.GetInt ("clearedStage"));
         fade = GameObject.Find("Fade").GetComponent<Image>();
         fade.color = new Color(0,0,0,255);
         StartCoroutine ("fadein");
+		if(SceneManager.GetActiveScene().name == "Title")
+			StartCoroutine (startCutScene ());
 	}
+	void checkEndGame()
+	{
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{ //Quit game
+			Application.Quit();
+		}
+	}
+	//cutscene
+	IEnumerator startCutScene(){
+		yield return new WaitForSeconds (2.5f);
+		cutScene.CrossFadeColor (new Color (0, 0, 0,0), 0.5f, true, true);
+		yield return new WaitForSeconds (0.5f);
+		cutScene.sprite = cutScene_Sprite [0];
+		cutText.text = "빨강머리 용사는 슬라임을 잡아 강해지기 위해 \r슬라임 마을을 습격한다! \r";
+		cutText.GetComponent<RectTransform> ().localPosition = new Vector2 (-165, -68);
+		cutScene.CrossFadeColor (new Color (255, 255, 255), 1.0f, false, true);
+
+		yield return new WaitForSeconds (2.5f);
+		cutScene.CrossFadeColor (new Color (0, 0, 0,0), 0.5f, true, true);
+		yield return new WaitForSeconds (0.5f);
+		cutScene.sprite = cutScene_Sprite [1];
+		cutText.text = "라이벌인 빨간머리 용사가 더 이상 강해지지못하게 \n슬라임들을 구해라! ";
+		cutText.GetComponent<RectTransform> ().localPosition = new Vector2 (230	, -160);
+		cutScene.CrossFadeColor (new Color (255, 255, 255), 0.5f, false, true);
+
+		yield return new WaitForSeconds (2.5f);
+		cutScene.CrossFadeColor (new Color (0, 0, 0,0), 0.5f, true, true);
+		yield return new WaitForSeconds (0.7f);
+		cutPanel.SetActive (false);
+	}
+	//fade in/out
 	IEnumerator fadein(){
         fade.CrossFadeAlpha(0.0f, 1, true);
         yield return new WaitForSeconds (1.0f);
@@ -32,6 +70,13 @@ public class Title : MonoBehaviour {
     }
 	// Update is called once per frame
 	void Update () {
+		if (PlayerPrefs.GetInt ("isNotFirst") == 1 && SceneManager.GetActiveScene().name == "Title") {
+			if (Input.GetMouseButtonDown (0)) {
+				StopCoroutine (startCutScene ());
+				cutPanel.SetActive (false);
+			}
+		}
+		checkEndGame();
 		debugging ();
 	}
 	void debugging()

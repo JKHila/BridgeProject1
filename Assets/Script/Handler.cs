@@ -65,7 +65,8 @@ public class Handler : MonoBehaviour
 			nextBtn.interactable = true;
 			clearPnl.SetActive(true);
 			PlayerPrefs.SetInt ("Stage0Score", 20);
-			PlayerPrefs.SetInt("clearedStage",SceneManager.GetActiveScene().buildIndex-3);
+			if(PlayerPrefs.GetInt("clearedStage") == -1)
+				PlayerPrefs.SetInt("clearedStage",SceneManager.GetActiveScene().buildIndex-3);
 			isTuto = false;
 		}
         else if (score + numDie >= 20)
@@ -143,7 +144,7 @@ public class Handler : MonoBehaviour
                 if (numOfItem > 0)
                 {
 					if (isTuto) {
-						//튜토리얼 일때
+						//튜토리얼 일때  
 						switch (tmp) {
 						case "DrillIcon":
 							if (Tutorial.isDrillCo) {
@@ -155,7 +156,7 @@ public class Handler : MonoBehaviour
 							if (Tutorial.isCushionCo) {
 								createDummy (dummyCusion);
 								selectedItem (1);
-								Tutorial.isCushionCo = false;
+								//Tutorial.isCushionCo = false;
 							}
 							break;
 						case "WallIcon":
@@ -172,12 +173,12 @@ public class Handler : MonoBehaviour
 							break;
 						//튜토리얼 일때 물리형 클릭소환
 						case "CushionCheck":
-							if (Tutorial.isCushionCo2) {
+							if (Tutorial.isCushionCo) {
 								Vector3 temp = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 								Instantiate (Cusion, new Vector2 (temp.x, temp.y), transform.rotation);
 								numOfItem--;
 								UpdateItemNum ();
-								Tutorial.isCushionCo2 = false; 
+								Tutorial.isCushionCo = false; 
 								initIcon ();
 							}
 							break;
@@ -195,12 +196,12 @@ public class Handler : MonoBehaviour
 							//설치형클릭후 땅 클릭했을때
 							if (OnItem == 0) {
 								createDummy (upDrill);
-								tpObj.GetComponent<CircleCollider2D> ().enabled = true;
+								tpObj.GetComponent<BoxCollider2D> ().enabled = true;
 							} else if (OnItem == 3) {
 								createDummy (dummyjumping);
 								tpObj.GetComponent<BoxCollider2D> ().enabled = true;
 							}
-							if(!Tutorial.isCushionCo2)
+							if(!Tutorial.isCushionCo)
 								initIcon ();
 							if (Time.timeScale != 0) {
 								initMousePos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
@@ -232,7 +233,7 @@ public class Handler : MonoBehaviour
 							if (OnItem == 0) {
 								createDummy (upDrill);
 								Tutorial.isDrillCo = false;
-								tpObj.GetComponent<CircleCollider2D> ().enabled = true;
+								tpObj.GetComponent<BoxCollider2D> ().enabled = true;
 							} else if (OnItem == 3) {
 								createDummy (dummyjumping);
 								Tutorial.isJumpingCo = false;
@@ -287,7 +288,7 @@ public class Handler : MonoBehaviour
                 string temp = tpObj.gameObject.tag;
 				switch (temp) {
 				case "drill":
-					tpObj.GetComponent<CircleCollider2D> ().enabled = true;
+					tpObj.GetComponent<BoxCollider2D> ().enabled = true;
 					break;
 				case "cushion":
 						
@@ -481,10 +482,10 @@ public class Handler : MonoBehaviour
     {
 		Screen.SetResolution(Screen.width,(Screen.width/16)*9,true);
         Time.timeScale = 1;
+		userData.curStageNum = SceneManager.GetActiveScene ().buildIndex - 3;
         setItem();
         background = GameObject.Find("Background");
-        //WarriorSpawn = GameObject.Find ("WarriorSpawn");
-        //spawn = GameObject.Find ("Spawn");
+		
         slimes = GameObject.Find("MovingObj");
         //WarriorSpawnSr = WarriorSpawn.GetComponent<SpriteRenderer> ();
         //slimeSpawnSr = spawn.GetComponent<SpriteRenderer> ();

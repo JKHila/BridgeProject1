@@ -21,7 +21,7 @@ public class Cushion : MonoBehaviour {
 			Destroy (this.gameObject);
 			GameObject.Find("Main Camera").SendMessage("canceledItem");
 		} else {
-			Tutorial.isCushionCo2 = false;
+			Tutorial.isCushionCo = false;
 			GameObject.Find("Main Camera").SendMessage("initIcon");
 		}
 	}
