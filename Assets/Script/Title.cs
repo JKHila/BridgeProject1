@@ -47,7 +47,7 @@ public class Title : MonoBehaviour {
 		yield return new WaitForSeconds (0.5f);
 		cutScene.sprite = cutScene_Sprite [1];
 		cutText.text = "라이벌인 빨간머리 용사가 더 이상 강해지지못하게 \n슬라임들을 구해라! ";
-		cutText.GetComponent<RectTransform> ().localPosition = new Vector2 (230	, -160);
+		cutText.GetComponent<RectTransform> ().localPosition = new Vector2 (230	, -120);
 		cutScene.CrossFadeColor (new Color (255, 255, 255), 0.5f, false, true);
 
 		yield return new WaitForSeconds (2.5f);

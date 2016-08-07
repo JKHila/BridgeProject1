@@ -18,11 +18,11 @@ public class Handler : MonoBehaviour
     private float time = 60;
     private bool isBtnOn = false;
     private bool isMoved = false;
-    private GameObject tpObj;
+    private GameObject tpObj = null;
     private Vector3 tpPos;
     private Vector2 initMousePos;
     //private int[] seqOfItem = new int[userData.numOfItemKind];
-    private int OnItem = -1;
+    private int OnItem;
 
     //Camera Opt
     public float minY = 50, maxY = 50, minX = 50, maxX = 50;
@@ -102,7 +102,7 @@ public class Handler : MonoBehaviour
             }
             else if (score >= 10 && score < 20)
                 scoreStar[2].sprite = noStar;
-			stageNumText.text = "Stage" + (curStageNum++);
+			stageNumText.text = "Stage" + (++curStageNum);
             clearPnl.SetActive(true);
         }
     }
@@ -233,11 +233,11 @@ public class Handler : MonoBehaviour
 							if (OnItem == 0) {
 								createDummy (upDrill);
 								Tutorial.isDrillCo = false;
-								tpObj.GetComponent<BoxCollider2D> ().enabled = true;
+								//tpObj.GetComponent<BoxCollider2D> ().enabled = true;
 							} else if (OnItem == 3) {
 								createDummy (dummyjumping);
 								Tutorial.isJumpingCo = false;
-								tpObj.GetComponent<BoxCollider2D> ().enabled = true;
+								//tpObj.GetComponent<BoxCollider2D> ().enabled = true;
 							}
 							initIcon ();
 							if (Time.timeScale != 0) {
@@ -327,7 +327,7 @@ public class Handler : MonoBehaviour
         }
         else if (Input.GetMouseButton(0))
         {
-            if (isBtnOn)
+			if (isBtnOn)
             {
                 tpPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 tpObj.transform.position = new Vector2(tpPos.x, tpPos.y); //마우스 누르고 있음.
@@ -486,6 +486,7 @@ public class Handler : MonoBehaviour
         setItem();
         background = GameObject.Find("Background");
 		
+		OnItem = -1;
         slimes = GameObject.Find("MovingObj");
         //WarriorSpawnSr = WarriorSpawn.GetComponent<SpriteRenderer> ();
         //slimeSpawnSr = spawn.GetComponent<SpriteRenderer> ();
