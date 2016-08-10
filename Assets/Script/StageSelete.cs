@@ -7,6 +7,14 @@ public class StageSelete : MonoBehaviour {
 	public Sprite[] sp = new Sprite[4];
 	// Use this for initialization
 	void Start () {
+		showStage();
+	}
+	
+	// Update is called once per frame
+	void Update () {
+	
+	}
+	public void showStage(){
 		Debug.Log (PlayerPrefs.GetInt ("clearedStage"));
 		for (int i = 0; i <= PlayerPrefs.GetInt("clearedStage")+1; i++) {
 			string stageText = "Stage" + i + "Score";
@@ -21,10 +29,5 @@ public class StageSelete : MonoBehaviour {
 				btn [i].GetComponent<Image> ().sprite = sp [3];
 			btn [i].transform.FindChild ("Text").gameObject.SetActive (true);
 			btn [i].GetComponent<Button> ().interactable = true;		}
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
 	}
 }

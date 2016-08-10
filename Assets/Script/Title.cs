@@ -79,6 +79,10 @@ public class Title : MonoBehaviour {
 		checkEndGame();
 		debugging ();
 	}
+	public void allClearBtnDown(){
+		PlayerPrefs.SetInt("clearedStage",8);
+		GameObject.Find("Main Camera").GetComponent<StageSelete>().showStage();
+	}
 	void debugging()
 	{
 		if (Input.GetKeyDown(KeyCode.Delete))
