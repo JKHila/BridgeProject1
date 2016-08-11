@@ -46,13 +46,15 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 240
+  spritePixelsToUnits: 235
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
+    serializedVersion: 2
     sprites:
-    - name: Land
+    - serializedVersion: 2
+      name: Land
       rect:
         serializedVersion: 2
         x: 3
@@ -62,35 +64,9 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.51, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 134.90001, y: -3.949997}
-        - {x: 151.90001, y: 9.050003}
-        - {x: 151.90001, y: 101.05}
-        - {x: 145.90001, y: 164.05}
-        - {x: 116.90001, y: 153.05}
-        - {x: 102.90001, y: 140.05}
-        - {x: 86.90001, y: 159.05}
-        - {x: 72.90001, y: 171.05}
-        - {x: 56.90001, y: 171.05}
-        - {x: 35.90001, y: 165.05}
-        - {x: 4.900009, y: 143.05}
-        - {x: -14.099991, y: 166.05}
-        - {x: -20.09999, y: 171.05}
-        - {x: -34.09999, y: 171.05}
-        - {x: -71.09999, y: 148.05}
-        - {x: -117.09999, y: 141.05}
-        - {x: -153.09999, y: 106.05}
-        - {x: -153.09999, y: 40.050003}
-        - {x: -148.09999, y: 17.050003}
-        - {x: -129.09999, y: 12.050003}
-        - {x: -127.09999, y: -129.95}
-        - {x: -124.09999, y: -132.95}
-        - {x: 10.900009, y: -133.95}
-        - {x: 116.90001, y: -133.95}
-        - {x: 120.90001, y: -129.95}
-        - {x: 120.90001, y: -125.95}
-        - {x: 122.90001, y: -8.949997}
-    - name: Wall
+      outline: []
+    - serializedVersion: 2
+      name: Wall
       rect:
         serializedVersion: 2
         x: 312
@@ -100,13 +76,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -126, y: 120.05}
-        - {x: -126, y: -131.95}
-        - {x: 114, y: -131.95}
-        - {x: 116, y: -129.95}
-        - {x: 116, y: 118.05}
-        - {x: 114, y: 120.05}
+      outline: []
     outline: []
   spritePackingTag: 
   userData: 

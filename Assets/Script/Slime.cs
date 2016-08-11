@@ -31,6 +31,17 @@ public class Slime : Moving {
 		curY = transform.position.y;
 		StartCoroutine ("moveAction");
 	}
+	IEnumerator passDoor(){
+		StopCoroutine(moveAction());
+		base.isAlive = false;
+		float slimeAlpha = 255;
+		while(slimeAlpha > 0){
+			slimeAlpha -=30;
+			GetComponent<SpriteRenderer>().color  = new Color(255,255,255,slimeAlpha);
+			yield return new WaitForSeconds(0.3f);
+		}
+		Destroy(this.gameObject);
+	} 
     IEnumerator stopping()
     {
         yield return new WaitForSeconds(0.5f);
