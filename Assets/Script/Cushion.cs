@@ -5,6 +5,7 @@ public class Cushion : MonoBehaviour {
 	//public Animator anim;
 	// Use this for initialization
 	//private GameObject tmpObj;
+	public AudioClip jumpSE;
 	public  bool tutoCheck;
 	public Sprite[] sp = new Sprite[9];
 
@@ -43,6 +44,7 @@ public class Cushion : MonoBehaviour {
 		}
 		if (coll.gameObject.tag == "Slime") {
 			Debug.Log (coll.GetComponent<Rigidbody2D> ().velocity.y);
+			AudioSource.PlayClipAtPoint(jumpSE,transform.position);
 			if (coll.GetComponent<Rigidbody2D> ().velocity.y < 0.0f) {
 				coll.gameObject.GetComponent<Moving> ().Jump ();
 				StartCoroutine (bound ());

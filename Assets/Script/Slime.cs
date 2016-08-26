@@ -11,6 +11,8 @@ public class Slime : Moving {
 	public Sprite[] die = new Sprite[6];
 	public GameObject checkArea;
 	public GameObject handler;
+	public AudioClip slimeSE;
+	public AudioClip slimeDieSE;
 	public float getCurY(){
 		return curY;
 	}
@@ -106,11 +108,13 @@ public class Slime : Moving {
 				base.isAlive = false;
 				base.speed = 0;
 				StartCoroutine (dieAction());
+				AudioSource.PlayClipAtPoint(slimeDieSE,transform.position);
 			}
 			curY = transform.position.y;
 		}
 		else {
 			curY = transform.position.y;
+			AudioSource.PlayClipAtPoint(slimeSE,transform.position);
 		}
 	}
 }

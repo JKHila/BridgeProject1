@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class Tutorial : MonoBehaviour {
 	private float speed;
 
+	public AudioClip btnSE;
+
 	public static bool isDrillCo = false;
 	public static bool isCushionCo;
 	public static bool isCushionCo2;
@@ -26,14 +28,17 @@ public class Tutorial : MonoBehaviour {
 
 		talkImg.SetActive (true);
 		yield return new WaitUntil (()=>Input.GetMouseButtonDown(0));
+		AudioSource.PlayClipAtPoint(btnSE,transform.position);
 		slimeText.text = "우리는 이 나무에서 한마리씩 나와!\n아이템을 사용해서 우리가 앞으로 갈 수 있게 해줘!";
 		pingImg.SetActive (true);
 		yield return new WaitForSeconds (0.5f);
 		yield return new WaitUntil (()=>Input.GetMouseButtonDown(0));
+		AudioSource.PlayClipAtPoint(btnSE,transform.position);
 		slimeText.text = "이 숫자는 아이템을 사용할 수 있는 총 횟수야!";
 		pingImg.GetComponent<RectTransform> ().localPosition = new Vector2 (-356, -139);
 		yield return new WaitForSeconds (0.5f);
 		yield return new WaitUntil (()=>Input.GetMouseButtonDown(0));
+		AudioSource.PlayClipAtPoint(btnSE,transform.position);
 		Handler.isPause = false;
 		StartCoroutine (spawnco ());
 	}

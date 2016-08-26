@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class Title : MonoBehaviour {
+	public AudioClip btnSE;
 	public Image fade;
 	public Image cutScene;
 	public Text cutText;
@@ -12,6 +13,7 @@ public class Title : MonoBehaviour {
 	public GameObject creditPanel;
 	public GameObject pausePanel;
 	public GameObject cutPanel;
+	public GameObject collectPanel;
 
 	public Button[] On_Off = new Button[3];
 	public Sprite[] On_Off_Sprite = new Sprite[2];
@@ -89,14 +91,22 @@ public class Title : MonoBehaviour {
 		{
 			PlayerPrefs.DeleteAll();
 			Debug.Log ("deleteAll");
+			PlayerPrefs.SetInt("clearedStage",-1);
 		}
 	}//title btn
 	public void titleCloseBtnDown(){
+		AudioSource.PlayClipAtPoint(btnSE,transform.position);
 		creditPanel.SetActive (false);
 		optPanel.SetActive (false);
+		collectPanel.SetActive(false);
 	}
 	public void optBtnDown(){
+		AudioSource.PlayClipAtPoint(btnSE,transform.position);
 		optPanel.SetActive (true);
+	}
+	public void collBtnDown(){
+		AudioSource.PlayClipAtPoint(btnSE,transform.position);
+		collectPanel.SetActive(true);
 	}
 	public void titleOnOffBtnDown(int n){
 		if (On_Off [n].image.sprite.name == "option_off")
@@ -105,45 +115,55 @@ public class Title : MonoBehaviour {
 			On_Off [n].image.sprite = On_Off_Sprite [1];
 	}
 	public void creditBtnDown(){
+		AudioSource.PlayClipAtPoint(btnSE,transform.position);
 		creditPanel.SetActive (true);
 		optPanel.SetActive (false);
 	}
 	//in stage Btn
     public void fastBtnDown()
     {
+		AudioSource.PlayClipAtPoint(btnSE,transform.position);
         if(Time.timeScale < 2)
             Time.timeScale = 2;
         else
             Time.timeScale = 1;
     }
 	public void pausBtnDown(){
+		AudioSource.PlayClipAtPoint(btnSE,transform.position);
 		pausePanel.SetActive (true);
 		Time.timeScale = 0;
 	}
 	public void ContinueBtn(){
+		AudioSource.PlayClipAtPoint(btnSE,transform.position);
 		pausePanel.SetActive (false);
 		Time.timeScale = 1;
 	}
 	//menu btn
 	public void nextBtnDown(){
+		AudioSource.PlayClipAtPoint(btnSE,transform.position);
 		SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex+1);
 	}
 	public void menuBtnDown(){
+		AudioSource.PlayClipAtPoint(btnSE,transform.position);
 		SceneManager.LoadScene (2);
 	}
 	public void replayBtnDown(){
+		AudioSource.PlayClipAtPoint(btnSE,transform.position);
 		SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex);
 	}
 
 	public void SelectStage(int n){
+		AudioSource.PlayClipAtPoint(btnSE,transform.position);
 		userData.curStageNum = n;
 		SceneManager.LoadScene (3+n);
 	}
 	public void SelectChapter(){
+		AudioSource.PlayClipAtPoint(btnSE,transform.position);
 		SceneManager.LoadScene (2,LoadSceneMode.Single);
 	}
 	public void GameStart(){
         //StartCoroutine(fadeOut());
+		AudioSource.PlayClipAtPoint(btnSE,transform.position);
         SceneManager.LoadScene (1,LoadSceneMode.Single);
        
 	}

@@ -5,6 +5,8 @@ public class Drill : MonoBehaviour {
 	SpriteRenderer drillSr;
 	SpriteRenderer articleSr;
 	private string objName;
+
+	public AudioClip drillSE;
     
 	public GameObject emptyBlock;
 	public Sprite[] drillSp;
@@ -37,6 +39,7 @@ public class Drill : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D coll){
 		if (coll.tag == "Article" && coll.name == objName) {
+			AudioSource.PlayClipAtPoint(drillSE,transform.position);
 			isAct = true;
 			articleSr = coll.GetComponent<SpriteRenderer> ();
 			Instantiate (emptyBlock, new Vector2(coll.transform.position.x,coll.transform.position.y + 1),transform.rotation);
