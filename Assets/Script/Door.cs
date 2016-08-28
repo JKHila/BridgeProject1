@@ -4,6 +4,7 @@ using System.Collections;
 public class Door : Wall {
 	public Handler handler;
 	public Sprite[] doorSp = new Sprite[7];
+	public AudioClip inSE;
 	// Use this for initialization
 	void Start () {
 		handler = GameObject.Find ("Main Camera").GetComponent<Handler> ();
@@ -21,6 +22,7 @@ public class Door : Wall {
 		if (coll.gameObject.tag == "Slime" && coll.gameObject.GetComponent<Moving>().isAlive) {
 			handler.addScore ();
 			coll.gameObject.GetComponent<Slime>().StartCoroutine("passDoor");
+			AudioSource.PlayClipAtPoint(inSE,new Vector2(0,0));
 			//Destroy (coll.gameObject);
 		} else {
 			//coll.gameObject.GetComponent<Moving> ().moveBack();

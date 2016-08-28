@@ -52,7 +52,7 @@ public class Warrior : Moving {
 	}
 	IEnumerator hitAction(float tpspd,Collider2D coll){
 		coll.GetComponent<Slime> ().isAlive = false;
-		AudioSource.PlayClipAtPoint(hitSE,transform.position);
+		AudioSource.PlayClipAtPoint(hitSE,transform.position,2.0f);
 		//Physics2D.IgnoreLayerCollision (8, 10);
 		Transform tptr = transform;
 		GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezePositionY;

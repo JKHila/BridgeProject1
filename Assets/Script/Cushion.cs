@@ -43,9 +43,9 @@ public class Cushion : MonoBehaviour {
 			tutoCheck = true;
 		}
 		if (coll.gameObject.tag == "Slime") {
-			Debug.Log (coll.GetComponent<Rigidbody2D> ().velocity.y);
-			AudioSource.PlayClipAtPoint(jumpSE,transform.position);
+			//Debug.Log (coll.GetComponent<Rigidbody2D> ().velocity.y);
 			if (coll.GetComponent<Rigidbody2D> ().velocity.y < 0.0f) {
+				AudioSource.PlayClipAtPoint(jumpSE,transform.position,0.5f);
 				coll.gameObject.GetComponent<Moving> ().Jump ();
 				StartCoroutine (bound ());
 			}

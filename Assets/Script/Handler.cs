@@ -56,9 +56,10 @@ public class Handler : MonoBehaviour
     //public SpriteRenderer slimeSpawnSr;
     //public Sprite[] slimeSpawnSp;
     public GameObject slimes;
-
+    public AudioClip winSE;
     IEnumerator showClearPanel(){
         yield return new WaitForSeconds(2.0f);
+        AudioSource.PlayClipAtPoint(winSE,new Vector2(0,0));
         clearPnl.SetActive(true);
         Time.timeScale = 0;
     }

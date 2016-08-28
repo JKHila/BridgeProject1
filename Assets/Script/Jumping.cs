@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class Jumping : MonoBehaviour {
+	public AudioClip jumpSE;
 	public Sprite[] sp;
 
 	private SpriteRenderer sr;
@@ -34,6 +35,7 @@ public class Jumping : MonoBehaviour {
 				if (i == 0) {
 					coll.GetComponent<Moving> ().boardJump ();
 					coll.GetComponent<Slime> ().setJump ();
+					AudioSource.PlayClipAtPoint(jumpSE,transform.position,0.5f);
 				}
 			}
 		}
