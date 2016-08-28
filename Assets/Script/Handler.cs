@@ -57,13 +57,18 @@ public class Handler : MonoBehaviour
     //public Sprite[] slimeSpawnSp;
     public GameObject slimes;
 
+    IEnumerator showClearPanel(){
+        yield return new WaitForSeconds(2.0f);
+        clearPnl.SetActive(true);
+        Time.timeScale = 0;
+    }
     void checkClear()
     {
 		if (isTuto && score > 0) {
 			PlayerPrefs.SetInt ("isNotFirst", 1);
 			endScoreText.text = "X 1/1";
 			nextBtn.interactable = true;
-			clearPnl.SetActive(true);
+            StartCoroutine(showClearPanel());
 			PlayerPrefs.SetInt ("Stage0Score", 20);
 			if(PlayerPrefs.GetInt("clearedStage") == -1)
 				PlayerPrefs.SetInt("clearedStage",SceneManager.GetActiveScene().buildIndex-3);
@@ -86,7 +91,7 @@ public class Handler : MonoBehaviour
             }
 			if (userData.curStageNum <= PlayerPrefs.GetInt("clearedStage"))
                 nextBtn.interactable = true;
-            Time.timeScale = 0;
+            
             endScoreText.text = "X " + score + "/20";
             if (score < 3)
             {
@@ -103,7 +108,7 @@ public class Handler : MonoBehaviour
             else if (score >= 10 && score < 20)
                 scoreStar[2].sprite = noStar;
 			stageNumText.text = "Stage" + (++curStageNum);
-            clearPnl.SetActive(true);
+            StartCoroutine(showClearPanel());
         }
     }
     void createDummy(GameObject obj)
@@ -121,14 +126,15 @@ public class Handler : MonoBehaviour
     {
         foreach (GameObject key in icon)
         {
-            key.transform.localScale = new Vector2(1.0f, 1.0f);
+            key.GetComponent<SpriteRenderer>().color = new Color32(255,255,255,255);//transform.localScale = new Vector2(1.0f, 1.0f);
         }
         OnItem = -1;
     }
     void selectedItem(int n)
     {
         initIcon();
-        icon[n].transform.localScale = new Vector2(1.15f, 1.15f);
+        //icon[n].transform.localScale = new Vector2(1.15f, 1.15f);
+        icon[n].GetComponent<SpriteRenderer>().color = new Color32(94,70,70,255);
         OnItem = n;
     }
     void checkTouch()
@@ -442,7 +448,7 @@ public class Handler : MonoBehaviour
 
     void setItem()
     {
-        float x = -2.75f, y = -0.23f;
+        float x = -2.85f, y = -0.20f;
         itemList = userData.stage[userData.curStageNum].getItemList();
         numOfItem = userData.stage[userData.curStageNum].getNumOfItem();
         foreach (usingitem usi in itemList)
@@ -471,7 +477,7 @@ public class Handler : MonoBehaviour
                     //jumpingItem = usi.clone ();
                     break;
             }
-            x += 2.28f;
+            x += 2.33f;
         }
         UpdateItemNum();
     }

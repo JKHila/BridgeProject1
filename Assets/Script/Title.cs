@@ -36,7 +36,7 @@ public class Title : MonoBehaviour {
 	}
 	//cutscene
 	IEnumerator startCutScene(){
-		yield return new WaitForSeconds (2.5f);
+		yield return new WaitForSeconds (3.0f);
 		cutScene.CrossFadeColor (new Color (0, 0, 0,0), 0.5f, true, true);
 		yield return new WaitForSeconds (0.5f);
 		cutScene.sprite = cutScene_Sprite [0];
@@ -44,7 +44,7 @@ public class Title : MonoBehaviour {
 		cutText.GetComponent<RectTransform> ().localPosition = new Vector2 (-165, -68);
 		cutScene.CrossFadeColor (new Color (255, 255, 255), 1.0f, false, true);
 
-		yield return new WaitForSeconds (2.5f);
+		yield return new WaitForSeconds (3.0f);
 		cutScene.CrossFadeColor (new Color (0, 0, 0,0), 0.5f, true, true);
 		yield return new WaitForSeconds (0.5f);
 		cutScene.sprite = cutScene_Sprite [1];
@@ -52,7 +52,7 @@ public class Title : MonoBehaviour {
 		cutText.GetComponent<RectTransform> ().localPosition = new Vector2 (230	, -120);
 		cutScene.CrossFadeColor (new Color (255, 255, 255), 0.5f, false, true);
 
-		yield return new WaitForSeconds (2.5f);
+		yield return new WaitForSeconds (3.0f);
 		cutScene.CrossFadeColor (new Color (0, 0, 0,0), 0.5f, true, true);
 		yield return new WaitForSeconds (0.7f);
 		cutPanel.SetActive (false);
@@ -164,7 +164,7 @@ public class Title : MonoBehaviour {
 	public void GameStart(){
         //StartCoroutine(fadeOut());
 		AudioSource.PlayClipAtPoint(btnSE,transform.position);
-        SceneManager.LoadScene (1,LoadSceneMode.Single);
+        SceneManager.LoadScene (2,LoadSceneMode.Single);
        
 	}
 }

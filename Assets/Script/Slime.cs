@@ -36,11 +36,12 @@ public class Slime : Moving {
 	IEnumerator passDoor(){
 		StopCoroutine(moveAction());
 		base.isAlive = false;
-		float slimeAlpha = 255;
+		float slimeAlpha = 1;
 		while(slimeAlpha > 0){
-			slimeAlpha -=30;
-			GetComponent<SpriteRenderer>().color  = new Color(255,255,255,slimeAlpha);
-			yield return new WaitForSeconds(0.3f);
+			slimeAlpha -= 0.1f;
+			GetComponent<SpriteRenderer>().color = new Color (255,255,255,slimeAlpha);
+			//GetComponent<SpriteRenderer>().color = new Color(255,255,255,slimeAlpha);
+			yield return new WaitForSeconds(0.1f);
 		}
 		Destroy(this.gameObject);
 	} 

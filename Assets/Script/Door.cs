@@ -20,8 +20,8 @@ public class Door : Wall {
 	void OnTriggerEnter2D(Collider2D coll){
 		if (coll.gameObject.tag == "Slime" && coll.gameObject.GetComponent<Moving>().isAlive) {
 			handler.addScore ();
-			//coll.gameObject.GetComponent<Slime>().StartCoroutine("passDoor");
-			Destroy (coll.gameObject);
+			coll.gameObject.GetComponent<Slime>().StartCoroutine("passDoor");
+			//Destroy (coll.gameObject);
 		} else {
 			//coll.gameObject.GetComponent<Moving> ().moveBack();
 			//base.moveBack(coll.collider);

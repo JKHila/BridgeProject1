@@ -14,6 +14,7 @@ public class Warrior : Moving {
 	//public GameObject backHitArea;
 	public GameObject tmpObj;
 
+	public AudioClip hitSE;
 
 	bool isHit = false;
 	void hitProcess(float tpspd,Collider2D coll){
@@ -51,6 +52,7 @@ public class Warrior : Moving {
 	}
 	IEnumerator hitAction(float tpspd,Collider2D coll){
 		coll.GetComponent<Slime> ().isAlive = false;
+		AudioSource.PlayClipAtPoint(hitSE,transform.position);
 		//Physics2D.IgnoreLayerCollision (8, 10);
 		Transform tptr = transform;
 		GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezePositionY;
