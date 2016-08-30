@@ -3,6 +3,8 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class Title : MonoBehaviour {
+
+	private int selectedStageNum;
 	public AudioClip BGM;
 	public AudioClip btnSE;
 	public Image fade;
@@ -15,7 +17,15 @@ public class Title : MonoBehaviour {
 	public GameObject pausePanel;
 	public GameObject cutPanel;
 	public GameObject collectPanel;
+	public GameObject goalPanel;
+	public Text goalText;
 
+	public GameObject pingImg;
+	public GameObject pingImg2;
+	public Text stageText;
+	public Image[] scoreStar = new Image[3];
+	public Sprite noStar; 
+	public Sprite yesStar;
 	public Button[] On_Off = new Button[3];
 	public Sprite[] On_Off_Sprite = new Sprite[2];
 	public Sprite[] cutScene_Sprite = new Sprite[2];
@@ -102,6 +112,7 @@ public class Title : MonoBehaviour {
 		creditPanel.SetActive (false);
 		optPanel.SetActive (false);
 		collectPanel.SetActive(false);
+		goalPanel.SetActive(false);
 	}
 	public void optBtnDown(){
 		AudioSource.PlayClipAtPoint(btnSE,Camera.main.transform.position);
@@ -156,9 +167,39 @@ public class Title : MonoBehaviour {
 	}
 
 	public void SelectStage(int n){
+		goalText.text = userData.stage[n].getGoalString();
+		pingImg.SetActive(false);
+		stageText.text = "Stage "+ (n+1);
+		selectedStageNum = n;
+		int score = PlayerPrefs.GetInt("Stage" + n + "Score");
+		Debug.Log(score);
+		 if (score < 3)
+            {
+                scoreStar[0].sprite = noStar;
+                scoreStar[1].sprite = noStar;
+                scoreStar[2].sprite = noStar;
+            }
+            else if (score < 10)
+            {
+                scoreStar[1].sprite = noStar;
+                scoreStar[2].sprite = noStar;
+            }
+            else if (score >= 10 && score < 20)
+                scoreStar[2].sprite = noStar;
+			else{
+				scoreStar[0].sprite = yesStar;
+                scoreStar[1].sprite = yesStar;
+                scoreStar[2].sprite = yesStar;
+			}
+		goalPanel.SetActive(true);
+		if(PlayerPrefs.GetInt ("isNotFirst") == 0){
+			pingImg2.SetActive(true);
+		}
+	}	
+	public void StageStart(){
 		AudioSource.PlayClipAtPoint(btnSE,Camera.main.transform.position);
-		userData.curStageNum = n;
-		SceneManager.LoadScene (3+n);
+		userData.curStageNum = selectedStageNum;
+		SceneManager.LoadScene (selectedStageNum+3);
 	}
 	public void SelectChapter(){
 		AudioSource.PlayClipAtPoint(btnSE,Camera.main.transform.position);

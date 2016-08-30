@@ -18,6 +18,7 @@ public class StageSelete : MonoBehaviour {
 		
 	}
 	public void showStage(){
+		totalStar = 0;
 		Debug.Log (PlayerPrefs.GetInt ("clearedStage"));
 		for (int i = 0; i <= PlayerPrefs.GetInt("clearedStage")+1; i++) {
 			string stageText = "Stage" + i + "Score";

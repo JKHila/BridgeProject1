@@ -22,7 +22,7 @@ public class Door : Wall {
 		if (coll.gameObject.tag == "Slime" && coll.gameObject.GetComponent<Moving>().isAlive) {
 			handler.addScore ();
 			coll.gameObject.GetComponent<Slime>().StartCoroutine("passDoor");
-			AudioSource.PlayClipAtPoint(inSE,new Vector2(0,0));
+			AudioSource.PlayClipAtPoint(inSE,new Vector2(0,0),0.5f);
 			//Destroy (coll.gameObject);
 		} else {
 			//coll.gameObject.GetComponent<Moving> ().moveBack();

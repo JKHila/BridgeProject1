@@ -57,9 +57,14 @@ public class Handler : MonoBehaviour
     //public Sprite[] slimeSpawnSp;
     public GameObject slimes;
     public AudioClip winSE;
+    public AudioClip loseSE;
     IEnumerator showClearPanel(){
         yield return new WaitForSeconds(2.0f);
-        AudioSource.PlayClipAtPoint(winSE,new Vector2(0,0));
+        if(!isTuto && score < 3){
+             AudioSource.PlayClipAtPoint(winSE,new Vector2(0,0));
+        }else{
+             AudioSource.PlayClipAtPoint(winSE,new Vector2(0,0));
+        }
         clearPnl.SetActive(true);
         Time.timeScale = 0;
     }
@@ -69,6 +74,7 @@ public class Handler : MonoBehaviour
 			PlayerPrefs.SetInt ("isNotFirst", 1);
 			endScoreText.text = "X 1/1";
 			nextBtn.interactable = true;
+            AudioSource.PlayClipAtPoint(winSE,new Vector2(0,0));
             StartCoroutine(showClearPanel());
 			PlayerPrefs.SetInt ("Stage0Score", 20);
 			if(PlayerPrefs.GetInt("clearedStage") == -1)
@@ -106,8 +112,9 @@ public class Handler : MonoBehaviour
                 scoreStar[1].sprite = noStar;
                 scoreStar[2].sprite = noStar;
             }
-            else if (score >= 10 && score < 20)
+            else if (score >= 10 && score < 20){
                 scoreStar[2].sprite = noStar;
+            }
 			stageNumText.text = "Stage" + (++curStageNum);
             StartCoroutine(showClearPanel());
         }

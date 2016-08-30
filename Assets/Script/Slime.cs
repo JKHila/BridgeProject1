@@ -72,6 +72,7 @@ public class Slime : Moving {
 	}
 	// Update is called once per frame
 	void Update () {
+		//movingWithController();
 		MovingFunc ();
 		if (base.speed > 0) {
 			checkArea.GetComponent<BoxCollider2D>().offset = new Vector2 (0.32f, 0);
@@ -84,7 +85,7 @@ public class Slime : Moving {
 		}
 	}
 	void OnTriggerEnter2D(Collider2D coll){ ///checkArea에 충돌
-		if (coll.tag == "Article") {
+		if (coll.tag == "Article" || coll.name == "bridge") {
 			base.moveBack ();
 		} else if (coll.tag == "grab") {
 			StartCoroutine (stopping ());
@@ -98,7 +99,10 @@ public class Slime : Moving {
 		}
 	}
 	void OnCollisionEnter2D (Collision2D coll){
-		if (coll.gameObject.tag != "cushion" && coll.gameObject.tag != "temp" || coll.gameObject.tag == "Jumping") {
+		if(coll.gameObject.name == "board"){
+			//base.isSlope = true;
+		}
+		else if (coll.gameObject.tag != "cushion" && coll.gameObject.tag != "temp" || coll.gameObject.tag == "Jumping") {
 			
 			if (isTemp) {
 				base.speed = 1.5f;

@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Moving : MonoBehaviour {
 
+	public bool isSlope = false;
 	public bool isAlive = true;
 	public float speed;
 	public Rigidbody2D rbody;
@@ -21,9 +22,21 @@ public class Moving : MonoBehaviour {
 			}
 		}
 	}
+	/*public void movingWithController(){
+		
+		CharacterController controller = GetComponent<CharacterController>();
+         if (controller.isGrounded){ 
+			controller.Move(Vector2.right * speed * Time.deltaTime);
+		}
+	}*/
 	public void MovingFunc(){
-		if (isAlive)
+		if (isAlive){
 			transform.Translate (Vector2.right * speed * Time.deltaTime);
+			if(isSlope){
+				transform.Translate ((Vector2.right * speed + Vector2.up*speed*4)* Time.deltaTime);
+			}
+
+		}
 			//rbody = GetComponent<Rigidbody2D> ();
 		//rbody.AddForce (Vector2.right * speed*100, ForceMode2D.Force);
 	}
